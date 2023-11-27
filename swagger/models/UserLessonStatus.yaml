@@ -1,0 +1,45 @@
+title: UserLessonStatus
+type: object
+x-tags:
+  - lesson
+description: ''
+properties:
+  userId:
+    type: string
+  lessonId:
+    type: string
+  status:
+    type: string
+    enum:
+      - not_cleared
+      - cleared
+      - locked
+    description: |-
+      "not_cleared" shows "It's available but not cleared"
+      "cleared" shows "It's available and already cleared at least once"
+      "locked" shows "It's unavailable for some reason. e.g.) the teacher has locked this lesson"
+  achievedStarCount:
+    type: number
+  correctAnsweredQuizCount:
+    type: number
+    nullable: true
+  usedHintCount:
+    type: number
+    nullable: true
+  stepIdskippingDetected:
+    type: boolean
+  startedAt:
+    type: string
+    format: date-time
+  finishedAt:
+    type: string
+    format: date-time
+  quizCount:
+    type: number
+
+required:
+  - userId
+  - lessonId
+  - status
+  - achievedStarCount
+  - stepIdskippingDetected

@@ -1,0 +1,31 @@
+title: District
+type: object
+x-tags:
+  - district
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  districtLMSId:
+    type: string
+  lastRosterSyncEventId:
+    type: string
+  lastRosterSyncEventDate:
+    type: string
+  enableRosterSync:
+    type: boolean
+  lmsId:
+    type: string
+  stateId:
+    type: string
+  administrators:
+    type: string
+required:
+  - id
+  - name
+  - districtLMSId
+  - lastRosterSyncEventDate
+  - lastRosterSyncEventId
+  - enableRosterSync
+description: The Definition of Get Districts.

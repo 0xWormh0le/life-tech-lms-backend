@@ -1,0 +1,98 @@
+get:
+  summary: Lesson Player API GET /check_token
+  tags:
+    - playerApi
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              example-1:
+                result: ''
+                isAccessible: true
+                name: ''
+                redirect_url: ''
+            properties:
+              result:
+                type: string
+                enum:
+                  - valid
+              isAccessible:
+                type: boolean
+              name:
+                type: string
+            required:
+              - result
+              - isAccessible
+              - name
+          examples:
+            authorized:
+              value:
+                result: valid
+                isAccessible: true
+                name: Bob
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              example-1:
+                result: invalid
+                isAccessible: false
+                redirect_url: 'https://www.yahoo.com'
+            properties:
+              result:
+                type: string
+                minLength: 1
+                enum:
+                  - invalid
+              isAccessible:
+                type: boolean
+              redirect_url:
+                type: string
+                minLength: 1
+            required:
+              - result
+              - isAccessible
+              - redirect_url
+          examples:
+            unauthorized:
+              value:
+                result: invalid
+                isAccessible: false
+                redirect_url: 'https://www.yahoo.com'
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            authorized:
+              value:
+                result: valid
+                isAccessible: true
+                name: Bob
+  operationId: getCheckToken
+  parameters:
+    - schema:
+        type: string
+      in: header
+      name: authentication
+  description: 'Lesson Player calls this API once at startup, verifying that the Bearer token is valid. If not, returning a redirect url.'

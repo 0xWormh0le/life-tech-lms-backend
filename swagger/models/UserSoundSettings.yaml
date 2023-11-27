@@ -1,0 +1,24 @@
+title: UserSoundSettings
+type: object
+x-tags:
+  - settings
+properties:
+  seVolume:
+    type: number
+  bgmVolume:
+    type: number
+  hintNarrationVolume:
+    type: number
+  serifNarrationVolume:
+    type: number
+  narrationLanguage:
+    type: string
+    enum:
+      - en
+      - es
+required:
+  - seVolume
+  - bgmVolume
+  - hintNarrationVolume
+  - serifNarrationVolume
+  - narrationLanguage

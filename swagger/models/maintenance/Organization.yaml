@@ -1,0 +1,16 @@
+title: MaintenanceOrganization
+type: object
+properties:
+  name:
+    type: string
+  districtId:
+    type: string
+  stateId:
+    type: string
+  organizationLmsId:
+    type: string
+required:
+  - name
+  - districtId
+  - stateId
+description: The Definition of Get Organizations.

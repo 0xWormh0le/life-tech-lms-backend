@@ -1,0 +1,101 @@
+parameters:
+  - schema:
+      type: string
+    name: studentGroupId
+    in: path
+    required: true
+get:
+  summary: Get unaccessible lessons based on student group
+  description: Get API call when teacher / internal operator / district administrator want to view restrict lesson access to their student group.
+  tags:
+    - codex
+  operationId: getUnaccessibleLessons
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              unaccessibleLessons:
+                type: array
+                items:
+                  $ref: ../../models/UnaccessibleLesson.yaml
+            required:
+              - unaccessibleLessons
+          examples:
+            success:
+              value:
+                unaccessibleLessons:
+                  - studentGroupId: student-group-id-1
+                    packageId: package-id-1
+                    lessonId: lesson-id-1
+                    createdUserId: user-id-1
+                    createdDate: '2022-05-17T11:54:02.141Z'
+                  - studentGroupId: student-group-id-1
+                    packageId: package-id-2
+                    lesonId: lesson-id-1
+                    createdUserId: user-id-2
+                    createdDate: '2022-05-17T11:54:02.141Z'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid studentGroupId:
+              value:
+                error: Invalid studentGroupId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to view restrict lesson access for student group.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            studentGroup not found:
+              value:
+                error: The specified student group not found.
+            lesson not found:
+              value:
+                error: The specified lesson not found.
+            user not found:
+              value:
+                error: The specified user not found.
+            administrator not found:
+              value:
+                error: The specified administrator not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something went wrong.

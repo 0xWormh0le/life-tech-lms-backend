@@ -1,0 +1,11 @@
+export function getAfterLessonCleared(request: any, response: any): Promise<void>;
+export function getCheckToken(request: any, response: any): Promise<void>;
+export function getLessonsSetting(request: any, response: any): Promise<void>;
+export function getPlayersServerStatus(request: any, response: any): Promise<void>;
+export function getPlayersSetting(request: any, response: any): Promise<void>;
+export function postActionLog(request: any, response: any): Promise<void>;
+export function postLessonCleared(request: any, response: any): Promise<void>;
+export function postLessonFinished(request: any, response: any): Promise<void>;
+export function postLessonSheetChanged(request: any, response: any): Promise<void>;
+export function postQuizAnswered(request: any, response: any): Promise<void>;
+export function postStepPassed(request: any, response: any): Promise<void>;

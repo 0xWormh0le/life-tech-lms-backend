@@ -1,0 +1,76 @@
+post:
+  summary: User Lesson Status API POST
+  tags:
+    - codex
+  operationId: postUserLessonStatus
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          x-examples:
+            example-1:
+              lessonId: lesson-id-1
+          properties:
+            lessonId:
+              type: string
+              minLength: 1
+          required:
+            - lessonId
+        examples:
+          success:
+            value:
+              lessonId: lesson-id-1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            lesson not found:
+              value:
+                error: The specified lesson not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  description: This POST API call when user start the any lesson.

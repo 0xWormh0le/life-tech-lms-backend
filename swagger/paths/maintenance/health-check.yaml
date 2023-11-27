@@ -1,0 +1,28 @@
+get:
+  summary: Health Check
+  tags:
+    - maintenance
+  operationId: maintenanceHealthCheck
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+            required:
+              - message
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+            required:
+              - message

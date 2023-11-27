@@ -1,0 +1,33 @@
+title: Organization
+type: object
+x-tags:
+  - organization
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  districtId:
+    type: string
+  stateId:
+    type: string
+  organizationLMSId:
+    type: string
+  createdUserId:
+    type: string
+  createdDate:
+    type: string
+    format: date-time
+  updatedDate:
+    type: string
+    format: date-time
+required:
+  - id
+  - name
+  - districtId
+  - stateId
+  - organizationLMSId
+  - createdUserId
+  - createdDate
+  - updatedDate
+description: The Definition of Get Organizations.

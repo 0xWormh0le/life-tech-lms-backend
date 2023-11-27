@@ -1,0 +1,210 @@
+parameters:
+  - schema:
+      type: string
+    name: studentGroupId
+    in: path
+    required: true
+  - in: query
+    name: lessonIds
+    required: true
+    schema:
+      type: array
+      items:
+        type: string
+post:
+  summary: Restrict lesson to student.
+  description: POST API call when teacher want to restrict lesson access to their student group.
+  tags:
+    - codex
+  operationId: postStudentGroupUnaccessibleLesson
+  security:
+    - BearerAuth: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            packageId:
+              type: string
+          required:
+            - packageId
+        examples:
+          success:
+            value:
+              packageId: package-id-1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid studentGroupId:
+              value:
+                error: Invalid studentGroupId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to restrict lesson access to provided student group.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            studentGroup not found:
+              value:
+                error: The specified student group not found.
+            lesson not found:
+              value:
+                error: The specified lesson not found.
+    '409':
+      description: Specified lesson already disable for student group
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            already disable:
+              value:
+                error: The specified lesson is already disable for provided student group.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+delete:
+  summary: Remove restrict lessons from student group.
+  description: Delete API call when teacher / internal operator / district administrator want to remove restrict lesson access to their student group.
+  tags:
+    - codex
+  operationId: deleteStudentGroupUnaccessibleLesson
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid studentGroupId:
+              value:
+                error: Invalid studentGroupId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to remove restrict lesson access for student group.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            studentGroup not found:
+              value:
+                error: The specified student group not found.
+            lesson not found:
+              value:
+                error: The specified lesson not found.
+            user not found:
+              value:
+                error: The specified user not found.
+            administrator not found:
+              value:
+                error: The specified administrator not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred

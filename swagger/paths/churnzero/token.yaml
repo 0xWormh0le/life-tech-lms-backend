@@ -1,0 +1,54 @@
+parameters:
+  - in: query
+    name: account-external-id
+    schema:
+      type: string
+    required: true
+  - in: query
+    name: contact-external-id
+    schema:
+      type: string
+    required: true
+  - in: query
+    name: next
+    schema:
+      type: string
+    required: true
+get:
+  summary: ChurnZero token based authentication
+  operationId: getChurnZeroAuthentication
+  tags:
+    - churnzero
+  responses:
+    '302':
+      description: Redirects to success center auth callback url
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              authToken:
+                type: string
+            required:
+              - authToken
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: Query parameter values are incorrect.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

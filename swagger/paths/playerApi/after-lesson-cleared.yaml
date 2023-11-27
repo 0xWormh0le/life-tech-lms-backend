@@ -1,0 +1,31 @@
+get:
+  summary: Lesson Player API GET /after_lesson_cleared (This updates LessonStatus actually)
+  tags:
+    - playerApi
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            oneOf:
+              - properties:
+                  type:
+                    type: string
+                    enum:
+                      - full_url
+                  value:
+                    type: string
+                    description: 'When "type" is "full_url", this will be the url to which the user redirect after the lesson'
+                required:
+                  - type
+                  - value
+            type: object
+          examples:
+            '"type" is "full_url"':
+              value:
+                type: full_url
+                value: 'http://www.yahoo.co.jp'
+  operationId: getAfterLessonCleared
+  description: Lesson Player calls this API at the end of each lesson. It moves to the specified destination according to the return value.

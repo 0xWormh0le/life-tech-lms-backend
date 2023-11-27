@@ -1,0 +1,307 @@
+parameters:
+  - schema:
+      type: string
+    name: teacherId
+    in: path
+    required: true
+put:
+  summary: Teacher API PUT
+  operationId: putTeacher
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              email: 'teacher1@email.com'
+              firstName: 'teacher_first_name_1'
+              lastName: 'teacher_last_name_1'
+              teacherLMSId: 'teacher_lms_id_1'
+              password: 'teacher_password_1'
+          properties:
+            teacher:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  description: This is a first name of teacher.
+                lastName:
+                  type: string
+                  description: This is a last name of teacher.
+                teacherLMSId:
+                  type: string
+                  description: This is a teacherLMSId of teacher.
+                email:
+                  type: string
+                password:
+                  type: string
+        examples:
+          success:
+            value:
+              teacher:
+                email: 'teacher1@email.com'
+                firstName: 'teacher_first_name_1'
+                lastName: 'teacher_last_name_1'
+                teacherLMSId: 'teacher_lms_id_1'
+                password: 'teacher_password_1'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid teacherId:
+              value:
+                error: Invalid teacherId.
+            Invalid email:
+              value:
+                error: Invalid email is provided.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to edit the specified teacher information.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            teacher not found:
+              value:
+                error: The specified teacher not found.
+            administrator not found:
+              value:
+                error: The specified administrator not found.
+            failed to get district administrators:
+              value:
+                error: Failed to getDistrictAdministrator.
+    '409':
+      description: Email already associate with the Teacher.
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Email already exists:
+              value:
+                error: This email is already exist.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred.
+  description: Teacher PUT API call when user want to edit teacher in system.
+delete:
+  summary: Delete an teacher
+  operationId: deleteTeacher
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid teacherId:
+              value:
+                error: Invalid teacherId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to delete an teacher.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            teacher not found:
+              value:
+                error: The specified teacher not found.
+            administrator not found:
+              value:
+                error: The specified administrator not found.
+            failed to get district administrators:
+              value:
+                error: Failed to getDistrictAdministrator.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred.
+  description: delete an teacher
+get:
+  summary: Get Teacher's Organizations
+  operationId: getTeacherOrganizations
+  tags:
+    - codex
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            $ref: ../../models/TeacherOrganization.yaml
+
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            bad request:
+              value:
+                error: Invalid teacherId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to GET the specified teacher's information.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            student not found:
+              value:
+                error: The specified teacher not found.
+            administrator not found:
+              value:
+                error: administrator not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  description: This API gives  the teacher's basic details and it's organization's details.

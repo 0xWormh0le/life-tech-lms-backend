@@ -1,0 +1,73 @@
+title: LoggedInUser
+type: object
+x-tags:
+  - user
+properties:
+  user:
+    type: object
+    properties:
+      id:
+        type: string
+      email:
+        type: string
+        nullable: true
+      role:
+        type: string
+      loginId:
+        type: string
+        nullable: true
+  administrator:
+    type: object
+    properties:
+      id:
+        type: string
+      userId:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      administratorLMSId:
+        type: string
+      districtId:
+        type: string
+  teacher:
+    type: object
+    properties:
+      id:
+        type: string
+      userId:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      teacherLMSId:
+        type: string
+      districtId:
+        type: string
+      organizationIds:
+        type: array
+        items:
+          type: string
+  student:
+    type: object
+    properties:
+      id:
+        type: string
+      userId:
+        type: string
+      nickName:
+        type: string
+      studentLMSId:
+        type: string
+      districtId:
+        type: string
+      organizationIds:
+        type: array
+        items:
+          type: string
+      studentGroupIds:
+        type: array
+        items:
+          type: string

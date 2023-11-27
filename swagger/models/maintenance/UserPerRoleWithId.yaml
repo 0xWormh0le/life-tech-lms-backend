@@ -1,0 +1,34 @@
+title: MaintenanceUserPerRoleWithId
+oneOf:
+  - allOf:
+      - $ref: './UserStudentRole.yaml'
+      - type: object
+        properties:
+          id:
+            type: string
+        required:
+          - id
+  - allOf:
+      - $ref: './UserTeacherRole.yaml'
+      - type: object
+        properties:
+          id:
+            type: string
+        required:
+          - id
+  - allOf:
+      - $ref: './UserAdministratorRole.yaml'
+      - type: object
+        properties:
+          id:
+            type: string
+        required:
+          - id
+  - allOf:
+      - $ref: './UserInternalOperatorRole.yaml'
+      - type: object
+        properties:
+          id:
+            type: string
+        required:
+          - id

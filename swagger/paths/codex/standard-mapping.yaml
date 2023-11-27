@@ -1,0 +1,106 @@
+get:
+  summary: Get standard-mapping information based on state
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              standardMappings:
+                type: array
+                items:
+                  $ref: ../../models/StandardMapping.yaml
+            required:
+              - standardMappings
+          examples:
+            success:
+              value:
+                standardMappings:
+                  - stateId: state-1
+                    gradeBand:
+                      - band: 9-12
+                        standardDomain:
+                          - standard: R1
+                            domain: Safety, Privacy, and Security
+                            description: Identify, demonstrate, and apply personal safe use of digital devices.
+                            disneyCodeillusionLesson:
+                              - Principal | Gems 1-5
+                              - Mickey | Gems 1-3, Book 1
+                              - Donald | Gems 1-4, Book 1
+                              - Goofy | Gems 1-4, Book 1
+                              - Tangled | Gems 1-4, Book 1
+                          - standard: R2
+                            domain: Legal and Ethical Behavior
+                            description: Recognize and demonstrate age-appropriate responsible use of digital devices and resources as outlined in school/district rules.
+                            disneyCodeillusionLesson:
+                              - Principal | Gems 1-5
+                              - Mickey | Gems 1-3, Book 1
+                              - Donald | Gems 1-4, Book 1
+                              - Goofy | Gems 1-4, Book 1
+                              - Tangled | Gems 1-4, Book 1
+                      - band: 6
+                        standardDomain:
+                          - standard: R1
+                            domain: Safety, Privacy, and Security
+                            description: Identify, demonstrate, and apply personal safe use of digital devices.
+                            disneyCodeillusionLesson:
+                              - Principal | Gems 1-5
+                              - Mickey | Gems 1-3, Book 1
+                              - Donald | Gems 1-4, Book 1
+                              - Goofy | Gems 1-4, Book 1
+                              - Tangled | Gems 1-4, Book 1
+                          - standard: R2
+                            domain: Legal and Ethical Behavior
+                            description: Recognize and demonstrate age-appropriate responsible use of digital devices and resources as outlined in school/district rules.
+                            disneyCodeillusionLesson:
+                              - Principal | Gems 1-5
+                              - Mickey | Gems 1-3, Book 1
+                              - Donald | Gems 1-4, Book 1
+                              - Goofy | Gems 1-4, Book 1
+                              - Tangled | Gems 1-4, Book 1
+                            cse:
+                              - Unit 1 Lesson 5
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to see standard mapping informations.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: getStandardMapping
+  parameters:
+    - schema:
+        type: string
+      in: query
+      name: stateId
+  description: |-
+    This API provides standard-mapping information of state.

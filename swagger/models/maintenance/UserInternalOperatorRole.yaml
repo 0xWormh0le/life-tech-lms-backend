@@ -1,0 +1,9 @@
+title: MaintenanceUserInternalOperatorRole
+type: object
+properties:
+  role:
+    type: string
+    enum:
+      - internalOperator
+required:
+  - role

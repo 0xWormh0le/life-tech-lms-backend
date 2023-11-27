@@ -1,0 +1,21 @@
+{
+  "extends": "@tsconfig/node14",
+  "include": ["src", "test", "scripts"],
+  "files": ["jest.d.ts"],
+  "compilerOptions": {
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "./build",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    // https://typeorm.io/#installation
+    "lib": ["es5", "es6"],
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "esModuleInterop": true
+  }
+}

@@ -1,0 +1,125 @@
+parameters:
+  - schema:
+      type: string
+    name: studentGroupId
+    in: path
+    required: true
+  - in: query
+    name: lessonIds
+    schema:
+      type: array
+      items:
+        type: string
+get:
+  summary: Get lesson statuses for student group.
+  description: GET API call when teacher / internal operator / district administrator want to view lesson statuses for student group.
+  tags:
+    - codex
+  operationId: getStudentGroupLessonStatuses
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              studentGroupLessonStatuses:
+                type: array
+                items:
+                  $ref: ../../models/UserLessonStatus.yaml
+          examples:
+            success:
+              value:
+                studentGroupLessonStatuses:
+                  - userId: user-id-1
+                    lessonId: lesson-id-1
+                    status: not_cleared
+                    achievedStarCount: 2
+                    usedHintCount: 1
+                    correctAnsweredQuizCount: 1
+                    stepIdskippingDetected: true
+                    startedAt: '2022-05-17T11:54:02.141Z'
+                    finishedAt: '2022-05-17T11:54:02.141Z'
+                  - userId: user-id-2
+                    lessonId: lesson-id-2
+                    status: not_cleared
+                    achievedStarCount: 3
+                    usedHintCount: 1
+                    correctAnsweredQuizCount: 1
+                    stepIdskippingDetected: true
+                    startedAt: '2022-05-17T11:54:02.141Z'
+                    finishedAt: '2022-05-17T11:54:02.141Z'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid studentGroupId:
+              value:
+                error: Invalid studentGroupId.
+            Invalid lessonId:
+              value:
+                error: Invalid lessonId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to view lesson statuses for student group id.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            studentGroup not found:
+              value:
+                error: The specified student group not found.
+            user not found:
+              value:
+                error: The specified user not found.
+            administrator not found:
+              value:
+                error: The specified administrator not found.
+            lesson statuses not found:
+              value:
+                error: The specified lesson statuses not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something went wrong
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something went wrong

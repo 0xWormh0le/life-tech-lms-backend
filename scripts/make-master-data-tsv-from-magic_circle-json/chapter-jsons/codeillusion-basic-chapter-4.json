@@ -1,0 +1,605 @@
+{
+  "data": [
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "310",
+        "top": "100"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_stitch_1",
+              "name": "g_stitch_1",
+              "id": 80,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "stitch",
+              "scenario_path": "lesson/g_stitch_1"
+            }
+          ],
+          "cleared": true,
+          "id": 53,
+          "course_label": "Web Design",
+          "jewel_description": "Learn to use JavaScript to switch through different images displayed using HTML.",
+          "jewel_label": "Transformation Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "web_design",
+          "display_order": 1,
+          "jewel_name": "g_stitch_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_stitch_2",
+              "name": "g_stitch_2",
+              "id": 81,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "stitch",
+              "scenario_path": "lesson/g_stitch_2"
+            }
+          ],
+          "cleared": true,
+          "id": 54,
+          "course_label": "Web Design",
+          "jewel_description": "Learn to use CSS to design buttons. Also, learn to switch images by clicking a button.",
+          "jewel_label": "Button Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "web_design",
+          "display_order": 2,
+          "jewel_name": "g_stitch_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_stitch_3",
+              "name": "g_stitch_3",
+              "id": 82,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "stitch",
+              "scenario_path": "lesson/g_stitch_3"
+            }
+          ],
+          "cleared": true,
+          "id": 55,
+          "course_label": "Web Design",
+          "jewel_description": "Learn to make three buttons and switch through three images.",
+          "jewel_label": "Transformation Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "web_design",
+          "display_order": 3,
+          "jewel_name": "g_stitch_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_stitch_4",
+              "name": "g_stitch_4",
+              "id": 83,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "stitch",
+              "scenario_path": "lesson/g_stitch_4"
+            }
+          ],
+          "cleared": true,
+          "id": 56,
+          "course_label": "Web Design",
+          "jewel_description": "Learn how to make a button move when it is overlapped by the cursor.",
+          "jewel_label": "Hover Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "web_design",
+          "display_order": 4,
+          "jewel_name": "g_stitch_4"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_stitch_1",
+          "id": 84,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "stitch",
+          "scenario_path": "lesson/b_stitch_1"
+        },
+        {
+          "label": "",
+          "name": "b_stitch_2",
+          "id": 85,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "stitch",
+          "scenario_path": "lesson/b_stitch_2"
+        },
+        {
+          "label": "",
+          "name": "b_stitch_3",
+          "id": 86,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "stitch",
+          "scenario_path": "lesson/b_stitch_3"
+        },
+        {
+          "label": "",
+          "name": "b_stitch_4",
+          "id": 87,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 4,
+          "project_name": "stitch",
+          "scenario_path": "lesson/b_stitch_4"
+        }
+      ],
+      "magic_circle_name": "b_stitch",
+      "book_id": 10,
+      "book_name": "b_stitch",
+      "book_label": "Photo Gallery",
+      "book_advanced_label": "Photo Gallery",
+      "book_second_label": "Lilo & Stitch",
+      "course_name": "web_design",
+      "course_label": "Web Design",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 5,
+        "hint_url": "https://hint.codeillusion.io/hint/p12opjijf67alvnd",
+        "card_name": "P12",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "570",
+        "top": "190"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_alice_1",
+              "name": "g_alice_1",
+              "id": 64,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "alice",
+              "scenario_path": "lesson/g_alice_1"
+            }
+          ],
+          "cleared": true,
+          "id": 41,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to add different images for a card's front and back and how to flip it with a click.",
+          "jewel_label": "Flip Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 1,
+          "jewel_name": "g_alice_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_alice_2",
+              "name": "g_alice_2",
+              "id": 65,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "alice",
+              "scenario_path": "lesson/g_alice_2"
+            }
+          ],
+          "cleared": true,
+          "id": 42,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to use a for statement to line up various cards.",
+          "jewel_label": "Flip Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 2,
+          "jewel_name": "g_alice_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_alice_3",
+              "name": "g_alice_3",
+              "id": 66,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "alice",
+              "scenario_path": "lesson/g_alice_3"
+            }
+          ],
+          "cleared": true,
+          "id": 43,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to shuffle various cards and randomize the art on them.",
+          "jewel_label": "Shuffle Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 3,
+          "jewel_name": "g_alice_3"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_alice_1",
+          "id": 67,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "alice",
+          "scenario_path": "lesson/b_alice_1"
+        },
+        {
+          "label": "",
+          "name": "b_alice_2",
+          "id": 68,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "alice",
+          "scenario_path": "lesson/b_alice_2"
+        },
+        {
+          "label": "",
+          "name": "b_alice_3",
+          "id": 69,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "alice",
+          "scenario_path": "lesson/b_alice_3"
+        },
+        {
+          "label": "",
+          "name": "b_alice_4",
+          "id": 70,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 4,
+          "project_name": "alice",
+          "scenario_path": "lesson/b_alice_4"
+        },
+        {
+          "label": "",
+          "name": "b_alice_5",
+          "id": 71,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 5,
+          "project_name": "alice",
+          "scenario_path": "lesson/b_alice_5"
+        }
+      ],
+      "magic_circle_name": "b_alice",
+      "book_id": 11,
+      "book_name": "b_alice",
+      "book_label": "Queen's Card",
+      "book_advanced_label": "Queen's Card",
+      "book_second_label": "Alice in Wonderland",
+      "course_name": "game",
+      "course_label": "Game Dev.",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 5,
+        "hint_url": "https://hint.codeillusion.io/hint/p10gfahoh794ds",
+        "card_name": "P10",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "50",
+        "top": "170"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_mermaid_1",
+              "name": "g_mermaid_1",
+              "id": 73,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "mermaid",
+              "scenario_path": "lesson/g_mermaid_1"
+            }
+          ],
+          "cleared": true,
+          "id": 47,
+          "course_label": "Media Art",
+          "jewel_description": "Learn to use the sine and cosine functions to create movements that flip between vertical and horizontal.",
+          "jewel_label": "Sway Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "media_art",
+          "display_order": 1,
+          "jewel_name": "g_mermaid_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_mermaid_2",
+              "name": "g_mermaid_2",
+              "id": 74,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "mermaid",
+              "scenario_path": "lesson/g_mermaid_2"
+            }
+          ],
+          "cleared": true,
+          "id": 48,
+          "course_label": "Media Art",
+          "jewel_description": "Learn to use the sine function to create wave-like movement.",
+          "jewel_label": "Wave Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "media_art",
+          "display_order": 2,
+          "jewel_name": "g_mermaid_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_mermaid_3",
+              "name": "g_mermaid_3",
+              "id": 75,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "mermaid",
+              "scenario_path": "lesson/g_mermaid_3"
+            }
+          ],
+          "cleared": true,
+          "id": 49,
+          "course_label": "Media Art",
+          "jewel_description": "Learn to use the sine and cosine functions together to make a whirlpool.",
+          "jewel_label": "Whirlpool Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "media_art",
+          "display_order": 3,
+          "jewel_name": "g_mermaid_3"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_mermaid_1",
+          "id": 76,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "mermaid",
+          "scenario_path": "lesson/b_mermaid_1"
+        },
+        {
+          "label": "",
+          "name": "b_mermaid_2",
+          "id": 77,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "mermaid",
+          "scenario_path": "lesson/b_mermaid_2"
+        },
+        {
+          "label": "",
+          "name": "b_mermaid_3",
+          "id": 78,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "mermaid",
+          "scenario_path": "lesson/b_mermaid_3"
+        }
+      ],
+      "magic_circle_name": "b_mermaid",
+      "book_id": 12,
+      "book_name": "b_mermaid",
+      "book_label": "School of Fish",
+      "book_advanced_label": "School of Fish",
+      "book_second_label": "The Little Mermaid",
+      "course_name": "media_art",
+      "course_label": "Media Art",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 6,
+        "hint_url": "https://hint.codeillusion.io/hint/p11foahpol67sc",
+        "card_name": "P11",
+        "symbol_position": 0
+      }
+    }
+  ],
+  "is_accessible": true,
+  "current_area_name": "waterfall",
+  "chapter_label": "Within the Time of Repetition",
+  "circle_connections": [],
+  "all_chapters_cleared": false,
+  "card_list_unlock": true,
+  "card_new": false,
+  "shop_unlock": true,
+  "shop_new": true,
+  "jewel_new": false,
+  "book_new": false,
+  "show_modal_on_distribution": false
+}

@@ -1,0 +1,193 @@
+parameters:
+  - schema:
+      type: string
+    name: studentGroupId
+    in: path
+    required: true
+  - schema:
+      type: string
+    name: studentId
+    in: path
+    required: true
+post:
+  summary: Student API POST
+  description: |-
+    This API add existing student to student group
+  tags:
+    - codex
+  operationId: postStudentInStudentGroup
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+          examples:
+            success:
+              value:
+                message: ok
+    '400':
+      description: invalid studentGroupId
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid studentGroupId:
+              value:
+                error: Invalid studentGroupId.
+            Invalid studentId:
+              value:
+                error: Invalid studentId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to add the student.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            student group not found:
+              value:
+                error: The specified student group not found.
+            student not found:
+              value:
+                error: The specified student not found.
+            administrator not found:
+              value:
+                error: administrator not found.
+    '409':
+      description: Student already exist
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            already exists:
+              value:
+                error: Student already exists in same student group.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+delete:
+  summary: This API remove student in studentgroup
+  tags:
+    - codex
+  operationId: deleteStudentFromStudentGroup
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid studentGroupId:
+              value:
+                error: Invalid studentGroupId.
+            Invalid studentId:
+              value:
+                error: Invalid studentId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to delete the specified student from student-group.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            student group not found:
+              value:
+                error: The specified student group not found.
+            student not found:
+              value:
+                error: The specified student not found in student group.
+            administrator not found:
+              value:
+                error: administrator not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  description: DELETE API call when user Internal Operator or Administrator want to remove the student from studentGroup.

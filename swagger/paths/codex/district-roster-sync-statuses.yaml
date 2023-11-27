@@ -1,0 +1,86 @@
+get:
+  summary: Get roster sync status of district.
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  parameters:
+    - schema:
+        type: string
+      in: query
+      name: districtId
+      required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              districtRosterSyncStatuses:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    districtId:
+                      type: string
+                    startedAt:
+                      type: string
+                    finishedAt:
+                      type: string
+                    errorMessage:
+                      type: string
+                    createdUserId:
+                      type: string
+                  required:
+                    - id
+                    - districtId
+                    - startedAt
+            required:
+              - districtRosterSyncStatuses
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid districtId:
+              value:
+                error: Invalid format of districtId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to view roster sync status.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: getDistrictRosterSyncStatus
+  description: |-
+    This API provides roster sync status of district.

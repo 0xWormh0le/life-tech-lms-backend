@@ -1,0 +1,14 @@
+title: MaintenanceUserStudentRole
+type: object
+properties:
+  role:
+    type: string
+    enum:
+      - student
+  nickname:
+    type: string
+  lmsId:
+    type: string
+required:
+  - nickname
+  - role

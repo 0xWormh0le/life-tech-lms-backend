@@ -1,0 +1,60 @@
+title: Lesson
+type: object
+x-tags:
+  - lesson
+properties:
+  id:
+    type: string
+  url:
+    type: string
+  name:
+    type: string
+  lessonEnvironment:
+    $ref: ./LessonEnvironment.yaml
+  course:
+    $ref: ./Course.yaml
+  theme:
+    type: string
+  skillsLearnedInThisLesson:
+    type: string
+  description:
+    type: string
+  lessonObjectives:
+    type: string
+  thumbnailImageUrl:
+    type: string
+  lessonOverViewPdfUrl:
+    type: string
+  projectName:
+    type: string
+  scenarioName:
+    type: string
+  lessonDuration:
+    type: string
+  maxStarCount:
+    type: number
+  quizCount:
+    type: number
+  hintCount:
+    type: number
+  level:
+    type: string
+    enum:
+      - basic
+      - advanced
+      - heroic
+      - adventurous
+required:
+  - id
+  - url
+  - name
+  - course
+  - description
+  - theme
+  - skillsLearnedInThisLesson
+  - lessonObjectives
+  - thumbnailImageUrl
+  - lessonDuration
+  - maxStarCount
+  - level
+description: The Definition of Lesson

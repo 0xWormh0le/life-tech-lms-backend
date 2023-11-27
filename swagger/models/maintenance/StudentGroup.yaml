@@ -1,0 +1,21 @@
+title: MaintenanceStudentGroup
+type: object
+properties:
+  organizationId:
+    type: string
+  name:
+    type: string
+  codeillusionPackageId:
+    type: string
+  csePackageId:
+    type: string
+  grade:
+    type: string
+  studentGroupLmsId:
+    type: string
+required:
+  - organizationId
+  - name
+  - grade
+  - codeillusionPackageId
+description: The Definition of Get Student Groups.

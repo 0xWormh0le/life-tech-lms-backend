@@ -1,0 +1,18 @@
+post:
+  summary: Lesson Player API POST /lesson_sheet_changed
+  tags:
+    - playerApi
+  parameters:
+    - name: lessonName
+      schema:
+        type: string
+      in: query
+      required: true
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+    '500':
+      description: Internal Server Error
+  operationId: postLessonSheetChanged

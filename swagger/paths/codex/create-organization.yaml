@@ -1,0 +1,106 @@
+post:
+  summary: Organization API POST
+  tags:
+    - codex
+  operationId: postOrganization
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              name: Sunrise
+              districtId: district-1
+              stateId: state-1
+              organizationLMSId: lms-id-1
+              createdUserId: user-id-1
+          properties:
+            name:
+              type: string
+              minLength: 1
+            districtId:
+              type: string
+              minLength: 1
+            stateId:
+              type: string
+              minLength: 1
+            organizationLMSId:
+              type: string
+              minLength: 1
+            createdUserId:
+              type: string
+          required:
+            - name
+            - districtId
+            - stateId
+        examples:
+          success:
+            value:
+              name: Sunrise
+              districtId: district-1
+              stateId: state-1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to add organization information
+    '409':
+      description: given organization already exist in same district
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: organization already exist.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  description: Organization POST API call when user want to add organization in system.

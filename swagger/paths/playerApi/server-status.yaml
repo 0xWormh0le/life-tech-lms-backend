@@ -1,0 +1,26 @@
+get:
+  summary: Lesson Player API GET /server_status
+  tags:
+    - playerApi
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              isMaintenance:
+                type: boolean
+            required:
+              - isMaintenance
+            x-examples:
+              example-1:
+                isMaintenance: false
+          examples:
+            when be in mantainance:
+              value:
+                isMaintenance: true
+  operationId: getPlayersServerStatus
+  description: The Lesson Player expects the "isMaintenance" flag to always be false.

@@ -1,0 +1,42 @@
+put:
+  summary: Sync StudentGroupStudents bulky for accounts management purpose
+  operationId: maintenancePutStudentGroupStudents
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            studentGroupStudents:
+              type: array
+              items:
+                allOf:
+                  - $ref: '../../models/maintenance/StudentGroupStudent.yaml'
+          required:
+            - studentGroupStudents
+  responses:
+    '200':
+      description: ok
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              ok:
+                type: string
+            required:
+              - ok
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

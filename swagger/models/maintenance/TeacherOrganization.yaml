@@ -1,0 +1,11 @@
+title: MaintenanceTeacherOrganization
+type: object
+properties:
+  organizationId:
+    type: string
+  userId:
+    type: string
+required:
+  - organizationId
+  - userId
+description: The Definition of Get Organizations.

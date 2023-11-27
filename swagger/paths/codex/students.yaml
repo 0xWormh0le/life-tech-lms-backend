@@ -1,0 +1,313 @@
+parameters:
+  - schema:
+      type: string
+    name: studentGroupId
+    in: path
+    required: true
+post:
+  summary: Student API POST
+  tags:
+    - codex
+  operationId: postStudents
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              students:
+                - nickName: parth
+                  loginId: 'login-id-1'
+                  password: 'parth@123'
+                  studentLMSId: 'lms-id-1'
+                  email: 'parth@gmail.com'
+                  emailsToNotify:
+                    - 'parth@gmail.com'
+                    - 'parekh@gmail.com'
+                - nickName: chirag
+                  loginId: 'login-id-2'
+                  password: 'chirag@123'
+                  email: 'chirag@gmail.com'
+                  studentLMSId: 'lms-id-2'
+                  emailsToNotify:
+                    - 'chirag@gmail.com'
+                    - 'patel@gmail.com'
+          properties:
+            students:
+              type: array
+              items:
+                title: student
+                type: object
+                properties:
+                  nickName:
+                    type: string
+                  email:
+                    type: string
+                  loginId:
+                    type: string
+                  password:
+                    type: string
+                  studentLMSId:
+                    type: string
+                  emailsToNotify:
+                    type: array
+                    items:
+                      type: string
+          required:
+            - students
+        examples:
+          success:
+            value:
+              students:
+                - nickName: parth
+                  loginId: 'login-id-1'
+                  password: 'parth@123'
+                  studentLMSId: 'lms-id-1'
+                  email: 'parth@gmail.com'
+                  emailsToNotify:
+                    - 'parth@gmail.com'
+                    - 'parekh@gmail.com'
+                - nickName: chirag
+                  loginId: 'login-id-2'
+                  password: 'chirag@123'
+                  email: 'chirag@gmail.com'
+                  studentLMSId: 'lms-id-2'
+                  emailsToNotify:
+                    - 'chirag@gmail.com'
+                    - 'patel@gmail.com'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+          examples:
+            success:
+              value:
+                message: ok
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                oneOf:
+                  - type: string
+                  - type: array
+                    items:
+                      type: object
+                      properties:
+                        index:
+                          type: number
+                        message:
+                          type: array | string
+                          items:
+                            type: string
+                            enum:
+                              - invalidEmail
+                              - loginIdAlreadyExists
+                              - duplicateEmail
+                              - nickNameNotProvided
+                              - emptyPassword
+                              - studentLMSIdAlreadyExists
+                              - duplicateRecordsWithSameLoginId
+                              - duplicateRecordsWithStudentLMSId
+                              - loginIdSholdNotContainedWhiteSpace
+                              - userAlreadyExistWithEmail
+                              - duplicateRecordsWithSameEmail
+                              - atLeastOneFieldIsMandatory
+                              - studentLmsIdNotProvided
+
+            required:
+              - error
+          examples:
+            bad request:
+              value:
+                error:
+                  - index: 0
+                    message:
+                      - duplicateRecordsWithSameLoginId
+                      - duplicateRecordsWithStudentLMSId
+                  - index: 2
+                    message:
+                      - invalidEmail
+                      - loginIdAlreadyExists
+                      - loginIdNotProvided
+                      - nickNameNotProvided
+                      - emptyPassword
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to add the students.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            student group not found:
+              value:
+                error: The specified student group not found.
+            administrator not found:
+              value:
+                error: administrator not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+get:
+  summary: Get Students API
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              students:
+                type: array
+                items:
+                  $ref: ../../models/Student.yaml
+          examples:
+            success:
+              value:
+                students:
+                  - id: 'student-1'
+                    userId: 'user-id-8'
+                    nickName: 'Parth'
+                    loginId: 'parth123'
+                    studentLMSId: 'lms-1'
+                    email: 'parth@gmail.com'
+                    emailToNotify:
+                      - 'parth@gmail.com'
+                      - 'parekh@gmail.com'
+                    createdUserName: 'user-name-1'
+                    studentGroupCount: 2
+                    studentGroup: Student-group-1,Student-group-2
+                    createdDate: '2022-05-17T11:54:02.141Z'
+                  - id: 'student-2'
+                    userId: 'user-id-9'
+                    nickName: 'Parekh'
+                    loginId: 'parekh123'
+                    studentLMSId: 'lms-2'
+                    email: 'parekh@gmail.com'
+                    emailToNotify:
+                      - 'parekh@gmail.com'
+                    createdUserName: 'user-name-1'
+                    createdDate: '2022-05-17T11:54:02.141Z'
+                    studentGroupCount: 1
+                    studentGroup: Student-group-1
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            bad request:
+              value:
+                error: Invalid studentGroupId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to view the specified student's information.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            student group not found:
+              value:
+                error: The specified student group not found.
+            administrator not found:
+              value:
+                error: administrator not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: getStudents
+  parameters:
+    - schema:
+        type: array
+        items:
+          type: string
+      in: query
+      name: studentIds
+    - schema:
+        type: string
+      name: name
+      in: query
+    - schema:
+        type: string
+        enum:
+          - NotIn
+          - In
+        default: In
+      name: option
+      in: query
+  description: |-
+    This API provides the students based on studentGroupId.

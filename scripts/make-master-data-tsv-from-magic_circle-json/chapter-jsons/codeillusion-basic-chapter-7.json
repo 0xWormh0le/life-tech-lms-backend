@@ -1,0 +1,357 @@
+{
+  "data": [
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "100",
+        "top": "100"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_frozen_1",
+              "id": 179,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_1"
+            }
+          ],
+          "cleared": true,
+          "id": 80,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to use if statements and random numerals to automatically create art.",
+          "jewel_label": "Randomization Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "media_art",
+          "display_order": 1,
+          "jewel_name": "g_frozen_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_frozen_2",
+              "id": 180,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_2"
+            }
+          ],
+          "cleared": true,
+          "id": 81,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to create gently moving art by combining the sine function, which makes wave-like movements, with squares.",
+          "jewel_label": "Wave Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "media_art",
+          "display_order": 2,
+          "jewel_name": "g_frozen_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_frozen_3",
+              "id": 181,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_3"
+            }
+          ],
+          "cleared": true,
+          "id": 82,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to create simple art by combining the rotate function with squares.",
+          "jewel_label": "Rotation Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "media_art",
+          "display_order": 3,
+          "jewel_name": "g_frozen_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_frozen_4",
+              "id": 182,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_4"
+            }
+          ],
+          "cleared": true,
+          "id": 83,
+          "course_label": "Media Art",
+          "jewel_description": "Learn a useful way of creating colorful art by combining the sine and cosine functions to create a whirlpool.",
+          "jewel_label": "Whirlpool Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "media_art",
+          "display_order": 4,
+          "jewel_name": "g_frozen_4"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_frozen_1",
+          "id": 183,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "frozen",
+          "scenario_path": "lesson/b_frozen_1"
+        },
+        {
+          "label": "",
+          "name": "b_frozen_2",
+          "id": 184,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "frozen",
+          "scenario_path": "lesson/b_frozen_2"
+        },
+        {
+          "label": "",
+          "name": "b_frozen_3",
+          "id": 185,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "frozen",
+          "scenario_path": "lesson/b_frozen_3"
+        }
+      ],
+      "magic_circle_name": "b_frozen",
+      "book_id": 18,
+      "book_name": "b_frozen",
+      "book_label": "Snow Magic",
+      "book_advanced_label": "",
+      "book_second_label": "",
+      "course_name": "media_art",
+      "course_label": "Media Art",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 7,
+        "hint_url": "https://hint.codeillusion.io/hint/p17kljoe87Ha",
+        "card_name": "P17",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "480",
+        "top": "170"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_sleepingbeauty_1",
+              "id": 186,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "sleepingbeauty",
+              "scenario_path": "lesson/g_sleepingbeauty_1"
+            }
+          ],
+          "cleared": true,
+          "id": 84,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to create various animation settings for sprite and control the length of a frame.",
+          "jewel_label": "Animation Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 1,
+          "jewel_name": "g_sleepingbeauty_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_sleepingbeauty_2",
+              "id": 187,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "sleepingbeauty",
+              "scenario_path": "lesson/g_sleepingbeauty_2"
+            }
+          ],
+          "cleared": true,
+          "id": 85,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to switch between three different animations to match the sprite's movements.",
+          "jewel_label": "Animation Magic 3",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "game",
+          "display_order": 2,
+          "jewel_name": "g_sleepingbeauty_2"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_sleepingbeauty_1",
+          "id": 188,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "sleepingbeauty",
+          "scenario_path": "lesson/b_sleepingbeauty_1"
+        },
+        {
+          "label": "",
+          "name": "b_sleepingbeauty_2",
+          "id": 189,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "sleepingbeauty",
+          "scenario_path": "lesson/b_sleepingbeauty_2"
+        },
+        {
+          "label": "",
+          "name": "b_sleepingbeauty_3",
+          "id": 190,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "sleepingbeauty",
+          "scenario_path": "lesson/b_sleepingbeauty_3"
+        }
+      ],
+      "magic_circle_name": "b_sleepingbeauty",
+      "book_id": 19,
+      "book_name": "b_sleepingbeauty",
+      "book_label": "Dragon & Sword",
+      "book_advanced_label": "",
+      "book_second_label": "",
+      "course_name": "game",
+      "course_label": "Game Dev.",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 4,
+        "hint_url": "https://hint.codeillusion.io/hint/p18pokah7ou",
+        "card_name": "P18",
+        "symbol_position": 0
+      }
+    }
+  ],
+  "is_accessible": true,
+  "chapter_label": "Technologia",
+  "circle_connections": [],
+  "all_chapters_cleared": true,
+  "card_list_unlock": true,
+  "card_new": false,
+  "shop_unlock": true,
+  "shop_new": false,
+  "jewel_new": false,
+  "book_new": false,
+  "show_modal_on_distribution": true
+}

@@ -1,0 +1,49 @@
+title: CsePackage
+type: object
+x-tags:
+  - lesson
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  headerButtonLink:
+    type: string
+    nullable: true
+  headerButtonText:
+    type: string
+    nullable: true
+  units:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        lessons:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              isQuizLesson:
+                type: boolean
+            required:
+              - id
+              - isQuizLesson
+      required:
+        - id
+        - name
+        - description
+        - lessons
+required:
+  - id
+  - name
+  - headerButtonLink
+  - headerButtonText
+  - units

@@ -1,0 +1,11 @@
+title: MaintenanceStudentGroupStudent
+type: object
+properties:
+  studentGroupId:
+    type: string
+  userId:
+    type: string
+required:
+  - studentGroupId
+  - userId
+description: The Definition of Get Student Groups.

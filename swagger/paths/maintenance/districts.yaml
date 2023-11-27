@@ -1,0 +1,76 @@
+get:
+  summary: Get All Districts for accounts management purpose
+  operationId: maintenanceGetDistricts
+  tags:
+    - maintenance
+  responses:
+    '200':
+      description: Returns all Districts
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              districts:
+                type: array
+                items:
+                  $ref: '../../models/maintenance/DistrictWithId.yaml'
+            required:
+              - districts
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+put:
+  summary: Create or Update Districts bulky for accounts management purpose
+  operationId: maintenancePutDistricts
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            districts:
+              type: array
+              items:
+                allOf:
+                  - type: object
+                    properties:
+                      id:
+                        type: string
+                  - $ref: '../../models/maintenance/District.yaml'
+          required:
+            - districts
+  responses:
+    '200':
+      description: Returns created Districts
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              ok:
+                type: string
+            required:
+              - ok
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

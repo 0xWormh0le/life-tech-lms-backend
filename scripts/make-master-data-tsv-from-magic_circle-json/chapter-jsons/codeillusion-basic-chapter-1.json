@@ -1,0 +1,704 @@
+{
+  "data": [
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "30",
+        "top": "90"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_principal_1",
+              "name": "g_principal_1",
+              "id": 1,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "principal",
+              "scenario_path": "lesson/g_principal_1"
+            }
+          ],
+          "cleared": true,
+          "id": 1,
+          "course_label": "Basic",
+          "jewel_description": "Learn clicking and scrolling, two basic functions of controlling a mouse.",
+          "jewel_label": "Click and Scroll Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "3-5min",
+          "course_name": "basic",
+          "display_order": 1,
+          "jewel_name": "g_principal_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_principal_2",
+              "name": "g_principal_2",
+              "id": 2,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "principal",
+              "scenario_path": "lesson/g_principal_2"
+            }
+          ],
+          "cleared": true,
+          "id": 2,
+          "course_label": "Basic",
+          "jewel_description": "Learn dragging and dropping, two basic functions of controlling a mouse.",
+          "jewel_label": "Drag and Drop Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "3-5min",
+          "course_name": "basic",
+          "display_order": 2,
+          "jewel_name": "g_principal_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_principal_3",
+              "name": "g_principal_3",
+              "id": 3,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "principal",
+              "scenario_path": "lesson/g_principal_3"
+            }
+          ],
+          "cleared": true,
+          "id": 3,
+          "course_label": "Basic",
+          "jewel_description": "Typing is the basic function of a keyboard. Learn how to input text and the necessary symbols for programming.",
+          "jewel_label": "Typing Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "3-8min",
+          "course_name": "basic",
+          "display_order": 3,
+          "jewel_name": "g_principal_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_principal_4",
+              "name": "g_principal_4",
+              "id": 4,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "principal",
+              "scenario_path": "lesson/g_principal_4"
+            }
+          ],
+          "cleared": true,
+          "id": 4,
+          "course_label": "Basic",
+          "jewel_description": "Typing is the basic function of a keyboard.",
+          "jewel_label": "Typing Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "3-8min",
+          "course_name": "basic",
+          "display_order": 4,
+          "jewel_name": "g_principal_4"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_principal_5",
+              "name": "g_principal_5",
+              "id": 5,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 5,
+              "project_name": "principal",
+              "scenario_path": "lesson/g_principal_5"
+            }
+          ],
+          "cleared": true,
+          "id": 5,
+          "course_label": "Basic",
+          "jewel_description": "Learn copying and pasting, two basic computer functions.",
+          "jewel_label": "Copy and Paste Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "3-5min",
+          "course_name": "basic",
+          "display_order": 5,
+          "jewel_name": "g_principal_5"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_principal_1",
+          "id": 5,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "principal",
+          "scenario_path": "lesson/b_principal_1"
+        }
+      ],
+      "magic_circle_name": "b_principal",
+      "book_id": 1,
+      "book_name": "b_principal",
+      "book_label": "The Principal's Test",
+      "book_advanced_label": "The Principal's Test",
+      "book_second_label": "The Principal's Test",
+      "course_name": "basic",
+      "course_label": "Basic",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 6,
+        "hint_url": "https://hint.codeillusion.io/hint/p01aodfrhg7fiauh",
+        "card_name": "P01",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "215",
+        "top": "180"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_mickey_1",
+              "name": "g_mickey_1",
+              "id": 7,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "mickey",
+              "scenario_path": "lesson/g_mickey_1"
+            }
+          ],
+          "cleared": true,
+          "id": 6,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to make circles using the ellipse() function.",
+          "jewel_label": "Circle Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "3-8min",
+          "course_name": "media_art",
+          "display_order": 1,
+          "jewel_name": "g_mickey_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_mickey_2",
+              "name": "g_mickey_2",
+              "id": 8,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "mickey",
+              "scenario_path": "lesson/g_mickey_2"
+            }
+          ],
+          "cleared": true,
+          "id": 7,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to add color using the fill() function and create colors using RGB values.",
+          "jewel_label": "Color Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "5-10min",
+          "course_name": "media_art",
+          "display_order": 2,
+          "jewel_name": "g_mickey_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_mickey_3",
+              "name": "g_mickey_3",
+              "id": 9,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "mickey",
+              "scenario_path": "lesson/g_mickey_3"
+            }
+          ],
+          "cleared": true,
+          "id": 8,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to input the mouse's movements using the mouseX and mouseY functions.",
+          "jewel_label": "Mouse Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "3-8min",
+          "course_name": "media_art",
+          "display_order": 3,
+          "jewel_name": "g_mickey_3"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_mickey_1",
+          "id": 10,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "mickey",
+          "scenario_path": "lesson/b_mickey_1"
+        }
+      ],
+      "magic_circle_name": "b_mickey",
+      "book_id": 2,
+      "book_name": "b_mickey",
+      "book_label": "Circle Art",
+      "book_advanced_label": "Circle Art",
+      "book_second_label": "Circle Art",
+      "course_name": "media_art",
+      "course_label": "Media Art",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 5,
+        "hint_url": "https://hint.codeillusion.io/hint/p02hfkea7899gG",
+        "card_name": "P02",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "400",
+        "top": "90"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_donald_1",
+              "name": "g_donald_1",
+              "id": 11,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_1"
+            }
+          ],
+          "cleared": true,
+          "id": 9,
+          "course_label": "Web Design",
+          "jewel_description": "Learn how HTML and CSS, the basics of web design, are connected.",
+          "jewel_label": "HTML and CSS Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "3-5min",
+          "course_name": "web_design",
+          "display_order": 1,
+          "jewel_name": "g_donald_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_donald_2",
+              "name": "g_donald_2",
+              "id": 12,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_2"
+            }
+          ],
+          "cleared": true,
+          "id": 10,
+          "course_label": "Web Design",
+          "jewel_description": "Learn HTML tags related to text, such as <h1> to make headers and <p> to create text.",
+          "jewel_label": "Text Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "3-8min",
+          "course_name": "web_design",
+          "display_order": 2,
+          "jewel_name": "g_donald_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_donald_3",
+              "name": "g_donald_3",
+              "id": 13,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_3"
+            }
+          ],
+          "cleared": true,
+          "id": 11,
+          "course_label": "Web Design",
+          "jewel_description": "Learn how to use the <img> tag to display images.",
+          "jewel_label": "Image Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "5-10min",
+          "course_name": "web_design",
+          "display_order": 3,
+          "jewel_name": "g_donald_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_donald_4",
+              "name": "g_donald_4",
+              "id": 14,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_4"
+            }
+          ],
+          "cleared": true,
+          "id": 12,
+          "course_label": "Web Design",
+          "jewel_description": "Learn how to use CSS properties to change the appearance of text such as color, to change color, and font-family, to change fonts.",
+          "jewel_label": "Font Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "5-10min",
+          "course_name": "web_design",
+          "display_order": 4,
+          "jewel_name": "g_donald_4"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_donald_1",
+          "id": 15,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "donald",
+          "scenario_path": "lesson/b_donald_1"
+        }
+      ],
+      "magic_circle_name": "b_donald",
+      "book_id": 3,
+      "book_name": "b_donald",
+      "book_label": "The Hat Shop's Website",
+      "book_advanced_label": "The Hat Shop's Website",
+      "book_second_label": "The Hat Shop's Website",
+      "course_name": "web_design",
+      "course_label": "Web Design",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 4,
+        "hint_url": "https://hint.codeillusion.io/hint/p03gljao837jajkb",
+        "card_name": "P03",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "590",
+        "top": "180"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_goofy_1",
+              "name": "g_goofy_1",
+              "id": 16,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "goofy",
+              "scenario_path": "lesson/g_goofy_1"
+            }
+          ],
+          "cleared": true,
+          "id": 13,
+          "course_label": "Game Dev.",
+          "jewel_description": "Review mouse and circle variables as well as how to add color. Learn how to use them with if statements.",
+          "jewel_label": "Mouse Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "game",
+          "display_order": 1,
+          "jewel_name": "g_goofy_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_goofy_2",
+              "name": "g_goofy_2",
+              "id": 17,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "goofy",
+              "scenario_path": "lesson/g_goofy_2"
+            }
+          ],
+          "cleared": true,
+          "id": 14,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to load image files and display them.",
+          "jewel_label": "Image Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "game",
+          "display_order": 2,
+          "jewel_name": "g_goofy_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_goofy_3",
+              "name": "g_goofy_3",
+              "id": 18,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "goofy",
+              "scenario_path": "lesson/g_goofy_3"
+            }
+          ],
+          "cleared": true,
+          "id": 15,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to load sound files and play them.",
+          "jewel_label": "Sound Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "5-10min",
+          "course_name": "game",
+          "display_order": 3,
+          "jewel_name": "g_goofy_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_goofy_4",
+              "name": "g_goofy_4",
+              "id": 19,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "goofy",
+              "scenario_path": "lesson/g_goofy_4"
+            }
+          ],
+          "cleared": true,
+          "id": 16,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to create variables, boxes in which numerals and data are placed.",
+          "jewel_label": "Variable Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "5-10min",
+          "course_name": "game",
+          "display_order": 4,
+          "jewel_name": "g_goofy_4"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_goofy_1",
+          "id": 20,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "goofy",
+          "scenario_path": "lesson/b_goofy_1"
+        }
+      ],
+      "magic_circle_name": "b_goofy",
+      "book_id": 4,
+      "book_name": "b_goofy",
+      "book_label": "Sound Machine",
+      "book_advanced_label": "Sound Machine",
+      "book_second_label": "Sound Machine",
+      "course_name": "game",
+      "course_label": "Game Dev.",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 4,
+        "hint_url": "https://hint.codeillusion.io/hint/p04hgn8jfgakjo3",
+        "card_name": "P04",
+        "symbol_position": 0
+      }
+    }
+  ],
+  "is_accessible": true,
+  "current_area_name": "waterfall",
+  "chapter_label": "Welcome to Technologia",
+  "circle_connections": [],
+  "all_chapters_cleared": false,
+  "card_list_unlock": true,
+  "card_new": false,
+  "shop_unlock": true,
+  "shop_new": true,
+  "jewel_new": false,
+  "book_new": false,
+  "show_modal_on_distribution": false
+}

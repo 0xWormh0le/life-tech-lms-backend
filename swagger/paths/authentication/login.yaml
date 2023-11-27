@@ -1,0 +1,88 @@
+post:
+  summary: Login with ID/Password and get access token
+  tags:
+    - authentication
+  operationId: postLogin
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              loginId: PFS0000001
+              password: d&fo1n@dl-1!
+          properties:
+            loginId:
+              type: string
+              minLength: 1
+              description: login ID
+            password:
+              type: string
+              minLength: 1
+              description: password
+          required:
+            - loginId
+            - password
+        examples:
+          success:
+            value:
+              loginId: PFS0000001
+              password: d&fo1n@dl-1!
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              user:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  accessToken:
+                    type: string
+                  role:
+                    type: string
+                    enum:
+                      - student
+                      - teacher
+                      - administrator
+                      - internalOperator
+                      - anonymous
+                required:
+                  - id
+                  - accessToken
+                  - role
+            required:
+              - user
+          examples:
+            success:
+              value:
+                user:
+                  id: 1234-1234-1234-1234
+                  accessToken: ffff-ffff-00001234
+                  role: student
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: given ID/Password are incorrect
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

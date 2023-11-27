@@ -1,0 +1,47 @@
+title: StandardMapping
+type: object
+properties:
+  stateId:
+    type: string
+  stateStandardName:
+    type: string
+  gradeBand:
+    type: array
+    items:
+      type: object
+      properties:
+        band:
+          type: string
+        standardDomain:
+          type: array
+          items:
+            type: object
+            properties:
+              standard:
+                type: string
+              domain:
+                type: string
+              description:
+                type: string
+              disneyCodeillusionLesson:
+                type: array
+                items:
+                  type: string
+              cse:
+                type: array
+                items:
+                  type: string
+            required:
+              - standard
+              - domain
+              - description
+              - disneyCodeillusionLesson
+              - cse
+      required:
+        - band
+        - standardDomain
+required:
+  - stateId
+  - gradeBand
+  - stateStandardName
+description: The Definition of Get standard mapping based on organization state.

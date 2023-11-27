@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  codex_usa_backend_db:
+    image: 'postgres:13.4'
+    ports:
+      - '25432:5432'
+    environment:
+      - POSTGRES_USER=codex
+      - POSTGRES_PASSWORD=codex
+      - POSTGRES_DB=codex
+    volumes:
+      - ${PWD}/env/adapter-unit-test/pgdata:/var/lib/postgresql/data # stores data into local-dir
+    healthcheck:
+      test: ['CMD', 'pg_isready', '-U', 'codex', '-d', 'codex']
+      interval: 1s
+      timeout: 10s
+      retries: 30
+
+volumes:
+  pgdata: {}

@@ -1,0 +1,89 @@
+parameters:
+  - in: query
+    name: packageId
+    schema:
+      type: string
+    required: true
+get:
+  summary: Get CodeIllusion Package
+  tags:
+    - codex
+  operationId: getCodeIllusionPackage
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              codeIllusionPackage:
+                $ref: ../../models/CodeIllusionPackage.yaml
+            required:
+              - codeIllusionPackage
+          examples:
+            success:
+              value:
+                codeIllusionPackage:
+                  id: package-id-1
+                  level: basic
+                  chapters:
+                    - id: chapter-id
+                      name: Chapter 1
+                      title: Welcome to Technologia
+                      circles:
+                        - id: circle-id
+                          course: basic
+                          characterImageUrl: 'https://lit.com/character-image-1.png'
+                          clearedCharacterImageUrl: 'https://lit.com/character-image-1.png'
+                          gemLessonIds:
+                            - lesson-id-1
+                            - lesson-id-2
+                            - lesson-id-3
+                          bookLessonIds:
+                            - lesson-id-4
+                            - lesson-id-5
+                          bookName: The Principal's Test
+                          bookImageUrl: 'https://lit.com/book-image-1.png'
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to view the codeIllusion package
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified package not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

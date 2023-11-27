@@ -1,0 +1,36 @@
+title: StudentGroups
+type: object
+x-tags:
+  - student
+properties:
+  id:
+    type: string
+  organizationId:
+    type: string
+  name:
+    type: string
+  grade:
+    type: string
+  studentGroupLmsId:
+    type: string
+  createdUserId:
+    type: string
+  updatedUserId:
+    type: string
+  createdDate:
+    type: string
+    format: date-time
+  updatedDate:
+    type: string
+    format: date-time
+required:
+  - id
+  - organizationId
+  - name
+  - grade
+  - studentGroupLmsId
+  - createdUserId
+  - updatedUserId
+  - createdDate
+  - updatedDate
+description: The Definition of Get Student Groups.

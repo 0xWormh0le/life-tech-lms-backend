@@ -1,0 +1,11 @@
+title: MaintenanceAdministratorDistrict
+type: object
+properties:
+  districtId:
+    type: string
+  userId:
+    type: string
+required:
+  - districtId
+  - userId
+description: The Definition of Get Districts.

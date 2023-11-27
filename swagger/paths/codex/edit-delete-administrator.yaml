@@ -1,0 +1,209 @@
+parameters:
+  - schema:
+      type: string
+    name: administratorId
+    in: path
+    required: true
+put:
+  summary: Administrator API PUT
+  operationId: putAdministrator
+  tags:
+    - codex
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              email: admin1@email.com
+              firstName: admin
+              lastName: one
+              administratorLMSId: 1
+          properties:
+            email:
+              type: string
+              description: This is a user's email.
+            firstName:
+              type: string
+              description: This is a first name of administrator.
+            lastName:
+              type: string
+              description: This is a last name of administrator.
+            administratorLMSId:
+              type: string
+              description: This is a administratorLMSId of administrator.
+            password:
+              type: string
+          required:
+            - email
+        examples:
+          success:
+            value:
+              administrator:
+                email: admin1@email.com
+                firstName: admin
+                lastName: one
+                administratorLMSId: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: Invalid request.
+    '409':
+      description: Administrator already exist
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Administrator already exist
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to add the specified administrator's information
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            district not found:
+              value:
+                error: The specified administrator not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  description: Administrator PUT API call when user want to edit administrator in system.
+delete:
+  summary: Delete an administrator
+  operationId: deleteAdministrator
+  tags:
+    - codex
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: Invalid request.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to delete an administrator information
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            admnistrator not found:
+              value:
+                error: The specified administrator not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  description: delete an administrator

@@ -1,0 +1,90 @@
+title: CodeIllusionPackage
+type: object
+x-tags:
+  - lesson
+properties:
+  id:
+    type: string
+  level:
+    type: string
+    enum:
+      - basic
+      - advanced
+  name:
+    type: string
+  headerButtonLink:
+    type: string
+    nullable: true
+  headerButtonText:
+    type: string
+    nullable: true
+  redirectUrlWhenAllFinished:
+    type: string
+    nullable: true
+  chapters:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        title:
+          type: string
+        lessonNoteSheetsZipUrl:
+          type: string
+        lessonOverViewPdfUrl:
+          type: string
+        circles:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              course:
+                $ref: ./Course.yaml
+              characterImageUrl:
+                type: string
+              clearedCharacterImageUrl:
+                type: string
+              gemLessonIds:
+                type: array
+                items:
+                  type: string
+              bookLessonIds:
+                type: array
+                items:
+                  type: string
+              bookName:
+                type: string
+              bookImageUrl:
+                type: string
+              allLessonIds:
+                type: array
+                items:
+                  type: string
+            required:
+              - id
+              - course
+              - characterImageUrl
+              - clearedCharacterImageUrl
+              - gemLessonIds
+              - bookLessonIds
+              - bookName
+              - bookImageUrl
+              - allLessonIds
+      required:
+        - id
+        - name
+        - title
+        - circles
+required:
+  - id
+  - level
+  - name
+  - headerButtonLink
+  - headerButtonText
+  - redirectUrlWhenAllFinished
+  - chapters

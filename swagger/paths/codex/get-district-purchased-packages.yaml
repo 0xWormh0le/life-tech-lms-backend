@@ -1,0 +1,90 @@
+parameters:
+  - schema:
+      type: string
+    name: districtId
+    in: path
+    required: true
+get:
+  summary: Get all district purchased packages
+  tags:
+    - codex
+  operationId: getDistrictPurchasedPackagesByDistrictId
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              packages:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    packageCategoryId:
+                      type: string
+                    packageId:
+                      type: string
+                      description: it is the id of the package.
+                    packageName:
+                      type: string
+                      description: it is the name of the package.
+                  required:
+                    - packageCategoryId
+                    - packageId
+                    - packageName
+            required:
+              - packages
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            bad request:
+              value:
+                error: Invalid format of districtId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to view district purchased packages.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            district not found:
+              value:
+                error: The specified district not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something went wrong.

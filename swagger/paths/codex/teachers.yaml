@@ -1,0 +1,282 @@
+parameters:
+  - schema:
+      type: string
+    name: organizationId
+    in: path
+    required: true
+  - in: query
+    name: teacherIds
+    schema:
+      type: array
+      items:
+        type: string
+post:
+  summary: Create teachers
+  tags:
+    - codex
+  operationId: postTeachers
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              teachers:
+                - email: 'teacher1@email.com'
+                  firstName: 'teacher_first_name_1'
+                  lastName: 'teacher_last_name_1'
+                  teacherLMSId: 'teacher_lms_id_1'
+                  password: 'teacher_password_1'
+                - email: 'teacher2@email.com'
+                  firstName: 'teacher_first_name_2'
+                  lastName: 'teacher_last_name_2'
+                  teacherLMSId: 'teacher_lms_id_2'
+                  password: 'teacher_password_2'
+                - email: 'teacher3@email.com'
+                  firstName: 'teacher_first_name_3'
+                  lastName: 'teacher_last_name_3'
+                  teacherLMSId: 'teacher_lms_id_3'
+                  password: 'teacher_password_3'
+          properties:
+            teachers:
+              type: array
+              items:
+                title: teacher
+                type: object
+                properties:
+                  email:
+                    type: string
+                  firstName:
+                    type: string
+                  lastName:
+                    type: string
+                  teacherLMSId:
+                    type: string
+                  password:
+                    type: string
+          required:
+            - teachers
+        examples:
+          success:
+            value:
+              teachers:
+                - email: 'teacher1@email.com'
+                  firstName: 'teacher_first_name_1'
+                  lastName: 'teacher_last_name_1'
+                  teacherLMSId: 'teacher_lms_id_1'
+                  password: 'teacher_password_1'
+                - email: 'teacher2@email.com'
+                  firstName: 'teacher_first_name_2'
+                  lastName: 'teacher_last_name_2'
+                  teacherLMSId: 'teacher_lms_id_2'
+                  password: 'teacher_password_2'
+                - email: 'teacher3@email.com'
+                  firstName: 'teacher_first_name_3'
+                  lastName: 'teacher_last_name_3'
+                  teacherLMSId: 'teacher_lms_id_3'
+                  password: 'teacher_password_3'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+          examples:
+            success:
+              value:
+                message: ok
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                oneOf:
+                  - type: string
+                  - type: array
+                    items:
+                      type: object
+                      properties:
+                        index:
+                          type: number
+                        message:
+                          type: array | string
+                          items:
+                            type: string
+                            enum:
+                              - duplicateRecordsWithSameEmail
+                              - duplicateRecordsWithSameTeacherLMSId
+                              - userAlreadyExistWithEmail
+                              - userAlreadyExistWithTeacherLMSId
+                              - emailInvalid
+                              - emailNotProvided
+                              - emptyPassword
+            required:
+              - error
+          examples:
+            badRequest:
+              value:
+                error:
+                  - index: 0
+                    message:
+                      - duplicateRecordsWithSameEmail
+                      - userAlreadyExistWithEmail
+                  - index: 2
+                    message:
+                      - duplicateRecordsWithSameEmail
+                      - userAlreadyExistWithEmail
+                      - emailInvalid
+                      - emailNotProvided
+                      - emptyPassword
+            Invalid organizationId:
+              value:
+                error: Invalid organizationId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to add the teachers.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            organization not found:
+              value:
+                error: The specified organization not found.
+            administrator not found:
+              value:
+                error: The specified administrator not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+get:
+  summary: Get Teachers based on organizationId
+  tags:
+    - codex
+  operationId: getTeachers
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              teachers:
+                type: array
+                items:
+                  $ref: ../../models/Teacher.yaml
+          examples:
+            success:
+              value:
+                teachers:
+                  - id: teacher-1
+                    email: 'teacher1@email.com'
+                    firstName: 'teacher_first_name_1'
+                    lastName: 'teacher_last_name_1'
+                    teacherLMSId: 'teacher_lms_id_1'
+                    createddUserName: 'user_name_1'
+                    createdDate: '2022-05-17T11:54:02.141Z'
+                  - id: teacher-2
+                    email: 'teacher2@email.com'
+                    firstName: 'teacher_first_name_2'
+                    lastName: 'teacher_last_name_2'
+                    teacherLMSId: 'teacher_lms_id_2'
+                    createddUserName: 'user_name_2'
+                    createdDate: '2022-05-17T11:54:02.141Z'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid organizationId:
+              value:
+                error: Invalid organizationId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to view the specified teacher information.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            organization not found:
+              value:
+                error: The specified organization not found.
+            teacher not found:
+              value:
+                error: The specified teacher not found.
+            failed to get organization:
+              value:
+                error: Failed to getOrganization.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred.
+  description: |-
+    This API provides the teachers based on organizationId

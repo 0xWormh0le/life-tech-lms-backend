@@ -1,0 +1,17 @@
+title: MaintenanceUserAdministratorRole
+type: object
+properties:
+  role:
+    type: string
+    enum:
+      - administrator
+  firstName:
+    type: string
+  lastName:
+    type: string
+  lmsId:
+    type: string
+required:
+  - firstName
+  - lastName
+  - role

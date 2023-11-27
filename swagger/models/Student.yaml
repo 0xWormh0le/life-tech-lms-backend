@@ -1,0 +1,55 @@
+title: Student
+type: object
+x-tags:
+  - Student
+properties:
+  id:
+    type: string
+  nickName:
+    type: string
+  userId:
+    type: string
+  password:
+    type: string
+  email:
+    type: string
+  studentLMSId:
+    type: string
+  emailsToNotify:
+    type: array
+    items:
+      type: string
+  loginId:
+    type: string
+  createdUserName:
+    type: string
+  createdDate:
+    type: string
+    format: date-time
+  lastLessionName:
+    type: string
+  lastLessonStartedAt:
+    type: string
+    nullable: true
+    format: date-time
+  studentGroupCount:
+    type: number
+  studentGroup:
+    type: string
+
+required:
+  - id
+  - nickName
+  - userId
+  - loginId
+  - email
+  - studentLMSId
+  - password
+  - emailsToNotify
+  - createdUserName
+  - createdDate
+  - lastLessionName
+  - lastLessonStartedAt
+  - studentGroupCount
+  - studentGroup
+description: The Definition of Get Students.

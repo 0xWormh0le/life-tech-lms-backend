@@ -1,0 +1,17 @@
+title: MaintenanceUserTeacherRole
+type: object
+properties:
+  role:
+    type: string
+    enum:
+      - teacher
+  firstName:
+    type: string
+  lastName:
+    type: string
+  lmsId:
+    type: string
+required:
+  - firstName
+  - lastName
+  - role

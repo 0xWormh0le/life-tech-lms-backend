@@ -1,0 +1,14 @@
+title: UserPackageAssignment
+type: object
+description: ''
+properties:
+  userId:
+    type: string
+  packageCategoryId:
+    type: string
+  packageId:
+    type: string
+required:
+  - userId
+  - packageCategoryId
+  - packageId

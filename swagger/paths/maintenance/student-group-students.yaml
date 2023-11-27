@@ -1,0 +1,112 @@
+get:
+  summary: Get All StudentGroupStudents for accounts management purpose
+  operationId: maintenanceGetStudentGroupStudents
+  tags:
+    - maintenance
+  responses:
+    '200':
+      description: Returns all StudentGroupStudents
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              studentGroupStudents:
+                type: array
+                items:
+                  $ref: '../../models/maintenance/StudentGroupStudent.yaml'
+            required:
+              - studentGroupStudents
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+post:
+  summary: Create StudentGroupStudents bulky for accounts management purpose
+  operationId: maintenancePostStudentGroupStudents
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            studentGroupStudents:
+              type: array
+              items:
+                $ref: '../../models/maintenance/StudentGroupStudent.yaml'
+          required:
+            - studentGroupStudents
+  responses:
+    '200':
+      description: Returns created StudentGroupStudents
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              ok:
+                type: string
+            required:
+              - ok
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+delete:
+  summary: Delete StudentGroupStudents bulky for accounts management purpose
+  operationId: maintenanceDeleteStudentGroupStudents
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            studentGroupStudents:
+              type: array
+              items:
+                $ref: '../../models/maintenance/StudentGroupStudent.yaml'
+          required:
+            - studentGroupStudents
+  responses:
+    '200':
+      description: Returns ok
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              ok:
+                type: string
+            required:
+              - ok
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

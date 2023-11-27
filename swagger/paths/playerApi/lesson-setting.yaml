@@ -1,0 +1,144 @@
+get:
+  summary: Lesson Player API GET /lesson_setting
+  tags:
+    - playerApi
+  parameters:
+    - schema:
+        type: string
+      in: query
+      name: scenario_path
+      required: true
+    - schema:
+        type: string
+      in: query
+      name: project_name
+      required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              example-1:
+                isAccessible: true
+                cleared: true
+                redirecetUrl: 'http://www.yahoo.co.jp'
+                passed_step_id_list:
+                  - 0
+                  - 1
+                  - 2
+                  - 3
+                  - 4
+                  - 5
+            properties:
+              isAccessible:
+                type: boolean
+              cleared:
+                type: boolean
+              redirecetUrl:
+                type: string
+              passed_step_id_list:
+                type: array
+                items:
+                  type: number
+            required:
+              - isAccessible
+              - cleared
+              - redirecetUrl
+              - passed_step_id_list
+          examples:
+            success:
+              value:
+                isAccessible: true
+                cleared: true
+                redirecetUrl: string
+                passed_step_id_list:
+                  - 0
+                  - 1
+                  - 2
+                  - 3
+                  - 4
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              isAccessible:
+                type: boolean
+              redirectUrl:
+                type: string
+                minLength: 1
+            required:
+              - isAccessible
+              - redirectUrl
+            x-examples:
+              example-1:
+                isAccessible: false
+                redirectUrl: "#{ENV['LOGIN_HOST']}/login"
+          examples:
+            unauthorized:
+              value:
+                isAccessible: false
+                redirectUrl: 'https://google.com'
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              isAccessible:
+                type: boolean
+              redirectUrl:
+                type: string
+                minLength: 1
+            required:
+              - isAccessible
+              - redirectUrl
+            x-examples:
+              example-1:
+                isAccessible: false
+                redirectUrl: "#{ENV['LOGIN_HOST']}/login"
+          examples:
+            unauthorized:
+              value:
+                isAccessible: false
+                redirectUrl: 'https://google.com'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified scenario_path and project_name not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  operationId: getLessonsSetting
+  description: The Lesson Player calls this API once at the start of each lesson. The display of the editor screen changes according to the returned value.

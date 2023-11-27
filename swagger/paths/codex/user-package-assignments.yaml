@@ -1,0 +1,168 @@
+get:
+  summary: Get User Package Assignment
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  parameters:
+    - in: query
+      name: userId
+      schema:
+        type: string
+    - in: query
+      name: packageId
+      schema:
+        type: string
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              userPackageAssignments:
+                type: array
+                items:
+                  $ref: ../../models/UserPackageAssignment.yaml
+            required:
+              - userPackageAssignments
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified user not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: getUserPackageAssignments
+  description: |-
+    This API returns the UserPackageAssignment which are assigned to the specified user.
+post:
+  summary: Create User Package Assignment
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../../models/UserPackageAssignment.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              userPackageAssignment:
+                $ref: ../../models/UserPackageAssignment.yaml
+            required:
+              - userPackageAssignment
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '409':
+      description: This user has the same category package already
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: postUserPackageAssignment
+  description: |-
+    This API create the UserPackageAssignment.
+delete:
+  summary: Delete User Package Assignment
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            packageCategoryId:
+              type: string
+            userId:
+              type: string
+          required:
+            - packageCategoryId
+            - userId
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+            required:
+              - message
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: deleteUserPackageAssignment
+  description: |-
+    This API deletes the UserPackageAssignment which are assigned to the specified user.

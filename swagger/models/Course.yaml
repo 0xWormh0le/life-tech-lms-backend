@@ -1,0 +1,10 @@
+type: string
+title: Course
+enum:
+  - basic
+  - webDesign
+  - mediaArt
+  - gameDevelopment
+  - ''
+x-tags:
+  - lesson

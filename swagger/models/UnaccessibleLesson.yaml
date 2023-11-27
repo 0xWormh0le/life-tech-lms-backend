@@ -1,0 +1,22 @@
+title: UnaccessibleLesson
+type: object
+x-tags:
+  - unaccessibleLesson
+properties:
+  studentGroupId:
+    type: string
+  packageId:
+    type: string
+  lessonId:
+    type: string
+  createdUserId:
+    type: string
+  createdDate:
+    type: string
+required:
+  - studentGroupId
+  - packageId
+  - lessonId
+  - createdUserId
+  - createdDate
+description: The Definition of Get unaccessible Lesson.

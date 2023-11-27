@@ -1,0 +1,24 @@
+title: Administrator
+type: object
+x-tags:
+  - administrator
+description: 'Administrator'
+properties:
+  administratorId:
+    type: string
+  userId:
+    type: string
+  districtId:
+    type: string
+  email:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+  administratorLMSId:
+    type: string
+  createdUserId:
+    type: string
+  createdDate:
+    type: string

@@ -1,0 +1,9 @@
+title: UserSettings
+type: object
+x-tags:
+  - settings
+properties:
+  sound:
+    $ref: ./UserSoundSettings.yaml
+required:
+  - sound

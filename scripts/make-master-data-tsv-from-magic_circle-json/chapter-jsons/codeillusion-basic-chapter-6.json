@@ -1,0 +1,415 @@
+{
+  "data": [
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "100",
+        "top": "170"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_snowwhite_1",
+              "id": 152,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "snowwhite",
+              "scenario_path": "lesson/g_snowwhite_1"
+            }
+          ],
+          "cleared": true,
+          "id": 76,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to switch sprite images with the click of a mouse. This continues in Swap Magic 2.",
+          "jewel_label": "Swap Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 1,
+          "jewel_name": "g_snowwhite_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_snowwhite_2",
+              "id": 153,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "snowwhite",
+              "scenario_path": "lesson/g_snowwhite_2"
+            }
+          ],
+          "cleared": true,
+          "id": 77,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to manage the positions of sprites, types of images, and switch between (swap) sprites.",
+          "jewel_label": "Swap Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 2,
+          "jewel_name": "g_snowwhite_2"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_snowwhite_1",
+          "id": 154,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "snowwhite",
+          "scenario_path": "lesson/b_snowwhite_1"
+        },
+        {
+          "label": "",
+          "name": "b_snowwhite_2",
+          "id": 155,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "snowwhite",
+          "scenario_path": "lesson/b_snowwhite_2"
+        },
+        {
+          "label": "",
+          "name": "b_snowwhite_3",
+          "id": 156,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "snowwhite",
+          "scenario_path": "lesson/b_snowwhite_3"
+        },
+        {
+          "label": "",
+          "name": "b_snowwhite_4",
+          "id": 157,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 4,
+          "project_name": "snowwhite",
+          "scenario_path": "lesson/b_snowwhite_4"
+        },
+        {
+          "label": "",
+          "name": "b_snowwhite_5",
+          "id": 158,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 5,
+          "project_name": "snowwhite",
+          "scenario_path": "lesson/b_snowwhite_5"
+        },
+        {
+          "label": "",
+          "name": "b_snowwhite_6",
+          "id": 159,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 6,
+          "project_name": "snowwhite",
+          "scenario_path": "lesson/b_snowwhite_6"
+        },
+        {
+          "label": "",
+          "name": "b_snowwhite_7",
+          "id": 160,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 7,
+          "project_name": "snowwhite",
+          "scenario_path": "lesson/b_snowwhite_7"
+        },
+        {
+          "label": "",
+          "name": "b_snowwhite_8",
+          "id": 161,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 8,
+          "project_name": "snowwhite",
+          "scenario_path": "lesson/b_snowwhite_8"
+        },
+        {
+          "label": "",
+          "name": "b_snowwhite_9",
+          "id": 162,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 9,
+          "project_name": "snowwhite",
+          "scenario_path": "lesson/b_snowwhite_9"
+        }
+      ],
+      "magic_circle_name": "b_snowwhite",
+      "book_id": 16,
+      "book_name": "b_snowwhite",
+      "book_label": "Jewel Puzzle",
+      "book_advanced_label": "",
+      "book_second_label": "",
+      "course_name": "game",
+      "course_label": "Game Dev.",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 7,
+        "hint_url": "https://hint.codeillusion.io/hint/p15djesiskcnsalle",
+        "card_name": "P15",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "480",
+        "top": "100"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_sugar2_1",
+              "id": 163,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "sugar2",
+              "scenario_path": "lesson/g_sugar2_1"
+            }
+          ],
+          "cleared": true,
+          "id": 78,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to control the camera hands-on through a game that searches around a large canvas to gather gems.",
+          "jewel_label": "Camera Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 1,
+          "jewel_name": "g_sugar2_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_sugar2_2",
+              "id": 164,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "sugar2",
+              "scenario_path": "lesson/g_sugar2_2"
+            }
+          ],
+          "cleared": true,
+          "id": 79,
+          "course_label": "Game Dev.",
+          "jewel_description": "Mimir will test the player's skills regarding the basics of game creation: handling the coordinates and velocity of sprites.",
+          "jewel_label": "Mimir's Test",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 2,
+          "jewel_name": "g_sugar2_2"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_sugar2_1",
+          "id": 165,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "sugar2",
+          "scenario_path": "lesson/b_sugar2_1"
+        },
+        {
+          "label": "",
+          "name": "b_sugar2_2",
+          "id": 166,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "sugar2",
+          "scenario_path": "lesson/b_sugar2_2"
+        },
+        {
+          "label": "",
+          "name": "b_sugar2_3",
+          "id": 167,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "sugar2",
+          "scenario_path": "lesson/b_sugar2_3"
+        },
+        {
+          "label": "",
+          "name": "b_sugar2_4",
+          "id": 168,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 4,
+          "project_name": "sugar2",
+          "scenario_path": "lesson/b_sugar2_4"
+        },
+        {
+          "label": "",
+          "name": "b_sugar2_5",
+          "id": 169,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 5,
+          "project_name": "sugar2",
+          "scenario_path": "lesson/b_sugar2_5"
+        }
+      ],
+      "magic_circle_name": "b_sugar2",
+      "book_id": 17,
+      "book_name": "b_sugar2",
+      "book_label": "Wreck-It Ralph",
+      "book_advanced_label": "",
+      "book_second_label": "",
+      "course_name": "game",
+      "course_label": "Game Dev.",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 4,
+        "hint_url": "https://hint.codeillusion.io/hint/p16gjascuu&jja",
+        "card_name": "P16",
+        "symbol_position": 0
+      }
+    }
+  ],
+  "is_accessible": true,
+  "chapter_label": "The Great Misfortune",
+  "circle_connections": [],
+  "all_chapters_cleared": true,
+  "card_list_unlock": true,
+  "card_new": false,
+  "shop_unlock": true,
+  "shop_new": false,
+  "jewel_new": false,
+  "book_new": false,
+  "show_modal_on_distribution": true
+}

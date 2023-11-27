@@ -1,0 +1,27 @@
+version: '3'
+services:
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    ports:
+      - '10081:8080'
+    volumes:
+      - type: bind
+        source: ../src/adapter/entry-points/_gen/codex-usa-backend-server/api/openapi.yaml
+        target: '/usr/share/nginx/html/codex-usa-backend.yaml'
+    environment:
+      API_URL: codex-usa-backend.yaml
+
+  swagger-mock-server:
+    image: stoplight/prism:3
+    ports:
+      - '10082:4010'
+    command: mock -h 0.0.0.0 /codex-usa-backend.yaml
+    volumes:
+      - type: bind
+        source: ../src/adapter/entry-points/_gen/codex-usa-backend-server/api/openapi.yaml
+        target: '/codex-usa-backend.yaml'
+
+  swagger-editor:
+    image: swaggerapi/swagger-editor
+    ports:
+      - '10083:8080'

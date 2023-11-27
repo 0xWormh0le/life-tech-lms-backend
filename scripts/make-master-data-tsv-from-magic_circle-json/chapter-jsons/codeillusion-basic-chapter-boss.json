@@ -1,0 +1,1934 @@
+{
+  "data": [
+    {
+      "type": "boss",
+      "status": "cleared",
+      "position": {
+        "left": "170",
+        "top": "250"
+      },
+      "exec_cuf": false,
+      "jewels": [],
+      "lessons": [
+        {
+          "label": "",
+          "name": "boss_phoenix",
+          "id": 175,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "boss",
+          "scenario_path": "phoenix"
+        }
+      ],
+      "review": {
+        "name": "phoenix",
+        "project_name": "boss",
+        "scenario_path": "phoenix",
+        "lessons": [
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "50",
+              "step_id_end": "55",
+              "project_name": "mickey",
+              "scenario_path": "lesson/b_mickey_1"
+            },
+            "label": "Background Magic",
+            "name": "ph_1_q_background_4",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "5",
+              "step_id_end": "12",
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_1"
+            },
+            "label": "Canvas Magic",
+            "name": "ph_1_q_createCanvas_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "14",
+              "step_id_end": "40",
+              "project_name": "mickey",
+              "scenario_path": "lesson/g_mickey_1"
+            },
+            "label": "Circle Magic",
+            "name": "ph_1_q_ellipse_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "50",
+              "step_id_end": "59",
+              "project_name": "beauty",
+              "scenario_path": "lesson/b_beauty_5"
+            },
+            "label": "Calculation Magic(==)",
+            "name": "ph_1_q_equal_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "81",
+              "step_id_end": "90",
+              "project_name": "beauty",
+              "scenario_path": "lesson/g_beauty_4"
+            },
+            "label": "Conditions Magic(else)",
+            "name": "ph_1_q_else_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "32",
+              "step_id_end": "39",
+              "project_name": "alice",
+              "scenario_path": "lesson/b_alice_4"
+            },
+            "label": "Calculation Magic(++)",
+            "name": "ph_1_q_plusPlus_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "13",
+              "step_id_end": "32",
+              "project_name": "mickey",
+              "scenario_path": "lesson/g_mickey_2"
+            },
+            "label": "Fill Magic",
+            "name": "ph_1_q_fill_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "123",
+              "step_id_end": "155",
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_3"
+            },
+            "label": "Repetition Magic",
+            "name": "ph_1_q_for_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "79",
+              "step_id_end": "87",
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_3"
+            },
+            "label": "No Fill Magic",
+            "name": "ph_1_q_noFill_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "124",
+              "step_id_end": "132",
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_3"
+            },
+            "label": "Line Magic",
+            "name": "ph_1_q_line_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "68",
+              "step_id_end": "78",
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_3"
+            },
+            "label": "Outline Magic",
+            "name": "ph_1_q_stroke_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "26",
+              "step_id_end": "51",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/g_mermaid_1"
+            },
+            "label": "Sway Magic",
+            "name": "ph_1_q_sin_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "45",
+              "step_id_end": "49",
+              "project_name": "mickey",
+              "scenario_path": "lesson/b_mickey_1"
+            },
+            "label": "Calculation Magic(/)",
+            "name": "ph_1_q_division_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "209",
+              "step_id_end": "252",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_5"
+            },
+            "label": "Integer Magic",
+            "name": "ph_1_q_floor_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "68",
+              "step_id_end": "78",
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_3"
+            },
+            "label": "Outline Magic",
+            "name": "ph_1_q_stroke_5",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "41",
+              "step_id_end": "82",
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_1"
+            },
+            "label": "Variable Magic",
+            "name": "ph_1_q_var_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "50",
+              "step_id_end": "55",
+              "project_name": "mickey",
+              "scenario_path": "lesson/b_mickey_1"
+            },
+            "label": "Background Magic",
+            "name": "ph_1_l_background_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "7",
+              "step_id_end": "15",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/g_mermaid_1"
+            },
+            "label": "Height Magic",
+            "name": "ph_1_l_height_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "28",
+              "step_id_end": "34",
+              "project_name": "mickey",
+              "scenario_path": "lesson/b_mickey_1"
+            },
+            "label": "Calculation Magic(-)",
+            "name": "ph_1_l_minus_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "35",
+              "step_id_end": "40",
+              "project_name": "mickey",
+              "scenario_path": "lesson/b_mickey_1"
+            },
+            "label": "Mouse Magic",
+            "name": "ph_1_l_mouseXY_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "23",
+              "step_id_end": "30",
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_3"
+            },
+            "label": "Square Magic",
+            "name": "ph_1_l_rect_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "82",
+              "step_id_end": "108",
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_2"
+            },
+            "label": "Randomization Magic",
+            "name": "ph_1_l_random_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "137",
+              "step_id_end": "144",
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_1"
+            },
+            "label": "Assignment Magic",
+            "name": "ph_1_l_substitution_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "146",
+              "step_id_end": "162",
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_1"
+            },
+            "label": "Bounce Magic",
+            "name": "ph_1_l_bound_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "32",
+              "step_id_end": "59",
+              "project_name": "beauty",
+              "scenario_path": "lesson/g_beauty_1"
+            },
+            "label": "Pixel Magic",
+            "name": "ph_1_l_imagefilter_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "51",
+              "step_id_end": "77",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/g_mermaid_2"
+            },
+            "label": "Wave Magic",
+            "name": "ph_1_l_sin_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "124",
+              "step_id_end": "131",
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_3"
+            },
+            "label": "Line Magic",
+            "name": "ph_1_l_line_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "13",
+              "step_id_end": "23",
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_4"
+            },
+            "label": "Draw Magic(translate)",
+            "name": "ph_1_l_translate_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          }
+        ]
+      },
+      "magic_circle_name": "phoenix",
+      "book_name": "phoenix",
+      "book_label": "Phoenix",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 5,
+        "hint_url": "https://hint.codeillusion.io/hint/p19aloenvaV5",
+        "card_name": "P19",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "boss",
+      "status": "cleared",
+      "position": {
+        "left": "360",
+        "top": "140"
+      },
+      "exec_cuf": false,
+      "jewels": [],
+      "lessons": [
+        {
+          "label": "",
+          "name": "boss_unicorn",
+          "id": 176,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "boss",
+          "scenario_path": "unicorn"
+        }
+      ],
+      "review": {
+        "name": "unicorn",
+        "project_name": "boss",
+        "scenario_path": "unicorn",
+        "lessons": [
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "70",
+              "step_id_end": "85",
+              "project_name": "goofy",
+              "scenario_path": "lesson/g_goofy_2"
+            },
+            "label": "Text Magic",
+            "name": "uc_1_q_text_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "6",
+              "step_id_end": "14",
+              "project_name": "alice",
+              "scenario_path": "lesson/g_alice_1"
+            },
+            "label": "Canvas Magic",
+            "name": "uc_1_q_createCanvas_3",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "124",
+              "step_id_end": "132",
+              "project_name": "pooh",
+              "scenario_path": "lesson/g_pooh_1"
+            },
+            "label": "Camera Magic",
+            "name": "uc_1_q_camera_3",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "32",
+              "step_id_end": "39",
+              "project_name": "alice",
+              "scenario_path": "lesson/b_alice_4"
+            },
+            "label": "Calculation Magic(++)",
+            "name": "uc_1_q_plusPlus_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "38",
+              "step_id_end": "71",
+              "project_name": "goofy",
+              "scenario_path": "lesson/g_goofy_2"
+            },
+            "label": "Image Magic(loadImage)",
+            "name": "uc_1_q_loadImage_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "17",
+              "step_id_end": "20",
+              "project_name": "goofy",
+              "scenario_path": "lesson/g_goofy_3"
+            },
+            "label": "Sound Magic(loop)",
+            "name": "uc_1_q_loop_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "15",
+              "step_id_end": "18",
+              "project_name": "goofy",
+              "scenario_path": "lesson/g_goofy_3"
+            },
+            "label": "Sound Magic(play)",
+            "name": "uc_1_q_play_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "57",
+              "step_id_end": "70",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_1"
+            },
+            "label": "Sprite Magic(addAnimation)",
+            "name": "uc_1_q_addAnimation_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "49",
+              "step_id_end": "57",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_4"
+            },
+            "label": "Sprite Magic(addImage)",
+            "name": "uc_1_q_addImage_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "93",
+              "step_id_end": "101",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_4"
+            },
+            "label": "Collision Detection Magic(collide)",
+            "name": "uc_1_q_collide_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "125",
+              "step_id_end": "135",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_5"
+            },
+            "label": "Collision Detection Magic(overlap)",
+            "name": "uc_1_q_overlap_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "117",
+              "step_id_end": "124",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_5"
+            },
+            "label": "Sprite Magic(remove)",
+            "name": "uc_1_q_remove_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "71",
+              "step_id_end": "78",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_1"
+            },
+            "label": "Sprite Magic(position)",
+            "name": "uc_1_q_spritePosition_3",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "55",
+              "step_id_end": "70",
+              "project_name": "sugar1",
+              "scenario_path": "lesson/g_sugar1_1"
+            },
+            "label": "Sprite Magic(velocity)",
+            "name": "uc_1_q_spriteVelocity_3",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "22",
+              "step_id_end": "30",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_1"
+            },
+            "label": "Sprite Magic(createSprite)",
+            "name": "uc_1_q_createSprite_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "114",
+              "step_id_end": "122",
+              "project_name": "alice",
+              "scenario_path": "lesson/g_alice_1"
+            },
+            "label": "Sprite Magic(changeImage)",
+            "name": "uc_1_q_changeImage_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "57",
+              "step_id_end": "70",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_1"
+            },
+            "label": "Sprite Magic(addAnimation)",
+            "name": "uc_1_l_addAnimation_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "59",
+              "step_id_end": "87",
+              "project_name": "sugar1",
+              "scenario_path": "lesson/g_sugar1_3"
+            },
+            "label": "Sprite Magic(changeAnimation)",
+            "name": "uc_1_l_changeAnimation_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "22",
+              "step_id_end": "30",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_4"
+            },
+            "label": "Sprite Magic(drawSprites)",
+            "name": "uc_1_l_drawSprites_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "117",
+              "step_id_end": "124",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_5"
+            },
+            "label": "Sprite Magic(remove)",
+            "name": "uc_1_l_remove_3",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "15",
+              "step_id_end": "48",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/b_aladdin_1"
+            },
+            "label": "Arrow Key Magic",
+            "name": "uc_1_l_keyDown_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "70",
+              "step_id_end": "78",
+              "project_name": "pooh",
+              "scenario_path": "lesson/g_pooh_1"
+            },
+            "label": "Text Magic",
+            "name": "uc_1_l_text_3",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "73",
+              "step_id_end": "77",
+              "project_name": "goofy",
+              "scenario_path": "lesson/g_goofy_2"
+            },
+            "label": "Text Size Magic",
+            "name": "uc_1_l_textSize_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "125",
+              "step_id_end": "135",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_5"
+            },
+            "label": "Collision Detection Magic(overlap)",
+            "name": "uc_1_l_overlap_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "93",
+              "step_id_end": "101",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_4"
+            },
+            "label": "Collision Detection Magic(collide)",
+            "name": "uc_1_l_collide_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "124",
+              "step_id_end": "132",
+              "project_name": "pooh",
+              "scenario_path": "lesson/g_pooh_1"
+            },
+            "label": "Camera Magic",
+            "name": "uc_1_l_camera_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "130",
+              "step_id_end": "140",
+              "project_name": "pooh",
+              "scenario_path": "lesson/g_pooh_1"
+            },
+            "label": "Camera Magic(camera.off)",
+            "name": "uc_1_l_cameraoff_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "105",
+              "step_id_end": "113",
+              "project_name": "alice",
+              "scenario_path": "lesson/g_alice_1"
+            },
+            "label": "Click Magic",
+            "name": "uc_1_l_onMousePressed_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "145",
+              "step_id_end": "193",
+              "project_name": "pooh",
+              "scenario_path": "lesson/g_pooh_2"
+            },
+            "label": "Conditions Magic(switch)",
+            "name": "uc_1_l_swich_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "76",
+              "step_id_end": "84",
+              "project_name": "snowwhite",
+              "scenario_path": "lesson/b_snowwhite_3"
+            },
+            "label": "Calculation Magic(--)",
+            "name": "uc_1_l_decrement_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "114",
+              "step_id_end": "122",
+              "project_name": "alice",
+              "scenario_path": "lesson/g_alice_1"
+            },
+            "label": "Sprite Magic(changeImage)",
+            "name": "uc_1_l_changeImage_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "222",
+              "step_id_end": "231",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_5"
+            },
+            "label": "Array Magic",
+            "name": "uc_1_l_array_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          }
+        ]
+      },
+      "magic_circle_name": "unicorn",
+      "book_name": "unicorn",
+      "book_label": "Unicorn",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 4,
+        "hint_url": "https://hint.codeillusion.io/hint/p21ag3frvYnb",
+        "card_name": "P21",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "boss",
+      "status": "cleared",
+      "position": {
+        "left": "380",
+        "top": "340"
+      },
+      "exec_cuf": false,
+      "jewels": [],
+      "lessons": [
+        {
+          "label": "",
+          "name": "boss_leviathan",
+          "id": 177,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "boss",
+          "scenario_path": "leviathan"
+        }
+      ],
+      "review": {
+        "name": "leviathan",
+        "project_name": "boss",
+        "scenario_path": "leviathan",
+        "lessons": [
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "22",
+              "step_id_end": "28",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_2"
+            },
+            "label": "Paragraph Magic",
+            "name": "lv_1_q_p_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "19",
+              "step_id_end": "31",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_1"
+            },
+            "label": "Text Magic(color)",
+            "name": "lv_1_q_color_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "28",
+              "step_id_end": "45",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_2"
+            },
+            "label": "Line Break Magic",
+            "name": "lv_1_q_br_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "40",
+              "step_id_end": "46",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_4"
+            },
+            "label": "Text Magic(text-align)",
+            "name": "lv_1_q_textAlign_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "71",
+              "step_id_end": "80",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_2"
+            },
+            "label": "Border Magic (Border-width)",
+            "name": "lv_1_q_borderWidth_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "70",
+              "step_id_end": "89",
+              "project_name": "stitch",
+              "scenario_path": "lesson/g_stitch_4"
+            },
+            "label": "Hover Magic",
+            "name": "lv_1_q_hover_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "90",
+              "step_id_end": "101",
+              "project_name": "stitch",
+              "scenario_path": "lesson/g_stitch_4"
+            },
+            "label": "Transformation Magic",
+            "name": "lv_1_q_transform_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "102",
+              "step_id_end": "113",
+              "project_name": "stitch",
+              "scenario_path": "lesson/g_stitch_4"
+            },
+            "label": "Transition Magic",
+            "name": "lv_1_q_transition_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "3",
+              "step_id_end": "18",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_3"
+            },
+            "label": "Image Magic",
+            "name": "lv_1_q_imgsrc_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "46",
+              "step_id_end": "60",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_4"
+            },
+            "label": "Font Magic",
+            "name": "lv_1_q_fontFamily_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "123",
+              "step_id_end": "132",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_1"
+            },
+            "label": "Background Image Magic",
+            "name": "lv_1_q_backgroundImage_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "31",
+              "step_id_end": "40",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_4"
+            },
+            "label": "Font Magic(font-size)",
+            "name": "lv_1_q_fontSize_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "97",
+              "step_id_end": "130",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_4"
+            },
+            "label": "Shadow Magic",
+            "name": "lv_1_q_boxShadow_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "36",
+              "step_id_end": "52",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_5"
+            },
+            "label": "Class Magic",
+            "name": "lv_1_q_class_3",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "14",
+              "step_id_end": "22",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_2"
+            },
+            "label": "Header Magic",
+            "name": "lv_1_l_h1_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "46",
+              "step_id_end": "60",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_4"
+            },
+            "label": "Font Magic",
+            "name": "lv_1_l_h1_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "14",
+              "step_id_end": "23",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_3"
+            },
+            "label": "Image Magic",
+            "name": "lv_1_l_imgsrc_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "72",
+              "step_id_end": "84",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_3"
+            },
+            "label": "Rounded Corner Magic",
+            "name": "lv_1_l_borderRadius_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "96",
+              "step_id_end": "105",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_1"
+            },
+            "label": "Background Color Magic",
+            "name": "lv_1_l_backgroundColor_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "123",
+              "step_id_end": "132",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_1"
+            },
+            "label": "Background Image Magic",
+            "name": "lv_1_l_backgroundImage_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "75",
+              "step_id_end": "85",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_3"
+            },
+            "label": "Arrangement Magic (Float)",
+            "name": "lv_1_l_float_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "100",
+              "step_id_end": "117",
+              "project_name": "donald",
+              "scenario_path": "lesson/b_donald_1"
+            },
+            "label": "Box Magic",
+            "name": "lv_1_l_div_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "36",
+              "step_id_end": "45",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_5"
+            },
+            "label": "Class Magic",
+            "name": "lv_1_l_class_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "40",
+              "step_id_end": "47",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_4"
+            },
+            "label": "Text Magic(text-align)",
+            "name": "lv_1_l_textAlign_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "51",
+              "step_id_end": "62",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_5"
+            },
+            "label": "Class & Selector Magic",
+            "name": "lv_1_l_classSelector_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "145",
+              "step_id_end": "153",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_5"
+            },
+            "label": "Clear Magic",
+            "name": "lv_1_l_clear_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "55",
+              "step_id_end": "72",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_2"
+            },
+            "label": "Border Magic (Border-left)",
+            "name": "lv_1_l_borderLeft_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          }
+        ]
+      },
+      "magic_circle_name": "leviathan",
+      "book_name": "leviathan",
+      "book_label": "Kairyu",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 1,
+        "hint_url": "https://hint.codeillusion.io/hint/p20aohuyinz6v",
+        "card_name": "P20",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "boss",
+      "status": "cleared",
+      "position": {
+        "left": "710",
+        "top": "260"
+      },
+      "exec_cuf": false,
+      "jewels": [],
+      "lessons": [
+        {
+          "label": "",
+          "name": "boss_centralroom",
+          "id": 178,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "boss",
+          "scenario_path": "centralroom"
+        }
+      ],
+      "review": {
+        "name": "centralroom",
+        "project_name": "boss",
+        "scenario_path": "centralroom",
+        "lessons": [
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "21",
+              "step_id_end": "28",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_1"
+            },
+            "label": "Class Magic",
+            "name": "cr_1_q_class_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "7",
+              "step_id_end": "77",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_2"
+            },
+            "label": "Vector Magic(velocity)",
+            "name": "cr_1_q_velocity_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "106",
+              "step_id_end": "113",
+              "project_name": "frozen",
+              "scenario_path": "lesson/b_frozen_1"
+            },
+            "label": "Calculation Magic(-)",
+            "name": "cr_1_q_minusMinus_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "87",
+              "step_id_end": "95",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_2"
+            },
+            "label": "Vector Magic(limit)",
+            "name": "cr_1_q_limit_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "42",
+              "step_id_end": "50",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_2"
+            },
+            "label": "Vector Magic(normalize)",
+            "name": "cr_1_q_normalize_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "18",
+              "step_id_end": "26",
+              "project_name": "bighero6",
+              "scenario_path": "lesson/b_bighero6_1"
+            },
+            "label": "Sound Magic(loop)",
+            "name": "cr_1_q_loop_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "43",
+              "step_id_end": "51",
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_3"
+            },
+            "label": "Movement Magic(translate)",
+            "name": "cr_1_q_translate_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "7",
+              "step_id_end": "15",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_2"
+            },
+            "label": "Vector Magic(createVector)",
+            "name": "cr_1_q_createVector_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "57",
+              "step_id_end": "65",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_1"
+            },
+            "label": "Class Magic(this)",
+            "name": "cr_1_q_this_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "57",
+              "step_id_end": "65",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_1"
+            },
+            "label": "Class Magic(constructor)",
+            "name": "cr_1_q_constructor_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "60",
+              "step_id_end": "68",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_2"
+            },
+            "label": "Vector Magic(add)",
+            "name": "cr_1_l_add_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "53",
+              "step_id_end": "61",
+              "project_name": "frozen",
+              "scenario_path": "lesson/b_frozen_1"
+            },
+            "label": "Array Magic(push)",
+            "name": "cr_1_l_push_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "84",
+              "step_id_end": "101",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_1"
+            },
+            "label": "Repetition Magic",
+            "name": "cr_1_l_for_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "143",
+              "step_id_end": "148",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_2"
+            },
+            "label": "Coordinate Magic(target)",
+            "name": "cr_1_l_setTarget_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "70",
+              "step_id_end": "78",
+              "project_name": "frozen",
+              "scenario_path": "lesson/g_frozen_2"
+            },
+            "label": "Color Magic",
+            "name": "cr_1_l_fill_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "131",
+              "step_id_end": "173",
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_4"
+            },
+            "label": "Array Magic",
+            "name": "cr_1_l_array_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "36",
+              "step_id_end": "45",
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_5"
+            },
+            "label": "Class Magic(CSS)",
+            "name": "cr_1_l_class_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "72",
+              "step_id_end": "84",
+              "project_name": "donald",
+              "scenario_path": "lesson/g_donald_3"
+            },
+            "label": "Rounded Corner Magic",
+            "name": "cr_1_l_class_2",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "70",
+              "step_id_end": "81",
+              "project_name": "stitch",
+              "scenario_path": "lesson/g_stitch_4"
+            },
+            "label": "Hover Magic",
+            "name": "cr_1_l_hover_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "101",
+              "step_id_end": "115",
+              "project_name": "stitch",
+              "scenario_path": "lesson/g_stitch_4"
+            },
+            "label": "Transformation Magic",
+            "name": "cr_1_l_transition_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "50",
+              "step_id_end": "78",
+              "project_name": "mermaid",
+              "scenario_path": "lesson/b_mermaid_2"
+            },
+            "label": "Vector Magic(mult)",
+            "name": "cr_1_l_mult_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "113",
+              "step_id_end": "124",
+              "project_name": "frozen",
+              "scenario_path": "lesson/b_frozen_1"
+            },
+            "label": "Array Magic(splice)",
+            "name": "cr_1_l_splice_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "176",
+              "step_id_end": "187",
+              "project_name": "frozen",
+              "scenario_path": "lesson/b_frozen_2"
+            },
+            "label": "Randomization Magic",
+            "name": "cr_1_l_random_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "68",
+              "step_id_end": "77",
+              "project_name": "stitch",
+              "scenario_path": "lesson/b_stitch_2"
+            },
+            "label": "Calculation Magic(>=)",
+            "name": "cr_1_l_changephoto_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "9",
+              "step_id_end": "16",
+              "project_name": "frozen",
+              "scenario_path": "lesson/b_frozen_3"
+            },
+            "label": "Calculation Magic(*=)",
+            "name": "cr_1_l_multiple_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "124",
+              "step_id_end": "133",
+              "project_name": "sleepingbeauty",
+              "scenario_path": "lesson/b_sleepingbeauty_3"
+            },
+            "label": "Collider Magic(setCollider)",
+            "name": "cr_1_l_setCollider_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "79",
+              "step_id_end": "121",
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_1"
+            },
+            "label": "Velocity Magic",
+            "name": "cr_1_l_velocity_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          },
+          {
+            "query": {
+              "step_begin": "",
+              "step_end": "",
+              "step_id": "110",
+              "step_id_end": "115",
+              "project_name": "sugar2",
+              "scenario_path": "lesson/b_sugar2_5"
+            },
+            "label": "Sound Magic(play)",
+            "name": "cr_1_l_play_1",
+            "boss_cleared": true,
+            "slide_num": 1,
+            "review_finished": false
+          }
+        ]
+      },
+      "magic_circle_name": "centralroom",
+      "book_name": "centralroom",
+      "book_label": "Central",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 4,
+        "hint_url": "https://hint.codeillusion.io/hint/p22sedst5mdk",
+        "card_name": "P22",
+        "symbol_position": 0
+      }
+    }
+  ],
+  "is_accessible": true,
+  "all_chapters_cleared": true,
+  "card_list_unlock": true,
+  "card_new": false,
+  "shop_unlock": true,
+  "shop_new": false,
+  "jewel_new": false,
+  "book_new": false,
+  "show_modal_on_distribution": true
+}

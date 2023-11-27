@@ -1,0 +1,13 @@
+title: MaintenanceAuthenticationInfo
+type: object
+properties:
+  loginId:
+    type: string
+  email:
+    type: string
+  password:
+    type: string
+required:
+  - loginId
+  - email
+  - password

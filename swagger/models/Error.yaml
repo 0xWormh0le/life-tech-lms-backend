@@ -1,0 +1,9 @@
+title: Error
+type: object
+x-tags:
+  - error
+properties:
+  error:
+    type: string
+required:
+  - error

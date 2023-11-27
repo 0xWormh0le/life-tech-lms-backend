@@ -1,0 +1,598 @@
+openapi: 3.0.3
+info:
+  title: CodeX USA Backend
+  version: 1.0.0
+  description: This provides APIs which used from basically codex_usa_frontend
+  contact:
+    name: Life is Tech! USA
+servers:
+  - url: 'https://api.stg.lit-lx.com'
+  - url: 'https://stg.lit-lx.com'
+paths:
+  /login:
+    $ref: '../paths/authentication/login.yaml'
+  /no-credential-login:
+    $ref: '../paths/authentication/no-credential-login.yaml'
+  '/clever/oauth/token':
+    $ref: '../paths/authentication/clever.yaml'
+  '/clever/roster-sync':
+    $ref: '../paths/clever/clever-roster-sync.yaml'
+  '/google/oauth/token':
+    $ref: '../paths/authentication/google.yaml'
+  '/class-link/oauth/token':
+    $ref: '../paths/authentication/class-link.yaml'
+  '/class-link/roster-sync':
+    $ref: '../paths/classlink/class-link-roster-sync.yaml'
+  '/reset-password-request':
+    $ref: '../paths/codex/user-reset-password-request.yaml'
+  '/reset-password':
+    $ref: '../paths/authentication/reset-password.yaml'
+  '/reset-password-request-resend':
+    $ref: '../paths/authentication/user-reset-password-request-resend.yaml'
+  '/users/{userId}/codeIllusionPackage':
+    parameters:
+      - schema:
+          type: string
+        name: userId
+        in: path
+        required: true
+    get:
+      summary: Get User's CodeIllusion Packages
+      tags:
+        - codex
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  codeIllusionPackage:
+                    $ref: ../models/CodeIllusionPackage.yaml
+                required:
+                  - codeIllusionPackage
+              examples:
+                success:
+                  value:
+                    codeIllusionPackage:
+                      id: package-id-1
+                      level: basic
+                      chapters:
+                        - id: chapter-id
+                          name: Chapter 1
+                          title: Welcome to Technologia
+                          circles:
+                            - id: circle-id
+                              course: basic
+                              characterImageUrl: 'https://lit.com/character-image-1.png'
+                              clearedCharacterImageUrl: 'https://lit.com/character-image-1.png'
+                              gemLessonIds:
+                                - lesson-id-1
+                                - lesson-id-2
+                                - lesson-id-3
+                              bookLessonIds:
+                                - lesson-id-4
+                                - lesson-id-5
+                              bookName: The Principal's Test
+                              bookImageUrl: 'https://lit.com/book-image-1.png'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                unauthorized:
+                  value:
+                    error: The token is not authorized.
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                forbidden:
+                  value:
+                    error: The token does not have permission to view the specified user's information
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                user not found:
+                  value:
+                    error: The specified user not found
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                internal server error:
+                  value:
+                    error: Something wrong has occurred
+      operationId: getUsersUserIdCodeIllusionPackages
+      description: |-
+        This API returns the CodeIllusionPacakges available to the specified user.
+        If the user pointed to by the token does not have permission to view the information for the specified userId, an error will occur.
+  /lessons:
+    get:
+      summary: Get Lessons
+      tags:
+        - codex
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  lessons:
+                    type: array
+                    items:
+                      $ref: ../models/Lesson.yaml
+                required:
+                  - lessons
+              examples:
+                success:
+                  value:
+                    lessons:
+                      - id: lesson-id-1
+                        url: 'https://player.lit.com/lesson/lesson-id-1'
+                        name: The Mouse Magic
+                        lessonType: book
+                        course: mediaArt
+                        description: Learn how to input the mouse's movements using the mouseX and mouseY functions.
+                        thumbnailImageUrl: 'https://lit.com/thumbnail-image-1.png'
+                        lessonDuration: 3-8min
+                        maxStarCount: 3
+                      - id: lesson-id-2
+                        url: 'https://player.lit.com/lesson/lesson-id-2'
+                        name: The Mouse Magic 2
+                        lessonType: gem
+                        course: gameDevelopment
+                        description: Review mouse and circle variables as well as how to add color. Learn how to use them with if statements.
+                        thumbnailImageUrl: 'https://lit.com/thumbnail-image-2.png'
+                        lessonDuration: 3-8min
+                        maxStarCount: 3
+                      - id: lesson-id-3
+                        url: 'https://player.lit.com/lesson/lesson-id-3'
+                        name: LESSON 1
+                        lessonType: book
+                        course: basic
+                        description: 'Learn how to use for statements to create many figures using short pieces of code, as well as how to connect it to your cursor.'
+                        thumbnailImageUrl: 'https://lit.com/thumbnail-image-3.png'
+                        lessonDuration: 3-8min
+                        maxStarCount: 3
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                unauthorized:
+                  value:
+                    error: The token is not authorized.
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                not found:
+                  value:
+                    error: lesson ids 0001 not found
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                internal server error:
+                  value:
+                    error: Something wrong has occurred
+      operationId: getLessons
+      parameters:
+        - schema:
+            type: array
+            items:
+              type: string
+          in: query
+          name: lessonIds
+          required: true
+      description: This API provides a list of Lesson definitions.
+    parameters: []
+  '/users/{userId}/lessonStatuses':
+    parameters:
+      - schema:
+          type: string
+        name: userId
+        in: path
+        required: true
+    get:
+      summary: Get User LessonStatuses
+      tags:
+        - codex
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  userLessonStatuses:
+                    type: array
+                    items:
+                      $ref: ../models/UserLessonStatus.yaml
+              examples:
+                success:
+                  value:
+                    userLessonStatuses:
+                      - lessonId: lesson-id-1
+                        status: not_cleared
+                        achievedStarCount: 2
+                      - lessonId: lesson-id-2
+                        status: not_cleared
+                        achievedStarCount: 3
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                unauthorized:
+                  value:
+                    error: The token is not authorized.
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                forbidden:
+                  value:
+                    error: The token does not have permission to view the specified user's information
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                user not found:
+                  value:
+                    error: The specified user not found
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                internal server error:
+                  value:
+                    error: Something wrong has occurred
+      operationId: getUsersUserIdLessonStatuses
+      parameters:
+        - schema:
+            type: array
+            items:
+              type: string
+          in: query
+          name: lessonIds
+      description: |-
+        This API provides Lesson Statuses for the specified User.
+        If the user pointed to by the token does not have permission to view the information for the specified userId, an error will occur.
+  '/users/{userId}/settings':
+    parameters:
+      - schema:
+          type: string
+        name: userId
+        in: path
+        required: true
+    get:
+      summary: Get User Settings
+      tags:
+        - codex
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  settings:
+                    $ref: ../models/UserSettings.yaml
+              examples:
+                success:
+                  value:
+                    settings:
+                      sound:
+                        seVolume: 4
+                        bgmVolume: 5
+                        hintNarrationVolume: 0
+                        serifNarrationVolume: 3
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                unauthorized:
+                  value:
+                    error: The token is not authorized.
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                forbidden:
+                  value:
+                    error: The token does not have permission to view the specified user's information
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                user not found:
+                  value:
+                    error: The specified user not found
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                internal server error:
+                  value:
+                    error: Something wrong has occurred
+      operationId: getUserSettings
+      description: |-
+        This API provides Settings for the specified User.
+        If the user pointed to by the token does not have permission to view the information for the specified userId, an error will occur.
+  '/users/{userId}/soundSettings':
+    parameters:
+      - schema:
+          type: string
+        name: userId
+        in: path
+        required: true
+    put:
+      summary: Update User SoundSettings
+      tags:
+        - codex
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  soundSettings:
+                    $ref: ../models/UserSoundSettings.yaml
+              examples:
+                success:
+                  value:
+                    soundSettings:
+                      seVolume: 4
+                      bgmVolume: 5
+                      hintNarrationVolume: 0
+                      serifNarrationVolume: 3
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                unauthorized:
+                  value:
+                    error: The token is not authorized.
+        '403':
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                forbidden:
+                  value:
+                    error: The token does not have permission to view the specified user's information
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                user not found:
+                  value:
+                    error: The specified user not found
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error.yaml
+              examples:
+                internal server error:
+                  value:
+                    error: Something wrong has occurred
+      operationId: updateUserSoundSettings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ../models/UserSoundSettings.yaml
+            examples:
+              request body:
+                value:
+                  seVolume: 4
+                  bgmVolume: 5
+                  hintNarrationVolume: 0
+                  serifNarrationVolume: 3
+        description: ''
+      description: |-
+        This API updates SoundSettings for the specified User.
+        SoundSettings is the part of User's Settings.
+        If the user pointed to by the token does not have permission to view the information for the specified userId, an error will occur.
+  '/user-package-assignments':
+    $ref: '../paths/codex/user-package-assignments.yaml'
+  '/districts':
+    $ref: '../paths/codex/districts.yaml'
+  '/district':
+    $ref: '../paths/codex/create-district.yaml'
+  '/district/{districtId}':
+    $ref: '../paths/codex/get-edit-delete-district.yaml'
+  '/district/{districtId}/administrators':
+    $ref: '../paths/codex/administrators.yaml'
+  '/administrator/{administratorId}':
+    $ref: '../paths/codex/edit-delete-administrator.yaml'
+  '/district/{districtId}/organizations':
+    $ref: '../paths/codex/organizations.yaml'
+  '/organization':
+    $ref: '../paths/codex/create-organization.yaml'
+  '/organization/{organizationId}':
+    $ref: '../paths/codex/edit-delete-organization.yaml'
+  '/organization/{organizationId}/student-groups':
+    $ref: '../paths/codex/student-groups.yaml'
+  '/organization/{organizationId}/student-group':
+    $ref: '../paths/codex/create-student-group.yaml'
+  '/organization/{organizationId}/district-lms-information':
+    $ref: '../paths/codex/get-district-lms-information-by-organization.yaml'
+  '/student-group/{studentGroupId}':
+    $ref: '../paths/codex/edit-delete-student-group.yaml'
+  '/student-group/{studentGroupId}/codeillusion-packages':
+    $ref: '../paths/codex/get-packages-by-student-group-id.yaml'
+  '/student-group/{studentGroupId}/students':
+    $ref: '../paths/codex/students.yaml'
+  '/student-group/{studentGroupId}/students/{studentId}':
+    $ref: '../paths/codex/student-student-group.yaml'
+  '/student/{studentId}':
+    $ref: '../paths/codex/edit-delete-student.yaml'
+  '/organization/{organizationId}/teachers':
+    $ref: '../paths/codex/teachers.yaml'
+  '/teacher/{teacherId}':
+    $ref: '../paths/codex/get-edit-delete-teacher.yaml'
+  '/organization/{organizationId}/teacher/{teacherId}':
+    $ref: '../paths/codex/teacher-organization.yaml'
+  '/student-group/{studentGroupId}/unaccessible-lesson':
+    $ref: '../paths/codex/unaccessible-lesson.yaml'
+  '/student-group/{studentGroupId}/unaccessible-lessons':
+    $ref: '../paths/codex/get-unaccessible-lessons.yaml'
+  '/student-group/{studentGroupId}/lesson-statuses':
+    $ref: '../paths/codex/student-group-lesson-status.yaml'
+  '/me':
+    $ref: '../paths/codex/me.yaml'
+  '/user-lesson-status':
+    $ref: '../paths/codex/user-lesson-status.yaml'
+  '/codex-packages':
+    $ref: '../paths/codex/get-codex-packages.yaml'
+  '/district/{districtId}/district-purchased-packages':
+    $ref: '../paths/codex/get-district-purchased-packages.yaml'
+  '/standard-mappings':
+    $ref: '../paths/codex/standard-mapping.yaml'
+  '/{studentId}/unaccessible-lesson':
+    $ref: '../paths/codex/get-student-unaccessible-lessons.yaml'
+  '/student-group-package-assignments':
+    $ref: '../paths/codex/student-group-package-assignments.yaml'
+  '/codeIllusionPackage':
+    $ref: '../paths/codex/codeIllusion-package.yaml'
+  '/cse-packages/{packageId}':
+    $ref: '../paths/codex/cse-package.yaml'
+  '/change-password':
+    $ref: '../paths/codex/change-password.yaml'
+  '/district-roster-sync-statuses':
+    $ref: '../paths/codex/district-roster-sync-statuses.yaml'
+
+  # APIs for LessonPlayer (ref_oz_movie)
+  /player_api/check_token:
+    $ref: '../paths/playerApi/check-token.yaml'
+  /player_api/player_setting:
+    $ref: '../paths/playerApi/player-setting.yaml'
+  /player_api/server_status:
+    $ref: '../paths/playerApi/server-status.yaml'
+  /player_api/action_log:
+    $ref: '../paths/playerApi/action-log.yaml'
+  /player_api/step_passed:
+    $ref: '../paths/playerApi/step-passed.yaml'
+  /player_api/quiz_answered:
+    $ref: '../paths/playerApi/quiz-answered.yaml'
+  /player_api/lesson_setting:
+    $ref: '../paths/playerApi/lesson-setting.yaml'
+  /player_api/lesson_finished:
+    $ref: '../paths/playerApi/lesson-finished.yaml'
+  /player_api/lesson_cleared:
+    $ref: '../paths/playerApi/lesson-cleared.yaml'
+  /player_api/after_lesson_cleared:
+    $ref: '../paths/playerApi/after-lesson-cleared.yaml'
+  /player_api/lesson_sheet_changed:
+    $ref: '../paths/playerApi/lesson-sheet-changed.yaml'
+
+  # APIs for ChurnZero authentication
+  /churnzero/token:
+    $ref: '../paths/churnzero/token.yaml'
+
+  # APIs for Maintenance
+  /health-check:
+    $ref: '../paths/maintenance/health-check.yaml'
+  /maintenance/users:
+    $ref: '../paths/maintenance/users.yaml'
+  /maintenance/accountNotification:
+    $ref: '../paths/maintenance/account-notification.yaml'
+  /maintenance/districts:
+    $ref: '../paths/maintenance/districts.yaml'
+  /maintenance/organizations:
+    $ref: '../paths/maintenance/organizations.yaml'
+  /maintenance/studentGroups:
+    $ref: '../paths/maintenance/student-groups.yaml'
+  /maintenance/administratorDistricts:
+    $ref: '../paths/maintenance/administrator-districts.yaml'
+  /maintenance/teacherOrganizations:
+    $ref: '../paths/maintenance/teacher-organizations.yaml'
+  /maintenance/studentGroupStudents:
+    $ref: '../paths/maintenance/student-group-students.yaml'
+  /maintenance/constructFreeTrialAccountsForSales:
+    $ref: '../paths/maintenance/construct-free-trial-accounts-for-sales.yaml'
+
+components:
+  schemas: {}
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+tags:
+  - name: authentication
+  - name: codex
+  - name: playerApi
+  - name: maintenance

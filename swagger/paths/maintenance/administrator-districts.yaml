@@ -1,0 +1,112 @@
+get:
+  summary: Get All AdministratorDistricts for accounts management purpose
+  operationId: maintenanceGetAdministratorDistricts
+  tags:
+    - maintenance
+  responses:
+    '200':
+      description: Returns all AdministratorDistricts
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              administratorDistricts:
+                type: array
+                items:
+                  $ref: '../../models/maintenance/AdministratorDistrict.yaml'
+            required:
+              - administratorDistricts
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+post:
+  summary: Create AdministratorDistrict bulky for accounts management purpose
+  operationId: maintenancePostAdministratorDistricts
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            administratorDistricts:
+              type: array
+              items:
+                $ref: '../../models/maintenance/AdministratorDistrict.yaml'
+          required:
+            - administratorDistricts
+  responses:
+    '200':
+      description: Returns created AdministratorDistrict
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              ok:
+                type: string
+            required:
+              - ok
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+delete:
+  summary: Delete AdministratorDistrict bulky for accounts management purpose
+  operationId: maintenanceDeleteAdministratorDistricts
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            administratorDistricts:
+              type: array
+              items:
+                $ref: '../../models/maintenance/AdministratorDistrict.yaml'
+          required:
+            - administratorDistricts
+  responses:
+    '200':
+      description: Returns ok
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              ok:
+                type: string
+            required:
+              - ok
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

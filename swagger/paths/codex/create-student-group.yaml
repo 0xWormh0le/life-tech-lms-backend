@@ -1,0 +1,131 @@
+parameters:
+  - schema:
+      type: string
+    name: organizationId
+    in: path
+    required: true
+post:
+  summary: Student Group API POST
+  tags:
+    - codex
+  operationId: postStudentGroup
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              name: Fl Group
+              packageId: package-id-1
+              grade: grade1
+              studentGroupLmsId: 1
+          properties:
+            name:
+              type: string
+              minLength: 1
+              description: This is a student group name.
+            packageId:
+              type: string
+              description: This is a packageId.
+            grade:
+              type: string
+              minLength: 1
+              description: This is a grade like (grade1,grade2 and etc).
+            studentGroupLmsId:
+              type: string
+              minLength: 1
+          required:
+            - name
+            - packageId
+        examples:
+          success:
+            value:
+              name: Fl Group
+              packageId: package-id-1
+              grade: grade1
+              studentGroupLmsId: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: Invalid organizationId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to add the specified student group's information
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            district not found:
+              value:
+                error: The organization information not found
+    '409':
+      description: Student Group already exist
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Student Group already exist
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  description: Student Group POST API call when user want to add student group in system.

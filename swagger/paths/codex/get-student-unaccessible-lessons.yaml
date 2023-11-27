@@ -1,0 +1,83 @@
+parameters:
+  - schema:
+      type: string
+    name: studentId
+    in: path
+    required: true
+get:
+  summary: Get student unaccessible lessons
+  description: Get API call when user want to view restricted lesson.
+  tags:
+    - codex
+  operationId: getStudentUnaccessibleLessons
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              unaccessibleLessons:
+                type: array
+                items:
+                  type: string
+            required:
+              - unaccessibleLessons
+          examples:
+            success:
+              value:
+                unaccessibleLessons:
+                  ['lesson-id-1', 'lesson-id-2', 'lesson-id-3']
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            Invalid studentId:
+              value:
+                error: Invalid studentId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to view restricted lesson.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The user not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something went wrong.

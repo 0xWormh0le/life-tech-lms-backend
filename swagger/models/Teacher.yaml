@@ -1,0 +1,33 @@
+title: Teacher
+type: object
+x-tags:
+  - teacher
+description: 'Teacher'
+properties:
+  id:
+    type: string
+  email:
+    type: string
+  userId:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+  teacherLMSId:
+    type: string
+  createdUserId:
+    type: string
+  createdUserName:
+    type: string
+  createdDate:
+    type: string
+required:
+  - id
+  - userId
+  - firstName
+  - lastName
+  - teacherLMSId
+  - createdUserId
+  - createdDate
+  - email

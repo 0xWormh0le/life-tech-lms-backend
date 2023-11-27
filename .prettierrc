@@ -1,0 +1,31 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "semi": false,
+  "overrides": [
+    {
+      "files": ["scripts/insert-dummy-user.ts"],
+      "options": {
+        "printWidth": 200
+      }
+    },
+    {
+      "files": ["src/domain/usecases/classlink/*"],
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": ["src/**/*.test.*"],
+      "options": {
+        "printWidth": 160
+      }
+    },
+    {
+      "files": ["src/adapter/typeorm/hardcoded-data/**/*"],
+      "options": {
+        "printWidth": 900
+      }
+    }
+  ]
+}

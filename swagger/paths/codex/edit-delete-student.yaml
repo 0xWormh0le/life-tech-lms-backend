@@ -1,0 +1,207 @@
+parameters:
+  - schema:
+      type: string
+    name: studentId
+    in: path
+    required: true
+put:
+  summary: Student API PUT
+  operationId: putStudent
+  tags:
+    - codex
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            nickName:
+              type: string
+              minLength: 1
+            loginId:
+              type: string
+            password:
+              type: string
+            studentLMSId:
+              type: string
+            email:
+              type: string
+            emailsToNotify:
+              type: array
+              items:
+                type: string
+        examples:
+          success:
+            value:
+              nickName: parth
+              loginId: 'login-id-1'
+              password: 'parth@123'
+              studentLMSId: 'lms-id-1'
+              email: 'parth@gmail.com'
+              emailsToNotify:
+                - 'parth@gmail.com'
+                - 'parekh@gmail.com'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            bad request:
+              value:
+                error: Invalid studentId.
+            invalid student attributes:
+              value:
+                error: invalidEmail,duplicateEmail,atLeastOneFieldIsMandatory,nickNameNotProvided
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to edit the specified student information.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            student not found:
+              value:
+                error: The specified student not found.
+            administrator not found:
+              value:
+                error: administrator not found.
+    '409':
+      description: student already exist
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            already exists:
+              value:
+                error: loginIdAlreadyExists,studentLMSIdAlreadyExists,userAlreadyExistWithEmail
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  description: Student PUT API call when user want to edit student information in system.
+delete:
+  summary: Delete Student
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: Invalid student id..
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to delete the specified student.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            student not found:
+              value:
+                error: The specified student not found.
+            administrator not found:
+              value:
+                error: administrator not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: deleteStudent
+  description: Student DELETE API call when user want to delete student in system.

@@ -1,0 +1,70 @@
+get:
+  summary: Get my details
+  tags:
+    - codex
+  operationId: getLoggedInUser
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Me.yaml
+          examples:
+            success:
+              value:
+                user:
+                  id: user-id
+                  email: user1@email.com
+                  Role: teacher
+                  loginId: login-id-1
+                administrator:
+                  id: administrator-id
+                  userId: user-id
+                  firstName: administrator_first_name_1
+                  lastName: administrator_last_name_1
+                  administratorLMSId: administrator_lms_id_1
+                teacher:
+                  id: teacher-id
+                  userId: user-id
+                  firstName: teacher_first_name_1
+                  lastName: teacher_last_name_1
+                  teacherLMSId: teacher_lms_id_1
+                student:
+                  id: student-id
+                  userId: user-id
+                  nickName: student_nick_name
+                  studentLMSId: student_lms_id_1
+
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The user not found.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something went wrong.

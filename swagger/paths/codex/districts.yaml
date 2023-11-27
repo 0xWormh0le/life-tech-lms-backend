@@ -1,0 +1,100 @@
+get:
+  summary: Get All Districts
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              districts:
+                type: array
+                items:
+                  $ref: ../../models/District.yaml
+          examples:
+            success:
+              value:
+                districts:
+                  - id: district-1
+                    name: District of Columbia
+                    districtLMSId: null
+                    lmsId: None
+                    lastRosterSyncEventId: event-id-1
+                    lastRosterSyncEventDate: '2022-05-29T16:07:41.835Z'
+                    enableRosterSync: false
+                    stateId: AL
+                    administrators: admin@gmail.com,test@gmail.com
+
+                  - id: district-2
+                    name: District of Florida
+                    districtLMSId: 1
+                    lmsId: Clever
+                    lastRosterSyncEventId: event-id-2
+                    lastRosterSyncEventDate: '2022-05-29T16:07:41.835Z'
+                    enableRosterSync: true
+                    stateId: GL
+                    administrators: admin1@gmail.com,test1@gmail.com
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to view the specified district's information
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified district not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: getDistricts
+  parameters:
+    - schema:
+        type: array
+        items:
+          type: string
+      in: query
+      name: districtIds
+    - schema:
+        type: string
+      in: query
+      name: LMSId
+    - schema:
+        type: boolean
+      in: query
+      name: enabledRosterSync
+  description: |-
+    This API provides all the Districts.
+    If the user pointed to by the token does not have permission to view the information for the specified userId, an error will occur.

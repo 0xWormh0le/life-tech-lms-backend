@@ -1,0 +1,96 @@
+post:
+  summary: Lesson Player API POST /action_log
+  tags:
+    - playerApi
+  operationId: postActionLog
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              log:
+                event_name: stepPassed
+                project_name: donald
+                scenario_path: lesson/g_donald_1
+                step_id: '10'
+          required:
+            - log
+          properties:
+            log:
+              type: object
+        examples:
+          success:
+            value:
+              log:
+                event_name: stepPassed
+                project_name: donald
+                scenario_path: lesson/g_donald_1
+                step_id: '10'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              example-1:
+                login_status: 'no'
+            properties:
+              login_status:
+                type: string
+                minLength: 1
+                enum:
+                  - 'no'
+            required:
+              - login_status
+          examples:
+            unauthorized:
+              value:
+                login_status: 'no'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified lesson for scenario_path and project_name not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  description: The Lesson Player calls this API once for action log

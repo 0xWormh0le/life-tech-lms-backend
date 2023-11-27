@@ -1,0 +1,14 @@
+title: MaintenanceUserPerRoleWithAuthenticationInfo
+oneOf:
+  - allOf:
+      - $ref: './UserStudentRole.yaml'
+      - $ref: './AuthenticationInfo.yaml'
+  - allOf:
+      - $ref: './UserTeacherRole.yaml'
+      - $ref: './AuthenticationInfo.yaml'
+  - allOf:
+      - $ref: './UserAdministratorRole.yaml'
+      - $ref: './AuthenticationInfo.yaml'
+  - allOf:
+      - $ref: './UserInternalOperatorRole.yaml'
+      - $ref: './AuthenticationInfo.yaml'

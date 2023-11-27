@@ -1,0 +1,94 @@
+post:
+  summary: Get Clever user access token
+  tags:
+    - authentication
+  operationId: postCleverAuthenticate
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              code: be055f7b9d748811351a
+              grantType: authorization_code
+              redirectUri: http://localhost:3100
+              studentGroupId: student-group-id-1
+              organizationId: organization-id-1
+          properties:
+            code:
+              type: string
+              minLength: 1
+            grantType:
+              type: string
+              minLength: 1
+            redirectUri:
+              type: string
+              minLength: 1
+            studentGroupId:
+              type: string
+            organizationId:
+              type: string
+          required:
+            - code
+            - grantType
+            - redirectUri
+            - studentGroupId
+            - organizationId
+        examples:
+          success:
+            value:
+              code: be055f7b9d748811351a
+              grantType: authorization_code
+              redirectUri: http://localhost:3100
+              studentGroupId: student-group-id-1
+              organizationId: organization-id-1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              user:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  accessToken:
+                    type: string
+                  role:
+                    type: string
+                required:
+                  - id
+                  - accessToken
+                  - role
+          examples:
+            success:
+              value:
+                user:
+                  id: 1234-1234-1234-1234
+                  accessToken: ffff-ffff-00001234
+                  role: student
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: error message.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

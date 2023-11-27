@@ -1,0 +1,370 @@
+{
+  "data": [
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "100",
+        "top": "100"
+      },
+      "on_click_cuf": {
+        "file": "books/b_pooh/clicked.js",
+        "args": [""]
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_pooh_1",
+              "id": 134,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "pooh",
+              "scenario_path": "lesson/g_pooh_1"
+            }
+          ],
+          "cleared": true,
+          "id": 70,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to make the camera follow moving characters and erase any unnecessary effects caused by the camera.",
+          "jewel_label": "Camera Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 1,
+          "jewel_name": "g_pooh_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_pooh_2",
+              "id": 135,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "pooh",
+              "scenario_path": "lesson/g_pooh_2"
+            }
+          ],
+          "cleared": true,
+          "id": 71,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to write switch-case statements that choose actions, similar to if statements.",
+          "jewel_label": "Switch Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 2,
+          "jewel_name": "g_pooh_2"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_pooh_1",
+          "id": 136,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "pooh",
+          "scenario_path": "lesson/b_pooh_1"
+        },
+        {
+          "label": "",
+          "name": "b_pooh_2",
+          "id": 137,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "pooh",
+          "scenario_path": "lesson/b_pooh_2"
+        },
+        {
+          "label": "",
+          "name": "b_pooh_3",
+          "id": 138,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "pooh",
+          "scenario_path": "lesson/b_pooh_3"
+        },
+        {
+          "label": "",
+          "name": "b_pooh_4",
+          "id": 139,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 4,
+          "project_name": "pooh",
+          "scenario_path": "lesson/b_pooh_4"
+        },
+        {
+          "label": "",
+          "name": "b_pooh_5",
+          "id": 140,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 5,
+          "project_name": "pooh",
+          "scenario_path": "lesson/b_pooh_5"
+        }
+      ],
+      "magic_circle_name": "b_pooh",
+      "book_id": 13,
+      "book_name": "b_pooh",
+      "book_label": "Honey Hunt",
+      "book_advanced_label": "",
+      "book_second_label": "",
+      "course_name": "game",
+      "course_label": "Game Dev.",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 6,
+        "hint_url": "https://hint.codeillusion.io/hint/p13lfakhjoijLfR",
+        "card_name": "P13",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "480",
+        "top": "170"
+      },
+      "on_click_cuf": {
+        "file": "books/b_bighero6/clicked.js",
+        "args": [""]
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_bighero6_1",
+              "id": 141,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "bighero6",
+              "scenario_path": "lesson/g_bighero6_1"
+            }
+          ],
+          "cleared": true,
+          "id": 74,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to make balloon sprites float up from random coordinates. This continues in Click Magic 2.",
+          "jewel_label": "Click Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 1,
+          "jewel_name": "g_bighero6_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "",
+              "name": "g_bighero6_2",
+              "id": 142,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "bighero6",
+              "scenario_path": "lesson/g_bighero6_2"
+            }
+          ],
+          "cleared": true,
+          "id": 75,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to make functions that are called when the mouse is clicked through a lesson of popping balloon sprites.",
+          "jewel_label": "Click Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "game",
+          "display_order": 2,
+          "jewel_name": "g_bighero6_2"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_bighero6_1",
+          "id": 143,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "bighero6",
+          "scenario_path": "lesson/b_bighero6_1"
+        },
+        {
+          "label": "",
+          "name": "b_bighero6_2",
+          "id": 144,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "bighero6",
+          "scenario_path": "lesson/b_bighero6_2"
+        },
+        {
+          "label": "",
+          "name": "b_bighero6_3",
+          "id": 145,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "bighero6",
+          "scenario_path": "lesson/b_bighero6_3"
+        },
+        {
+          "label": "",
+          "name": "b_bighero6_4",
+          "id": 146,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 4,
+          "project_name": "bighero6",
+          "scenario_path": "lesson/b_bighero6_4"
+        },
+        {
+          "label": "",
+          "name": "b_bighero6_5",
+          "id": 147,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 5,
+          "project_name": "bighero6",
+          "scenario_path": "lesson/b_bighero6_5"
+        }
+      ],
+      "magic_circle_name": "b_bighero6",
+      "book_id": 14,
+      "book_name": "b_bighero6",
+      "book_label": "Breaking Tiles",
+      "book_advanced_label": "",
+      "book_second_label": "",
+      "course_name": "game",
+      "course_label": "Game Dev.",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": true,
+        "no_hint_cleared": true
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 8,
+        "hint_url": "https://hint.codeillusion.io/hint/p14ewah&787L",
+        "card_name": "P14",
+        "symbol_position": 0
+      }
+    }
+  ],
+  "is_accessible": true,
+  "current_area_name": "waterfall",
+  "chapter_label": "A Forecasted Journey",
+  "circle_connections": [],
+  "modal_on_init_list": [
+    {
+      "image": "tutorial_lesson_leap.jpg",
+      "type": "image"
+    }
+  ],
+  "all_chapters_cleared": false,
+  "card_list_unlock": true,
+  "card_new": false,
+  "shop_unlock": true,
+  "shop_new": true,
+  "jewel_new": false,
+  "book_new": false,
+  "show_modal_on_distribution": false
+}

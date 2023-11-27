@@ -1,0 +1,123 @@
+post:
+  summary: Lesson Player API POST /lesson_finished (This updates LessonStatus actually)
+  tags:
+    - playerApi
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            oneOf:
+              - properties:
+                  type:
+                    type: string
+                    enum:
+                      - full_url
+                  value:
+                    type: string
+                    description: 'When "type" is "full_url", this will be the url to which the user redirect after the lesson'
+                required:
+                  - type
+                  - value
+            type: object
+          examples:
+            '"type" is "full_url"':
+              value:
+                type: full_url
+                value: 'http://www.yahoo.co.jp'
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              login_status:
+                type: string
+                enum:
+                  - 'no'
+            required:
+              - login_status
+          examples:
+            unauthorized:
+              value:
+                login_status: 'no'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified scenario_path and project_name not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  operationId: postLessonFinished
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            project_name:
+              type: string
+              minLength: 1
+              description: This is defined in the spread sheet where the lesson steps are defined
+            scenario_path:
+              type: string
+              minLength: 1
+              description: This is defined in the spread sheet where the lesson steps are defined
+            finish_status:
+              type: object
+              required:
+                - quiz_all_answered
+                - no_hint_cleared
+                - no_status_up
+              properties:
+                quiz_all_answered:
+                  type: boolean
+                  description: Will be true the user answered all of quiz correcly or the lesson has no quiz
+                no_hint_cleared:
+                  type: boolean
+                  description: Will be true if the user didn't use any hint in the lesson
+                no_status_up:
+                  type: boolean
+                  description: Will be true if the user did the cheat that skip a step by editing the step_id in the URL.
+          required:
+            - project_name
+            - scenario_path
+            - finish_status
+        examples:
+          success:
+            value:
+              project_name: donald
+              scenario_path: lesson/b_donald_1
+              finish_status:
+                quiz_all_answered: true
+                no_hint_cleared: true
+                no_status_up: true
+    description: ''
+  description: Lesson Player calls this API at the end of each lesson. It moves to the specified destination according to the return value.

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  codex_usa_backend:
+    container_name: codex_usa_backend_db
+    image: 'postgres:13.4'
+    ports:
+      - '5431:5432'
+    environment:
+      - POSTGRES_USER=codex
+      - POSTGRES_PASSWORD=codex
+      - POSTGRES_DB=codex
+    volumes:
+      - ${PWD}/env/local-db/pgdata:/var/lib/postgresql/data # stores data into local-dir
+
+volumes:
+  pgdata: {}

@@ -1,0 +1,18 @@
+title: User
+type: object
+properties:
+  id:
+    type: string
+  loginId:
+    type: string
+  role:
+    type: string
+    enum:
+      - student
+      - teacher
+      - administrator
+      - internalOperator
+required:
+  - id
+  - loginId
+  - role

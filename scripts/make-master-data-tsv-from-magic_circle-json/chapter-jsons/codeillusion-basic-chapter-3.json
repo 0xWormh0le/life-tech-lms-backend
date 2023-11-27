@@ -1,0 +1,435 @@
+{
+  "data": [
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "150",
+        "top": "140"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_sugar1_1",
+              "name": "g_sugar1_1",
+              "id": 46,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "sugar1",
+              "scenario_path": "lesson/g_sugar1_1"
+            }
+          ],
+          "cleared": true,
+          "id": 33,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to add gravity onto a ball's movements.",
+          "jewel_label": "Gravitational Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "game",
+          "display_order": 1,
+          "jewel_name": "g_sugar1_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_sugar1_2",
+              "name": "g_sugar1_2",
+              "id": 47,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "sugar1",
+              "scenario_path": "lesson/g_sugar1_2"
+            }
+          ],
+          "cleared": true,
+          "id": 34,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to control a ghost's position and velocity, as well as make it follow the cursor.",
+          "jewel_label": "Velocity Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "game",
+          "display_order": 2,
+          "jewel_name": "g_sugar1_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_sugar1_3",
+              "name": "g_sugar1_3",
+              "id": 48,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "sugar1",
+              "scenario_path": "lesson/g_sugar1_3"
+            }
+          ],
+          "cleared": true,
+          "id": 35,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to change the ghost's animation based on the cursor's position.",
+          "jewel_label": "Animation Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "game",
+          "display_order": 3,
+          "jewel_name": "g_sugar1_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_sugar1_4",
+              "name": "g_sugar1_4",
+              "id": 49,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "sugar1",
+              "scenario_path": "lesson/g_sugar1_4"
+            }
+          ],
+          "cleared": true,
+          "id": 36,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to use an array to create many sprites and create a labyrinth.",
+          "jewel_label": "Labyrinth Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "20-40min",
+          "course_name": "game",
+          "display_order": 4,
+          "jewel_name": "g_sugar1_4"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_sugar1_1",
+          "id": 50,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "sugar1",
+          "scenario_path": "lesson/b_sugar1_1"
+        },
+        {
+          "label": "",
+          "name": "b_sugar1_2",
+          "id": 51,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "sugar1",
+          "scenario_path": "lesson/b_sugar1_2"
+        }
+      ],
+      "magic_circle_name": "b_sugar1",
+      "book_id": 8,
+      "book_name": "b_sugar1",
+      "book_label": "Dungeon Escape",
+      "book_advanced_label": "Dungeon Escape",
+      "book_second_label": "Wreck-it Ralph",
+      "course_name": "game",
+      "course_label": "Game Dev.",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 9,
+        "hint_url": "https://hint.codeillusion.io/hint/p09mgaho892mag",
+        "card_name": "P09",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "450",
+        "top": "100"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_beauty_1",
+              "name": "g_beauty_1",
+              "id": 53,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "beauty",
+              "scenario_path": "lesson/g_beauty_1"
+            }
+          ],
+          "cleared": true,
+          "id": 37,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to control pixels, the smallest unit in computer displays, and how to freely change their color.",
+          "jewel_label": "Pixel Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "media_art",
+          "display_order": 1,
+          "jewel_name": "g_beauty_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_beauty_2",
+              "name": "g_beauty_2",
+              "id": 54,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "beauty",
+              "scenario_path": "lesson/g_beauty_2"
+            }
+          ],
+          "cleared": true,
+          "id": 38,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to fetch the pixels' RGB color values and change them to other colors.",
+          "jewel_label": "Pixel Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "media_art",
+          "display_order": 2,
+          "jewel_name": "g_beauty_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_beauty_3",
+              "name": "g_beauty_3",
+              "id": 55,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "beauty",
+              "scenario_path": "lesson/g_beauty_3"
+            }
+          ],
+          "cleared": true,
+          "id": 39,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to fetch the pixels' RGB color values from an image and change a photo into a mosaic.",
+          "jewel_label": "Mosaic Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "media_art",
+          "display_order": 3,
+          "jewel_name": "g_beauty_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_beauty_4",
+              "name": "g_beauty_4",
+              "id": 56,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "beauty",
+              "scenario_path": "lesson/g_beauty_4"
+            }
+          ],
+          "cleared": true,
+          "id": 40,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to load a video and control (play/pause) it.",
+          "jewel_label": "Video Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "media_art",
+          "display_order": 4,
+          "jewel_name": "g_beauty_4"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_beauty_1",
+          "id": 57,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": true,
+            "no_hint_cleared": true
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "beauty",
+          "scenario_path": "lesson/b_beauty_1"
+        },
+        {
+          "label": "",
+          "name": "b_beauty_2",
+          "id": 58,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "beauty",
+          "scenario_path": "lesson/b_beauty_2"
+        },
+        {
+          "label": "",
+          "name": "b_beauty_3",
+          "id": 59,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "beauty",
+          "scenario_path": "lesson/b_beauty_3"
+        },
+        {
+          "label": "",
+          "name": "b_beauty_4",
+          "id": 60,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 4,
+          "project_name": "beauty",
+          "scenario_path": "lesson/b_beauty_4"
+        },
+        {
+          "label": "",
+          "name": "b_beauty_5",
+          "id": 61,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 5,
+          "project_name": "beauty",
+          "scenario_path": "lesson/b_beauty_5"
+        }
+      ],
+      "magic_circle_name": "b_beauty",
+      "book_id": 9,
+      "book_name": "b_beauty",
+      "book_label": "Mirror Magic",
+      "book_advanced_label": "Mirror Magic",
+      "book_second_label": "Beauty and the Beast",
+      "course_name": "media_art",
+      "course_label": "Media Art",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 5,
+        "hint_url": "https://hint.codeillusion.io/hint/p08gh9a8f0kafjhi",
+        "card_name": "P08",
+        "symbol_position": 0
+      }
+    }
+  ],
+  "is_accessible": true,
+  "current_area_name": "waterfall",
+  "chapter_label": "Beyond the Darkness",
+  "circle_connections": [],
+  "all_chapters_cleared": false,
+  "card_list_unlock": true,
+  "card_new": false,
+  "shop_unlock": true,
+  "shop_new": true,
+  "jewel_new": false,
+  "book_new": false,
+  "show_modal_on_distribution": false
+}

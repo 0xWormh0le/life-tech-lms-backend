@@ -1,0 +1,103 @@
+post:
+  summary: Create AccountNotification for example. This will send email
+  operationId: maintenancePostAccountNotification
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            title:
+              type: string
+            accounts:
+              type: array
+              items:
+                type: object
+                properties:
+                  email:
+                    type: string
+                  password:
+                    type: string
+                required:
+                  - email
+                  - password
+            toType:
+              type: string
+              enum:
+                - email
+                - adminId
+                - teacherId
+            toEmails:
+              type: array
+              items:
+                type: string
+            toAdminIds:
+              type: array
+              items:
+                type: string
+            toTeacherIds:
+              type: array
+              items:
+                type: string
+          required:
+            - title
+            - accounts
+            - toType
+        example:
+          example-1:
+            value:
+              title: 'Sample Title'
+              accounts:
+                - email: 'user-email-1@example.io'
+                  password: 'aaaaaaa'
+                - email: 'user-email-2@example.io'
+                  password: 'bbbbbbb'
+              toType: 'email'
+              toEmails:
+                - 'example1@lit.com'
+                - 'example2@lit.com'
+              toAdminIds:
+                - 'admin-uuid-1'
+                - 'admin-uuid-2'
+              toTeacherIds:
+                - 'teacher-uuid-1'
+                - 'teacher-uuid-2'
+
+  responses:
+    '200':
+      description: Succeeded to create. Returns nothing
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+            required:
+              - message
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            bad request:
+              value:
+                error: parameters is invalid
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

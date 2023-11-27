@@ -1,0 +1,72 @@
+get:
+  summary: Construct Free Trial Accounts for Sales
+  operationId: maintenanceGetConstructFreeTrialAccountsForSales
+  tags:
+    - maintenance
+  parameters:
+    - in: query
+      schema:
+        type: string
+      name: districtName
+      required: true
+    - in: query
+      schema:
+        type: string
+      name: stateId
+      required: true
+    - in: query
+      schema:
+        type: string
+      name: prefix
+      required: true
+    - in: query
+      schema:
+        type: integer
+      name: maxStudentCount
+    - in: query
+      schema:
+        type: integer
+      name: maxTeacherCount
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+            required:
+              - message
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            bad request:
+              value:
+                error: parameters is invalid
+    '409':
+      description: Duplicated
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            bad request:
+              value:
+                error: districtName is duplicated
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

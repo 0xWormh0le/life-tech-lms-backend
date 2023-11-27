@@ -1,0 +1,50 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/bin
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+/schema
+
+# misc
+.DS_Store
+
+# sst build output
+.build
+.sst
+
+# environments
+.env
+.env*.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# express logger
+error.log
+combined.log
+
+# npm
+node_modules
+/.npm
+
+# Parcel
+/.cache
+/.config
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+# jest
+/coverage
+
+# IntelliJ idea
+.idea

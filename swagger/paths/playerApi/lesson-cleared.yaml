@@ -1,0 +1,373 @@
+post:
+  summary: Lesson Player API POST /lesson_cleared (This updates LessonStatus actually)
+  tags:
+    - playerApi
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              stars:
+                type: object
+                required:
+                  - to
+                  - from
+                properties:
+                  to:
+                    type: object
+                    required:
+                      - cleared
+                      - noHintCleared
+                      - quizAllAnswered
+                    properties:
+                      cleared:
+                        type: boolean
+                      noHintCleared:
+                        type: boolean
+                      quizAllAnswered:
+                        type: boolean
+                  from:
+                    type: object
+                    required:
+                      - cleared
+                      - noHintCleared
+                      - quizAllAnswered
+                    properties:
+                      cleared:
+                        type: boolean
+                      noHintCleared:
+                        type: boolean
+                      quizAllAnswered:
+                        type: boolean
+              status:
+                type: object
+                required:
+                  - to
+                  - from
+                  - levelTable
+                  - rankTable
+                properties:
+                  to:
+                    type: object
+                    required:
+                      - totalStarNum
+                      - tp
+                      - nickname
+                      - coins
+                      - designation
+                      - courseLevel
+                      - currentChapterName
+                    properties:
+                      totalStarNum:
+                        type: number
+                      tp:
+                        type: number
+                      nickname:
+                        type: string
+                      coins:
+                        type: number
+                      designation:
+                        type: object
+                        required:
+                          - label
+                          - rank
+                          - name
+                          - requiredTp
+                        properties:
+                          label:
+                            type: string
+                          rank:
+                            type: number
+                          name:
+                            type: string
+                          requiredTp:
+                            type: number
+                      courseLevel:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            exp:
+                              type: number
+                            label:
+                              type: string
+                            requiredExp:
+                              type: number
+                            level:
+                              type: number
+                            name:
+                              type: string
+                          required:
+                            - exp
+                            - label
+                            - requiredExp
+                            - level
+                            - name
+                      currentChapterName:
+                        type: string
+                  from:
+                    type: object
+                    required:
+                      - totalStarNum
+                      - tp
+                      - nickname
+                      - coins
+                      - designation
+                      - courseLevel
+                      - currentChapterName
+                    properties:
+                      totalStarNum:
+                        type: number
+                      tp:
+                        type: number
+                      nickname:
+                        type: string
+                      coins:
+                        type: number
+                      designation:
+                        type: object
+                        required:
+                          - label
+                          - rank
+                          - name
+                          - requiredTp
+                        properties:
+                          label:
+                            type: string
+                          rank:
+                            type: number
+                          name:
+                            type: string
+                          requiredTp:
+                            type: number
+                      courseLevel:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            exp:
+                              type: number
+                            label:
+                              type: string
+                            requiredExp:
+                              type: number
+                            level:
+                              type: number
+                            name:
+                              type: string
+                          required:
+                            - exp
+                            - label
+                            - requiredExp
+                            - level
+                            - name
+                      currentChapterName:
+                        type: string
+                  levelTable:
+                    type: object
+                    required:
+                      - mediaArt
+                      - basic
+                      - webDesign
+                      - game
+                    properties:
+                      mediaArt:
+                        type: object
+                        required:
+                          - '0'
+                        properties:
+                          '0':
+                            type: number
+                      basic:
+                        type: object
+                        required:
+                          - '0'
+                        properties:
+                          '0':
+                            type: number
+                      webDesign:
+                        type: object
+                        required:
+                          - '0'
+                        properties:
+                          '0':
+                            type: number
+                      game:
+                        type: object
+                        required:
+                          - '0'
+                        properties:
+                          '0':
+                            type: number
+                  rankTable:
+                    type: object
+                    required:
+                      - label
+                      - tp
+                    properties:
+                      label:
+                        type: object
+                        required:
+                          - '0'
+                        properties:
+                          '0':
+                            type: string
+                      tp:
+                        type: object
+                        required:
+                          - '0'
+                        properties:
+                          '0':
+                            type: number
+            required:
+              - stars
+              - status
+          examples:
+            Success:
+              value:
+                stars:
+                  to:
+                    cleared: true
+                    noHintCleared: true
+                    quizAllAnswered: false
+                  from:
+                    cleared: true
+                    noHintCleared: false
+                    quizAllAnswered: false
+                status:
+                  to:
+                    totalStarNum: 0
+                    tp: 0
+                    nickname: user
+                    coins: 0
+                    designation:
+                      label: Average Wizard
+                      rank: 0
+                      name: certified2
+                      requiredTp: 0
+                    courseLevel: []
+                    currentChapterName: '8'
+                  from:
+                    totalStarNum: 0
+                    tp: 0
+                    nickname: user
+                    coins: 0
+                    designation:
+                      label: Average Wizard
+                      rank: 0
+                      name: certified2
+                      requiredTp: 0
+                    courseLevel: []
+                    currentChapterName: '8'
+                  levelTable:
+                    mediaArt:
+                      '0': 0
+                    basic:
+                      '0': 0
+                    webDesign:
+                      '0': 0
+                    game:
+                      '0': 0
+                  rankTable:
+                    label:
+                      '0': Average Wizard
+                    tp:
+                      '0': 0
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              login_status:
+                type: string
+                enum:
+                  - 'no'
+            required:
+              - login_status
+          examples:
+            unauthorized:
+              value:
+                login_status: 'no'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified scenario_path and project_name not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  operationId: postLessonCleared
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            project_name:
+              type: string
+              minLength: 1
+              description: This is defined in the spread sheet where the lesson steps are defined
+            scenario_path:
+              type: string
+              minLength: 1
+              description: This is defined in the spread sheet where the lesson steps are defined
+            finish_status:
+              type: object
+              required:
+                - quiz_all_answered
+                - no_hint_cleared
+                - no_status_up
+              properties:
+                quiz_all_answered:
+                  type: boolean
+                  description: Will be true the user answered all of quiz correcly or the lesson has no quiz
+                no_hint_cleared:
+                  type: boolean
+                  description: Will be true if the user didn't use any hint in the lesson
+                no_status_up:
+                  type: boolean
+                  description: Will be true if the user did the cheat that skip a step by editing the step_id in the URL.
+          required:
+            - project_name
+            - scenario_path
+            - finish_status
+        examples:
+          success:
+            value:
+              project_name: donald
+              scenario_path: lesson/b_donald_1
+              finish_status:
+                quiz_all_answered: true
+                no_hint_cleared: true
+                no_status_up: true
+    description: ''
+  description: Lesson Player calls this API at the end of each lesson. It moves to the specified destination according to the return value.

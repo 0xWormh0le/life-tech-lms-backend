@@ -1,0 +1,6 @@
+type: string
+title: LessonEnvironment
+enum:
+  - litLessonPlayer
+description: |
+  We currently only have "LiT Lesson Player" as an Environment, but we will add external project etc. like "Magic Quest" in the future.

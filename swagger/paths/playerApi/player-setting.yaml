@@ -1,0 +1,215 @@
+get:
+  summary: Lesson Player API GET /player_setting
+  tags:
+    - playerApi
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              language:
+                type: string
+                minLength: 1
+                enum:
+                  - en
+                  - ja
+              log_level:
+                type: string
+                minLength: 1
+                enum:
+                  - development
+                  - production
+              header_user_icon_name:
+                type: string
+              login_status:
+                type: string
+                minLength: 1
+                example: 'yes'
+                enum:
+                  - 'yes'
+              my_page_url:
+                type: string
+                minLength: 1
+                description: 'URL to which the user is redirected when clicking the user icon in the header; if not specified, nothing happens when the icon is clicked.'
+              player_name:
+                type: string
+                minLength: 1
+                description: 'User name next to the user icon in the header. If not specified, the string "user" is used.'
+              nickname:
+                type: string
+                minLength: 1
+                description: 'This name is used in serifs of instructors'
+              header_appearance:
+                type: object
+                properties:
+                  show_user_icon:
+                    type: boolean
+                  show_menu:
+                    type: boolean
+                  show_login_status:
+                    type: boolean
+              sound_volume:
+                type: object
+                required:
+                  - bgm
+                  - se
+                  - serif_talk
+                  - hint_talk
+                properties:
+                  bgm:
+                    type: number
+                  se:
+                    type: number
+                  serif_talk:
+                    type: number
+                    description: Volume of automatic reading of instructional characters' lines
+                  hint_talk:
+                    type: number
+                    description: Volume of audio played when pressing the play button in the upper right corner of the hint window
+              sound_config:
+                type: object
+                required:
+                  - min
+                  - max
+                  - talk_type
+                properties:
+                  min:
+                    type: number
+                  max:
+                    type: number
+                  talk_type:
+                    type: object
+                    required:
+                      - serif_talk
+                      - hint_talk
+                    properties:
+                      serif_talk:
+                        type: string
+                      hint_talk:
+                        type: string
+              return_page:
+                type: object
+                required:
+                  - title
+                  - url
+                properties:
+                  title:
+                    type: string
+                  url:
+                    type: string
+              custom_items:
+                type: array
+                uniqueItems: true
+                minItems: 0
+                deprecated: true
+                items:
+                  type: object
+                  properties:
+                    url:
+                      type: string
+                      minLength: 1
+                    text:
+                      type: string
+                      minLength: 1
+                    style:
+                      type: object
+                      properties:
+                        border:
+                          type: string
+                          minLength: 1
+                        padding:
+                          type: string
+                          minLength: 1
+                        borderRadius:
+                          type: string
+                          minLength: 1
+                      required:
+                        - border
+                        - padding
+                        - borderRadius
+                    new_tab:
+                      type: boolean
+                    confirm:
+                      type: string
+                      minLength: 1
+                  required:
+                    - url
+                    - text
+                    - new_tab
+                    - confirm
+            required:
+              - language
+              - log_level
+              - header_user_icon_name
+              - login_status
+              - header_appearance
+              - sound_volume
+              - sound_config
+              - return_page
+              - custom_items
+          examples:
+            success:
+              value:
+                language: us
+                log_level: development
+                header_user_icon_name: string
+                login_status: 'yes'
+                my_page_url: string
+                player_name: string
+                header_appearance:
+                  show_user_icon: true
+                  show_menu: true
+                  show_login_status: true
+                sound_volume:
+                  bgm: 0
+                  se: 2
+                  serif_talk: 5
+                  hint_talk: 0
+                custom_items: []
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              example-1:
+                login_status: 'no'
+            properties:
+              login_status:
+                type: string
+                minLength: 1
+                enum:
+                  - 'no'
+            required:
+              - login_status
+          examples:
+            unauthorized:
+              value:
+                login_status: 'no'
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  operationId: getPlayersSetting
+  description: 'The Lesson Player calls this API once at startup, and the return value contains a variety of information that can be used to change the behavior of the Lesson Player.'

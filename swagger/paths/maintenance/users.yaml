@@ -1,0 +1,137 @@
+get:
+  summary: Get All Users for accounts management purpose
+  operationId: maintenanceGetUsers
+  tags:
+    - maintenance
+  responses:
+    '200':
+      description: Returns all Users
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              users:
+                type: array
+                items:
+                  $ref: '../../models/maintenance/UserPerRoleWithIdAndAuthenticationInfo.yaml'
+            required:
+              - users
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+post:
+  summary: Create Users bulky for accounts management purpose
+  operationId: maintenancePostUsers
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            users:
+              type: array
+              items:
+                $ref: '../../models/maintenance/UserPerRoleWithAuthenticationInfo.yaml'
+          required:
+            - users
+  responses:
+    '200':
+      description: Returns created Users
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              users:
+                type: array
+                items:
+                  $ref: '../../models/maintenance/UserPerRoleWithId.yaml'
+            required:
+              - users
+    '409':
+      description: Some of the given Users already exist
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+put:
+  summary: Update Users bulky for accounts management purpose
+  operationId: maintenancePutUsers
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            users:
+              type: array
+              items:
+                allOf:
+                  - $ref: '../../models/maintenance/UserPerRoleWithIdAndAuthenticationInfo.yaml'
+          required:
+            - users
+  responses:
+    '200':
+      description: Returns created Users
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              users:
+                type: array
+                items:
+                  $ref: '../../models/maintenance/UserPerRoleWithIdAndAuthenticationInfo.yaml'
+            required:
+              - users
+    '404':
+      description: Some of the given Users not found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

@@ -1,0 +1,17 @@
+title: MaintenanceDistrict
+type: object
+properties:
+  name:
+    type: string
+  stateId:
+    type: string
+  lmsId:
+    type: string
+  enableRosterSync:
+    type: boolean
+  districtLmsId:
+    type: string
+required:
+  - name
+  - stateId
+description: The Definition of Get Districts.

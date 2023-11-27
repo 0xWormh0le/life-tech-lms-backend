@@ -1,0 +1,1092 @@
+enum ErrorCode {
+  PERMISSION_DENIED
+  NOT_FOUND_ERROR
+  UNKNOWN_RUNTIME_ERROR
+}
+
+type Error {
+  errorCode: ErrorCode!
+  message: String
+  stack: String
+}
+
+type ErrorPermissionDenied {
+  errorCode: ErrorCode!
+  message: String
+  stack: String
+}
+
+type ErrorUnknownRuntime {
+  errorCode: ErrorCode!
+  message: String
+  stack: String
+}
+
+type ErrorNotFound {
+  errorCode: ErrorCode!
+  message: String
+  stack: String
+}
+type District {
+  id: ID!
+  name: String!
+  stateId: String!
+  lmsId: String
+  externalLmsDistrictId: String
+  enableRosterSync: Boolean!
+  districtPurchasedPackages: [DistrictPurchasedPackage!]!
+  classlinkTenantCredential: ClasslinkTenantCredential
+  createdAt: String!
+  createdUserId: String
+}
+type DistrictPurchasedPackage {
+  id: ID!
+  districtId: String!
+  curriculumPackageId: String!
+  createdAt: String!
+  createdUserId: String
+}
+type ClasslinkTenantCredential {
+  districtId: ID!
+  externalLmsAppId: String!
+  accessToken: String!
+  externalLmsTenantId: String!
+}
+type DistrictRosterSyncStatus {
+  id: ID!
+  districtId: String!
+  startedAt: String!
+  finishedAt: String
+  errorMessage: String
+}
+
+type Organization {
+  id: ID!
+  name: String!
+  districtId: String!
+  externalLmsOrganizationId: String
+  classlinkTenantId: String
+  createdAt: String!
+  updatedAt: String!
+}
+
+type StudentGroup {
+  id: ID!
+  name: String!
+  grade: String
+  organizationId: String!
+  classlinkTenantId: String
+  externalLmsStudentGroupId: String
+  createdUserId: String
+  updatedUserId: String
+  createdAt: String!
+  updatedAt: String!
+}
+type StudentGroupPackageAssignment {
+  id: ID!
+  packageCategoryId: String!
+  curriculumBrandId: String!
+  curriculumPackageId: String!
+  studentGroupId: String!
+  createdAt: String!
+}
+
+type User {
+  id: ID!
+  role: String!
+  isDemo: Boolean!
+}
+type HumanUser {
+  userId: ID!
+  email: String
+  loginId: String
+  password: String
+  user: User!
+}
+type Administrator {
+  id: ID!
+  userId: String!
+  role: String!
+  districtId: String!
+  firstName: String!
+  lastName: String!
+  externalLmsAdministratorId: String
+  isDeactivated: Boolean!
+  humanUser: HumanUser!
+  createdUserId: String
+  createdAt: String!
+}
+type Teacher {
+  id: ID!
+  userId: String!
+  role: String!
+  firstName: String!
+  lastName: String!
+  externalLmsTeacherId: String
+  isDeactivated: Boolean!
+  humanUser: HumanUser!
+  createdUserId: String
+  createdAt: String!
+}
+type Student {
+  id: ID!
+  userId: String!
+  role: String!
+  nickName: String!
+  externalLmsStudentId: String
+  isDeactivated: Boolean
+  humanUser: HumanUser!
+  createdUserId: String
+  createdAt: String!
+}
+
+type TeacherOrganizationAffiliation {
+  id: ID!
+  teacherId: String!
+  organizationId: String!
+  createdUserId: String
+  createdAt: String!
+}
+type StudentStudentGroupAffiliation {
+  id: ID!
+  studentId: String!
+  studentGroupId: String!
+  createdUserId: String
+  createdAt: String!
+}
+
+type LessonStep {
+  id: ID!
+  lessonId: String!
+  orderIndex: Int!
+  createdAt: String!
+  externalLessonPlayerStepId: String!
+}
+
+type LessonQuiz {
+  id: ID!
+  lessonStepId: String!
+  label: String!
+  description: String!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type LessonHint {
+  id: ID!
+  lessonStepId: String!
+  label: String!
+  description: String!
+  createdAt: String!
+  updatedAt: String!
+}
+
+type UserLessonHintStatus {
+  id: ID!
+  userId: String!
+  lessonHintId: String!
+  userLessonStatusId: String!
+  createdAt: String!
+}
+
+type UserExternalChurnZeroMapping {
+  userId: String!
+  externalChurnZeroContactExternalId: String!
+  externalChurnZeroAccountExternalId: String!
+}
+type CodeillusionPackageChapterDefinition {
+  id: ID!
+  name: String!
+  title: String!
+  lessonOverViewPdfUrl: String!
+  lessonNoteSheetsZipUrl: String!
+  codeillusionPackageCircleDefinitions: CodeillusionPackageCircleDefinitions
+}
+
+type CodeillusionPackageCircleDefinition {
+  id: ID!
+  codeillusionPackageChapterDefinitionId: String!
+  course: LessonCourse!
+  bookName: String!
+  characterImageUrl: String!
+  clearedCharacterImageUrl: String!
+  bookImageUrl: String!
+  codeillusionPackageLessonDefinitions: CodeillusionPackageLessonDefinitions
+}
+
+enum CodeillusionPackageLessonDefinitionUiType {
+  GEM
+  BOOK
+  MAGIC_QUEST
+  MAGIC_JOURNEY
+}
+type CodeillusionPackageLessonDefinition {
+  lessonId: String!
+  codeillusionPackageCircleDefinitionId: String!
+  uiType: CodeillusionPackageLessonDefinitionUiType!
+}
+type CsePackageUnitDefinition {
+  id: ID!
+  name: String!
+  description: String!
+  csePackageLessonDefinitions: CsePackageLessonDefinitions
+}
+type CsePackageLessonDefinition {
+  lessonId: String!
+  csePackageUnitDefinitionId: String!
+  isQuizLesson: Boolean
+}
+
+enum LessonCourse {
+  BASIC
+  WEB_DESIGN
+  MEDIA_ART
+  GAME_DEVELOPMENT
+  EMPTY
+}
+
+type Lesson {
+  id: ID!
+  url: String!
+  name: String!
+  course: String!
+  lessonEnvironment: String!
+  description: String!
+  theme: String!
+  skillsLearnedInThisLesson: String!
+  lessonOverViewPdfUrl: String!
+  lessonDuration: String!
+  thumbnailImageUrl: String!
+  projectName: String
+  scenarioName: String
+  maxStarCount: Int
+  quizCount: Int
+  hintCount: Int
+  level: String!
+}
+type CurriculumPackage {
+  id: ID!
+  curriculumBrandId: String!
+  name: String!
+  level: CurriculumPackageLevel!
+}
+enum CurriculumPackageLevel {
+  BASIC
+  ADVANCED
+}
+type CurriculumPackageLessonConfiguration {
+  curriculumPackageId: String!
+  lessonId: String!
+}
+
+type UserLessonStepStatus {
+  id: ID!
+  userId: String!
+  stepId: String!
+  userLessonStatusId: String!
+  lessonId: String!
+  status: String!
+  createdAt: String!
+}
+
+type CurriculumBrand {
+  id: ID!
+  name: String!
+}
+
+type Users {
+  items: [User!]!
+  count: Int!
+}
+
+type HumanUsers {
+  items: [HumanUser!]!
+  count: Int!
+}
+
+type Districts {
+  items: [District!]!
+  count: Int!
+}
+
+type StudentGroupPackageAssignments {
+  items: [StudentGroupPackageAssignment!]!
+  count: Int!
+}
+
+type Organizations {
+  items: [Organization!]!
+  count: Int!
+}
+
+type Administrators {
+  items: [Administrator!]!
+  count: Int!
+}
+
+type Students {
+  items: [Student!]!
+  count: Int!
+}
+
+type Teachers {
+  items: [Teacher!]!
+  count: Int!
+}
+
+type TeacherOrganizationAffiliations {
+  items: [TeacherOrganizationAffiliation!]!
+  count: Int!
+}
+
+type StudentGroups {
+  items: [StudentGroup!]!
+  count: Int!
+}
+
+type StudentStudentGroupAffiliations {
+  items: [StudentStudentGroupAffiliation!]!
+  count: Int!
+}
+
+type DistrictRosterSyncStatuses {
+  items: [DistrictRosterSyncStatus!]!
+  count: Int!
+}
+
+type LessonSteps {
+  items: [LessonStep!]!
+  count: Int!
+}
+
+type LessonQuizzes {
+  items: [LessonQuiz!]!
+  count: Int!
+}
+
+type LessonHints {
+  items: [LessonHint!]!
+  count: Int!
+}
+
+type UserLessonHintStatuses {
+  items: [UserLessonHintStatus!]!
+  count: Int!
+}
+
+type Lessons {
+  items: [Lesson!]!
+  count: Int!
+}
+
+type UserLessonStepStatuses {
+  items: [UserLessonStepStatus!]!
+  count: Int!
+}
+type CodeillusionPackageChapterDefinitions {
+  items: [CodeillusionPackageChapterDefinition!]!
+  count: Int!
+}
+type CodeillusionPackageCircleDefinitions {
+  items: [CodeillusionPackageCircleDefinition!]!
+  count: Int!
+}
+type CodeillusionPackageLessonDefinitions {
+  items: [CodeillusionPackageLessonDefinition!]!
+  count: Int!
+}
+type CsePackageUnitDefinitions {
+  items: [CsePackageUnitDefinition!]!
+  count: Int!
+}
+type CsePackageLessonDefinitions {
+  items: [CsePackageLessonDefinition!]!
+  count: Int!
+}
+type CurriculumPackages {
+  items: [CurriculumPackage!]!
+  count: Int!
+}
+
+type CurriculumPackageLessonConfigurations {
+  items: [CurriculumPackageLessonConfiguration!]!
+  count: Int!
+}
+
+type CurriculumBrands {
+  items: [CurriculumBrand!]!
+  count: Int!
+}
+
+union UsersResult = Users | ErrorPermissionDenied | ErrorUnknownRuntime
+
+union HumanUsersResult =
+    HumanUsers
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union DistrictsResult = Districts | ErrorPermissionDenied | ErrorUnknownRuntime
+
+union StudentGroupPackageAssignmentsResult =
+    StudentGroupPackageAssignments
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union OrganizationsResult =
+    Organizations
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union AdministratorsResult =
+    Administrators
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union StudentsResult = Students | ErrorPermissionDenied | ErrorUnknownRuntime
+
+union TeachersResult = Teachers | ErrorPermissionDenied | ErrorUnknownRuntime
+
+union TeacherOrganizationAffiliationsResult =
+    TeacherOrganizationAffiliations
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union StudentGroupsResult =
+    StudentGroups
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union StudentStudentGroupAffiliationsResult =
+    StudentStudentGroupAffiliations
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union DistrictRosterSyncStatusesResult =
+    DistrictRosterSyncStatuses
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union LessonStepsResult =
+    LessonSteps
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union LessonQuizzesResult =
+    LessonQuizzes
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union LessonHintsResult =
+    LessonHints
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UserLessonHintStatusesResult =
+    UserLessonHintStatuses
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UserExternalChurnZeroMappingResult =
+    UserExternalChurnZeroMapping
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union LessonsResult = Lessons | ErrorPermissionDenied | ErrorUnknownRuntime
+union LessonResult =
+    Lesson
+  | ErrorNotFound
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UserLessonStepStatusesResult =
+    UserLessonStepStatuses
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CodeillusionPackageChapterDefinitionsResult =
+    CodeillusionPackageChapterDefinitions
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+union CodeillusionPackageCircleDefinitionsResult =
+    CodeillusionPackageCircleDefinitions
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+union CodeillusionPackageLessonDefinitionsResult =
+    CodeillusionPackageLessonDefinitions
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+union CsePackageUnitDefinitionsResult =
+    CsePackageUnitDefinitions
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+union CsePackageLessonDefinitionsResult =
+    CsePackageLessonDefinitions
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+union CurriculumPackagesResult =
+    CurriculumPackages
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+union CurriculumPackageLessonConfigurationsResult =
+    CurriculumPackageLessonConfigurations
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+union CurriculumBrandsResult =
+    CurriculumBrands
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+type Query {
+  hc: String!
+  users: UsersResult
+  humanUsers(email: String): HumanUsersResult
+  districts: DistrictsResult
+  organizations: OrganizationsResult
+  administrators: AdministratorsResult
+  teachers: TeachersResult
+  students(studentGroupId: String!): StudentsResult
+  studentGroups(organizationId: String): StudentGroupsResult
+  studentGroupPackageAssignments(
+    studentGroupId: String
+  ): StudentGroupPackageAssignmentsResult
+  districtRosterSyncStatuses(
+    districtId: String
+  ): DistrictRosterSyncStatusesResult
+  teacherOrganizationAffiliations: TeacherOrganizationAffiliationsResult
+  studentStudentGroupAffiliations(
+    studentGroupId: String!
+  ): StudentStudentGroupAffiliationsResult
+  lessonSteps(lessonId: String!): LessonStepsResult
+  lessonQuizzes: LessonQuizzesResult
+  lessonHints: LessonHintsResult
+  userLessonHintStatuses: UserLessonHintStatusesResult
+  userExternalChurnZeroMapping(
+    userId: String!
+  ): UserExternalChurnZeroMappingResult
+  lessons: LessonsResult!
+  userLessonStepStatuses(userIds: [String!]!): UserLessonStepStatusesResult
+  lesson(lessonId: String!): LessonResult!
+  codeillusionPackageChapterDefinitions: CodeillusionPackageChapterDefinitionsResult!
+  codeillusionPackageCircleDefinitions(
+    codeillusionPackageChapterDefinitionId: String!
+  ): CodeillusionPackageCircleDefinitionsResult!
+  codeillusionPackageLessonDefinitions(
+    codeillusionPackageCircleDefinitionId: String!
+  ): CodeillusionPackageLessonDefinitionsResult!
+  csePackageUnitDefinitions: CsePackageUnitDefinitionsResult!
+  csePackageLessonDefinitions(
+    csePackageUnitDefinitionId: String!
+  ): CsePackageLessonDefinitionsResult!
+  curriculumPackages(curriculumBrandId: String!): CurriculumPackagesResult!
+  curriculumPackageLessonConfigurations(
+    curriculumPackageId: String!
+  ): CurriculumPackageLessonConfigurationsResult!
+  curriculumBrands: CurriculumBrandsResult!
+}
+
+input CreateUserInput {
+  role: String!
+  isDemo: Boolean!
+  clientMutationId: String
+}
+type CreateUserPayload {
+  user: User!
+  clientMutationId: String
+}
+input UpdateUserInput {
+  id: ID!
+  role: String!
+  isDemo: Boolean!
+  clientMutationId: String
+}
+type UpdateUserPayload {
+  user: User!
+  clientMutationId: String
+}
+input CreateHumanUserInput {
+  userId: String!
+  email: String
+  loginId: String
+  password: String
+  clientMutationId: String
+}
+type CreateHumanUserPayload {
+  humanUser: HumanUser!
+  clientMutationId: String
+}
+input UpdateHumanUserInput {
+  userId: String!
+  email: String
+  loginId: String
+  password: String
+  clientMutationId: String
+}
+type UpdateHumanUserPayload {
+  humanUser: HumanUser!
+  clientMutationId: String
+}
+input CreateDistrictInput {
+  name: String!
+  stateId: String!
+  lmsId: String
+  externalLmsDistrictId: String
+  enableRosterSync: Boolean!
+  clientMutationId: String
+}
+type CreateDistrictPayload {
+  district: District!
+  clientMutationId: String
+}
+input UpdateDistrictInput {
+  id: ID!
+  name: String!
+  stateId: String!
+  lmsId: String
+  externalLmsDistrictId: String
+  enableRosterSync: Boolean!
+  clientMutationId: String
+}
+type UpdateDistrictPayload {
+  district: District!
+  clientMutationId: String
+}
+input CreateAdministratorInput {
+  userId: String!
+  districtId: String!
+  firstName: String!
+  lastName: String!
+  externalLmsAdministratorId: String
+  isDeactivated: Boolean!
+  clientMutationId: String
+}
+input UpdateAdministratorInput {
+  id: ID!
+  userId: String!
+  districtId: String!
+  firstName: String!
+  lastName: String!
+  externalLmsAdministratorId: String
+  isDeactivated: Boolean!
+  clientMutationId: String
+}
+type CreateAdministratorPayload {
+  administrator: Administrator!
+  clientMutationId: String
+}
+type UpdateAdministratorPayload {
+  administrator: Administrator!
+  clientMutationId: String
+}
+input CreateDistrictPurchasedPackageInput {
+  districtId: String!
+  curriculumPackageId: String!
+  clientMutationId: String
+}
+type CreateDistrictPurchasedPackagePayload {
+  districtPurchasedPackage: DistrictPurchasedPackage!
+  clientMutationId: String
+}
+input DeleteDistrictPurchasedPackageInput {
+  id: ID!
+  clientMutationId: String
+}
+type DeleteDistrictPurchasedPackagePayload {
+  id: ID!
+  clientMutationId: String
+}
+input CreateClasslinkTenantCredentialInput {
+  districtId: ID!
+  externalLmsAppId: String!
+  accessToken: String!
+  externalLmsTenantId: String!
+  clientMutationId: String
+}
+type CreateClasslinkTenantCredentialPayload {
+  classlinkTenantCredential: ClasslinkTenantCredential!
+  clientMutationId: String
+}
+input UpdateClasslinkTenantCredentialInput {
+  districtId: ID!
+  externalLmsAppId: String!
+  accessToken: String!
+  externalLmsTenantId: String!
+  clientMutationId: String
+}
+type UpdateClasslinkTenantCredentialPayload {
+  classlinkTenantCredential: ClasslinkTenantCredential!
+  clientMutationId: String
+}
+input CreateOrganizationInput {
+  name: String!
+  districtId: String!
+  externalLmsOrganizationId: String
+  classlinkTenantId: String
+  clientMutationId: String
+}
+type CreateOrganizationPayload {
+  organization: Organization!
+  clientMutationId: String
+}
+input UpdateOrganizationInput {
+  id: ID!
+  name: String!
+  districtId: String!
+  externalLmsOrganizationId: String
+  classlinkTenantId: String
+  clientMutationId: String
+}
+type UpdateOrganizationPayload {
+  organization: Organization!
+  clientMutationId: String
+}
+input CreateTeacherInput {
+  userId: String!
+  firstName: String!
+  lastName: String!
+  externalLmsTeacherId: String
+  isDeactivated: Boolean!
+  clientMutationId: String
+}
+type CreateTeacherPayload {
+  teacher: Teacher!
+  clientMutationId: String
+}
+input UpdateTeacherInput {
+  id: ID!
+  userId: String!
+  firstName: String!
+  lastName: String!
+  externalLmsTeacherId: String
+  isDeactivated: Boolean!
+  clientMutationId: String
+}
+type UpdateTeacherPayload {
+  teacher: Teacher!
+  clientMutationId: String
+}
+input CreateStudentGroupPackageAssignmentInput {
+  studentGroupId: String!
+  curriculumPackageId: String!
+  clientMutationId: String
+}
+type CreateStudentGroupPackageAssignmentPayload {
+  studentGroupPackageAssignment: StudentGroupPackageAssignment!
+  clientMutationId: String
+}
+input DeleteStudentGroupPackageAssignmentInput {
+  id: ID!
+  clientMutationId: String
+}
+type DeleteStudentGroupPackageAssignmentPayload {
+  id: ID!
+  clientMutationId: String
+}
+input CreateStudentGroupInput {
+  name: String!
+  grade: String
+  organizationId: String!
+  classlinkTenantId: String
+  externalLmsStudentGroupId: String
+  clientMutationId: String
+}
+type CreateStudentGroupPayload {
+  studentGroup: StudentGroup!
+  clientMutationId: String
+}
+input UpdateStudentGroupInput {
+  id: ID!
+  name: String!
+  grade: String
+  organizationId: String!
+  classlinkTenantId: String
+  externalLmsStudentGroupId: String
+  clientMutationId: String
+}
+type UpdateStudentGroupPayload {
+  studentGroup: StudentGroup!
+  clientMutationId: String
+}
+input CreateStudentInput {
+  userId: String!
+  nickName: String!
+  externalLmsStudentId: String
+  isDeactivated: Boolean
+  clientMutationId: String
+}
+type CreateStudentPayload {
+  student: Student!
+  clientMutationId: String
+}
+input UpdateStudentInput {
+  id: ID!
+  userId: String!
+  nickName: String!
+  externalLmsStudentId: String
+  isDeactivated: Boolean
+  clientMutationId: String
+}
+type UpdateStudentPayload {
+  student: Student!
+  clientMutationId: String
+}
+input CreateTeacherOrganizationAffiliationInput {
+  teacherId: String!
+  organizationId: String!
+  clientMutationId: String
+}
+type CreateTeacherOrganizationAffiliationPayload {
+  teacherOrganizationAffiliation: TeacherOrganizationAffiliation!
+  clientMutationId: String
+}
+input DeleteTeacherOrganizationAffiliationInput {
+  id: ID!
+  clientMutationId: String
+}
+type DeleteTeacherOrganizationAffiliationPayload {
+  id: ID!
+  clientMutationId: String
+}
+input CreateStudentStudentGroupAffiliationInput {
+  studentId: String!
+  studentGroupId: String!
+  clientMutationId: String
+}
+type CreateStudentStudentGroupAffiliationPayload {
+  studentStudentGroupAffiliation: StudentStudentGroupAffiliation!
+  clientMutationId: String
+}
+input DeleteStudentStudentGroupAffiliationInput {
+  id: ID!
+  clientMutationId: String
+}
+type DeleteStudentStudentGroupAffiliationPayload {
+  id: ID!
+  clientMutationId: String
+}
+input CreateUserExternalChurnZeroMappingInput {
+  userId: String!
+  externalChurnZeroContactExternalId: String!
+  externalChurnZeroAccountExternalId: String!
+  clientMutationId: String
+}
+input UpdateUserExternalChurnZeroMappingInput {
+  userId: String!
+  externalChurnZeroContactExternalId: String!
+  externalChurnZeroAccountExternalId: String!
+  clientMutationId: String
+}
+type CreateUserExternalChurnZeroMappingPayload {
+  userExternalChurnZeroMapping: UserExternalChurnZeroMapping!
+  clientMutationId: String
+}
+type UpdateUserExternalChurnZeroMappingPayload {
+  userExternalChurnZeroMapping: UserExternalChurnZeroMapping!
+  clientMutationId: String
+}
+
+union CreateUserPayloadResult =
+    CreateUserPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateUserPayloadResult =
+    UpdateUserPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateHumanUserPayloadResult =
+    CreateHumanUserPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateHumanUserPayloadResult =
+    UpdateHumanUserPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateDistrictPayloadResult =
+    CreateDistrictPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateDistrictPayloadResult =
+    UpdateDistrictPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateDistrictPurchasedPackagePayloadResult =
+    CreateDistrictPurchasedPackagePayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union DeleteDistrictPurchasedPackagePayloadResult =
+    DeleteDistrictPurchasedPackagePayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateClasslinkTenantCredentialPayloadResult =
+    CreateClasslinkTenantCredentialPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateClasslinkTenantCredentialPayloadResult =
+    UpdateClasslinkTenantCredentialPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateStudentGroupPackageAssignmentPayloadResult =
+    CreateStudentGroupPackageAssignmentPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union DeleteStudentGroupPackageAssignmentPayloadResult =
+    DeleteStudentGroupPackageAssignmentPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateOrganizationPayloadResult =
+    CreateOrganizationPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateOrganizationPayloadResult =
+    UpdateOrganizationPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateAdministratorPayloadResult =
+    CreateAdministratorPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateAdministratorPayloadResult =
+    UpdateAdministratorPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateStudentPayloadResult =
+    CreateStudentPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateStudentPayloadResult =
+    UpdateStudentPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateTeacherPayloadResult =
+    CreateTeacherPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateTeacherPayloadResult =
+    UpdateTeacherPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateTeacherOrganizationAffiliationPayloadResult =
+    CreateTeacherOrganizationAffiliationPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union DeleteTeacherOrganizationAffiliationPayloadResult =
+    DeleteTeacherOrganizationAffiliationPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateStudentGroupPayloadResult =
+    CreateStudentGroupPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateStudentGroupPayloadResult =
+    UpdateStudentGroupPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateStudentStudentGroupAffiliationPayloadResult =
+    CreateStudentStudentGroupAffiliationPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union DeleteStudentStudentGroupAffiliationPayloadResult =
+    DeleteStudentStudentGroupAffiliationPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union CreateUserExternalChurnZeroMappingPayloadResult =
+    CreateUserExternalChurnZeroMappingPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+union UpdateUserExternalChurnZeroMappingPayloadResult =
+    UpdateUserExternalChurnZeroMappingPayload
+  | ErrorPermissionDenied
+  | ErrorUnknownRuntime
+
+type Mutation {
+  createUser(input: CreateUserInput!): CreateUserPayloadResult!
+  updateUser(input: UpdateUserInput!): UpdateUserPayloadResult!
+  createHumanUser(input: CreateHumanUserInput!): CreateHumanUserPayloadResult!
+  updateHumanUser(input: UpdateHumanUserInput!): UpdateHumanUserPayloadResult!
+  createDistrict(input: CreateDistrictInput!): CreateDistrictPayloadResult!
+  updateDistrict(input: UpdateDistrictInput!): UpdateDistrictPayloadResult!
+  createAdministrator(
+    input: CreateAdministratorInput!
+  ): CreateAdministratorPayloadResult!
+  updateAdministrator(
+    input: UpdateAdministratorInput!
+  ): UpdateAdministratorPayloadResult!
+  createDistrictPurchasedPackage(
+    input: CreateDistrictPurchasedPackageInput!
+  ): CreateDistrictPurchasedPackagePayloadResult!
+  deleteDistrictPurchasedPackage(
+    input: DeleteDistrictPurchasedPackageInput!
+  ): DeleteDistrictPurchasedPackagePayloadResult!
+  createClasslinkTenantCredential(
+    input: CreateClasslinkTenantCredentialInput!
+  ): CreateClasslinkTenantCredentialPayloadResult!
+  updateClasslinkTenantCredential(
+    input: UpdateClasslinkTenantCredentialInput!
+  ): UpdateClasslinkTenantCredentialPayloadResult!
+  createOrganization(
+    input: CreateOrganizationInput!
+  ): CreateOrganizationPayloadResult!
+  updateOrganization(
+    input: UpdateOrganizationInput!
+  ): UpdateOrganizationPayloadResult!
+  createTeacher(input: CreateTeacherInput!): CreateTeacherPayloadResult!
+  updateTeacher(input: UpdateTeacherInput!): UpdateTeacherPayloadResult!
+  createStudentGroup(
+    input: CreateStudentGroupInput!
+  ): CreateStudentGroupPayloadResult
+  updateStudentGroup(
+    input: UpdateStudentGroupInput!
+  ): UpdateStudentGroupPayloadResult
+  createStudent(input: CreateStudentInput!): CreateStudentPayloadResult!
+  updateStudent(input: UpdateStudentInput!): UpdateStudentPayloadResult!
+  createStudentGroupPackageAssignment(
+    input: CreateStudentGroupPackageAssignmentInput!
+  ): CreateStudentGroupPackageAssignmentPayloadResult!
+  deleteStudentGroupPackageAssignment(
+    input: DeleteStudentGroupPackageAssignmentInput!
+  ): DeleteStudentGroupPackageAssignmentPayloadResult!
+  createTeacherOrganizationAffiliation(
+    input: CreateTeacherOrganizationAffiliationInput!
+  ): CreateTeacherOrganizationAffiliationPayloadResult!
+  deleteTeacherOrganizationAffiliation(
+    input: DeleteTeacherOrganizationAffiliationInput!
+  ): DeleteTeacherOrganizationAffiliationPayloadResult!
+  createStudentStudentGroupAffiliation(
+    input: CreateStudentStudentGroupAffiliationInput!
+  ): CreateStudentStudentGroupAffiliationPayloadResult!
+  deleteStudentStudentGroupAffiliation(
+    input: DeleteStudentStudentGroupAffiliationInput!
+  ): DeleteStudentStudentGroupAffiliationPayloadResult!
+  createUserExternalChurnZeroMapping(
+    input: CreateUserExternalChurnZeroMappingInput!
+  ): CreateUserExternalChurnZeroMappingPayloadResult!
+  updateUserExternalChurnZeroMapping(
+    input: UpdateUserExternalChurnZeroMappingInput!
+  ): UpdateUserExternalChurnZeroMappingPayloadResult!
+}

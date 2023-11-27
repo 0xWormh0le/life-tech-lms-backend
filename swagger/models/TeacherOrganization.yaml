@@ -1,0 +1,60 @@
+title: Teacher-Organization
+type: object
+x-tags:
+  - teacher
+description: 'Teacher'
+properties:
+  teacher:
+    type: object
+    properties:
+      teacherId:
+        type: string
+      userId:
+        type: string
+      firstName:
+        type: string
+      organizationId:
+        type: string
+      districtId:
+        type: string
+      email:
+        type: string
+      lastName:
+        type: string
+      isPrimary:
+        type: boolean
+      teacherLMSId:
+        type: string
+      createdUserId:
+        type: string
+      createdDate:
+        type: string
+      teacherOrganizations:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: string
+              description: id of the organization.
+            name:
+              type: string
+              description: name of the organization.
+            stateId:
+              type: string
+              description: stateId of organization
+          required:
+            - id
+            - name
+    required:
+      - teacherId
+      - userId
+      - firstName
+      - lastName
+      - teacherLMSId
+      - createdUserId
+      - createdDate
+      - teacherOrganizations
+      - email
+required:
+  - teacher

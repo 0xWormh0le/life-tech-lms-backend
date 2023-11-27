@@ -1,0 +1,9 @@
+title: DistrictWithId
+allOf:
+  - type: object
+    properties:
+      id:
+        type: string
+    required:
+      - id
+  - $ref: ./District.yaml

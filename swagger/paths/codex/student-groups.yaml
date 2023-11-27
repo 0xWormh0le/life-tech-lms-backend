@@ -1,0 +1,100 @@
+parameters:
+  - schema:
+      type: string
+    name: organizationId
+    in: path
+    required: true
+get:
+  summary: Get Student Groups based on organizationId
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              studentgroups:
+                type: array
+                items:
+                  $ref: ../../models/StudentGroups.yaml
+          examples:
+            success:
+              value:
+                studentgroups:
+                  - id: student-group-1
+                    organizationId: organization-id-1
+                    name: FL Group
+                    grade: grade1
+                    studentGroupLmsId: student-group-lms-id-1
+                    createdUserId: user-id-1
+                    updatedUserId: user-id-1
+                    createdDate: '2022-05-17T11:54:02.141Z'
+                    updatedDate: '2022-05-17T11:54:02.141Z'
+                  - id: student-group-2
+                    organizationId: organization-id-2
+                    name: HL Group
+                    grade: grade1
+                    studentGroupLmsId: student-group-lms-id-1
+                    createdUserId: user-id-1
+                    updatedUserId: user-id-1
+                    createdDate: '2022-05-17T11:54:02.141Z'
+                    updatedDate: '2022-05-17T11:54:02.141Z'
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: Invalid organizationId.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to view the specified student groups's information
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified student group not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: getStudentGroups
+  description: |-
+    This API provides the student groups based on organizationId
+    If the user pointed to by the token does not have permission to view the information for the specified student groups, an error will occur.

@@ -1,0 +1,273 @@
+parameters:
+  - schema:
+      type: string
+    name: districtId
+    in: path
+    required: true
+  - in: query
+    name: administratorIds
+    schema:
+      type: array
+      items:
+        type: string
+get:
+  summary: Get All Administrators
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              administrators:
+                type: array
+                items:
+                  $ref: ../../models/Administrator.yaml
+          examples:
+            success:
+              value:
+                administrators:
+                  administrators:
+                    - userId: '1'
+                      districtId: '1'
+                      administratorId: '1'
+                      email: admin1@email.com
+                      firstName: admin
+                      lastName: one
+                      administratorLMSId: '1'
+                      createdUserId: '1'
+                      createdDate: 02 oct 2022
+                    - userId: '2'
+                      districtId: '1'
+                      administratorId: '1'
+                      email: admin2@email.com
+                      firstName: admin
+                      lastName: two
+                      administratorLMSId: '2'
+                      createdUserId: '2'
+                      createdDate: 02 oct 2022
+                    - userId: '3'
+                      districtId: '1'
+                      administratorId: '1'
+                      email: admin3@email.com
+                      firstName: admin
+                      lastName: three
+                      administratorLMSId: '3'
+                      createdUserId: '3'
+                      createdDate: 02 oct 2022
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: Invalid request.
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to view the specified administrator's information
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified district not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: getAdministrators
+  description: This API provides a list of all the administrators.
+post:
+  summary: Create administrators from the given email ids
+  tags:
+    - codex
+  operationId: postAdministrators
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              administrators:
+                - email: 'admin1@email.com'
+                  firstName: 'admin1_first_name'
+                  lastName: 'admin1_last_name'
+                  administratorLMSId: 'admin1_adminisitrator_lms_id'
+                - email: 'admin2@email.com'
+                  firstName: 'admin2_first_name'
+                  lastName: 'admin2_last_name'
+                  administratorLMSId: 'admin2_adminisitrator_lms_id'
+                - email: 'admin3@email.com'
+                  firstName: 'admin3_first_name'
+                  lastName: 'admin3_last_name'
+                  administratorLMSId: 'admin3_adminisitrator_lms_id'
+          properties:
+            administrators:
+              type: array
+              items:
+                title: administrator
+                type: object
+                properties:
+                  email:
+                    type: string
+                  firstName:
+                    type: string
+                  lastName:
+                    type: string
+                  administratorLMSId:
+                    type: string
+                  password:
+                    type: string
+          required:
+            - administrators
+        examples:
+          success:
+            value:
+              administrators:
+                - email: 'admin1@email.com'
+                  firstName: 'admin1_first_name'
+                  lastName: 'admin1_last_name'
+                  administratorLMSId: 'admin1_adminisitrator_lms_id'
+                - email: 'admin2@email.com'
+                  firstName: 'admin2_first_name'
+                  lastName: 'admin2_last_name'
+                  administratorLMSId: 'admin2_adminisitrator_lms_id'
+                - email: 'admin3@email.com'
+                  firstName: 'admin3_first_name'
+                  lastName: 'admin3_last_name'
+                  administratorLMSId: 'admin3_adminisitrator_lms_id'
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+          examples:
+            success:
+              value:
+                message: ok
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                oneOf:
+                  - type: string
+                  - type: array
+                    items:
+                      type: object
+                      properties:
+                        index:
+                          type: number
+                        message:
+                          type: array | string
+                          items:
+                            type: string
+                            enum:
+                              - duplicateRecordsWithSameEmail
+                              - userAlreadyExistWithEmail
+                              - emailInvalid
+                              - emailNotProvided
+            required:
+              - error
+          examples:
+            badRequest:
+              value:
+                error:
+                  - index: 0
+                    message:
+                      - duplicateRecordsWithSameEmail
+                      - userAlreadyExistWithEmail
+                  - index: 2
+                    message:
+                      - duplicateRecordsWithSameEmail
+                      - userAlreadyExistWithEmail
+                      - emailInvalid
+                      - emailNotProvided
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to add the administrators
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified district not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

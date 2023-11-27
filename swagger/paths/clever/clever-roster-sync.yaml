@@ -1,0 +1,56 @@
+get:
+  summary: Get Clever's data and add in codex database.
+  tags:
+    - clever-roster-sync
+  security:
+    - BearerAuth: []
+  parameters:
+    - schema:
+        type: string
+      in: query
+      name: districtId
+      required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The user is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The user does not have permission to view all the packages.
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: getCleverRosterSync
+  description: |-
+    This API provides get all the clever 's data' and add in codex database.

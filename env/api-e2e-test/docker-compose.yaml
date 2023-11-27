@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  codex_usa_backend:
+    image: 'node:14.19-bullseye'
+    user: '${UID}:${GID}'
+    ports:
+      - '13000:3000'
+    volumes:
+      - type: bind
+        source: '${CODEX_USA_BACKEND_PATH}'
+        target: '/app'
+    working_dir: '/app'
+    environment:
+      - ROOT_FOLDER_PATH=.
+      - POSTGRES_DATABASE_USERNAME=codex
+      - POSTGRES_DATABASE_PASSWORD=codex
+      - POSTGRES_DATABASE_NAME=codex
+      - POSTGRES_DATABASE_HOST=codex_usa_backend_db
+      - POSTGRES_DATABASE_DIALECT=postgres
+      - POSTGRES_DATABASE_PORT=5432
+      - STATIC_FILES_BASE_URL=http://localhost:3000/
+      - CODEX_USA_FRONTEND_BASE_URL=http://localhost:3100/
+      - LESSON_PLAYER_BASE_URL=http://localhost:3200/
+      - CHURN_ZERO_VANITY_URL=https://lifeistech-usa-dev.eu2app.churnzero.net
+      - CHURN_ZERO_HASH_SECRET=d8+=g*3f8GGsd1@dg;9
+      - CHURN_ZERO_APP_KEY=1!XomzFhl7zZnbMtpEvY4J9dgRwd1Up-y9kbkfu6w0Y8ot117C
+
+    healthcheck:
+      test: ['CMD', 'curl', '--fail', 'http://localhost:3000']
+      interval: 1s
+      retries: 30
+      start_period: 20s
+      timeout: 10s
+    depends_on:
+      codex_usa_backend_db:
+        condition: service_healthy
+    command: npm run serve:non-watch
+
+  codex_usa_backend_db:
+    image: 'postgres:13.4'
+    ports:
+      - '15431:5432'
+    environment:
+      - POSTGRES_USER=codex
+      - POSTGRES_PASSWORD=codex
+      - POSTGRES_DB=codex
+    volumes:
+      - ${PWD}/env/api-e2e-test/pgdata:/var/lib/postgresql/data # stores data into local-dir
+    healthcheck:
+      test: ['CMD', 'pg_isready', '-U', 'codex', '-d', 'codex']
+      interval: 1s
+      timeout: 10s
+      retries: 30
+
+volumes:
+  pgdata: {}

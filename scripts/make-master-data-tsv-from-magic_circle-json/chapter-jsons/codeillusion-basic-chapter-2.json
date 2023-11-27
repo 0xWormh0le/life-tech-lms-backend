@@ -1,0 +1,655 @@
+{
+  "data": [
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "310",
+        "top": "170"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_tangled_1",
+              "name": "g_tangled_1",
+              "id": 22,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_1"
+            }
+          ],
+          "cleared": true,
+          "id": 17,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to make circles bounce around the screen while reviewing everything learned up until now.",
+          "jewel_label": "Movement Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "20-40min",
+          "course_name": "media_art",
+          "display_order": 1,
+          "jewel_name": "g_tangled_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_tangled_2",
+              "name": "g_tangled_2",
+              "id": 23,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_2"
+            }
+          ],
+          "cleared": true,
+          "id": 18,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to use the random function to create random numbers that are then displayed. By handling unexpected numbers, interesting arrangements can be made possible.",
+          "jewel_label": "Randomization Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "media_art",
+          "display_order": 2,
+          "jewel_name": "g_tangled_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_tangled_3",
+              "name": "g_tangled_3",
+              "id": 24,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_3"
+            }
+          ],
+          "cleared": true,
+          "id": 19,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to use the rect function to draw squares, use for statements, efficently raise numbers, or change colors.",
+          "jewel_label": "Repetition Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "20-30min",
+          "course_name": "media_art",
+          "display_order": 3,
+          "jewel_name": "g_tangled_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_tangled_4",
+              "name": "g_tangled_4",
+              "id": 25,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "tangled",
+              "scenario_path": "lesson/g_tangled_4"
+            }
+          ],
+          "cleared": true,
+          "id": 20,
+          "course_label": "Media Art",
+          "jewel_description": "Learn how to use arrays to efficiently handle a lot of data at once as well as how to use arrays with for statements.",
+          "jewel_label": "Array Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "30-50min",
+          "course_name": "media_art",
+          "display_order": 4,
+          "jewel_name": "g_tangled_4"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_tangled_1",
+          "id": 26,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "tangled",
+          "scenario_path": "lesson/b_tangled_1"
+        }
+      ],
+      "magic_circle_name": "b_tangled",
+      "book_id": 5,
+      "book_name": "b_tangled",
+      "book_label": "Sky Lanterns",
+      "book_advanced_label": "Fireworks Magic",
+      "book_second_label": "Tangled",
+      "course_name": "media_art",
+      "course_label": "Media Art",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 4,
+        "hint_url": "https://hint.codeillusion.io/hint/p05goajoji7325b",
+        "card_name": "P05",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "570",
+        "top": "125"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_zootopia_1",
+              "name": "g_zootopia_1",
+              "id": 36,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_1"
+            }
+          ],
+          "cleared": true,
+          "id": 22,
+          "course_label": "Web Design",
+          "jewel_description": "Learn styling tags, the basics in making stylish websites.",
+          "jewel_label": "Styling Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "web_design",
+          "display_order": 1,
+          "jewel_name": "g_zootopia_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_zootopia_2",
+              "name": "g_zootopia_2",
+              "id": 37,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_2"
+            }
+          ],
+          "cleared": true,
+          "id": 23,
+          "course_label": "Web Design",
+          "jewel_description": "Learn how to control the empty spaces between characters and images.",
+          "jewel_label": "Space Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "web_design",
+          "display_order": 2,
+          "jewel_name": "g_zootopia_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_zootopia_3",
+              "name": "g_zootopia_3",
+              "id": 38,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_3"
+            }
+          ],
+          "cleared": true,
+          "id": 24,
+          "course_label": "Web Design",
+          "jewel_description": "Learn how to use <div> tags and CSS to create a layout featuring three boxes lined up horizontally.",
+          "jewel_label": "Layout Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "web_design",
+          "display_order": 3,
+          "jewel_name": "g_zootopia_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_zootopia_4",
+              "name": "g_zootopia_4",
+              "id": 39,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_4"
+            }
+          ],
+          "cleared": true,
+          "id": 25,
+          "course_label": "Web Design",
+          "jewel_description": "Learn how to use all the CSS learned so far to decorate a simple layout.",
+          "jewel_label": "Styling Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "web_design",
+          "display_order": 4,
+          "jewel_name": "g_zootopia_4"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_zootopia_5",
+              "name": "g_zootopia_5",
+              "id": 40,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 5,
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_5"
+            }
+          ],
+          "cleared": true,
+          "id": 26,
+          "course_label": "Web Design",
+          "jewel_description": "Learn how to create more complicated layouts by adjusting width and height.",
+          "jewel_label": "Layout Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "web_design",
+          "display_order": 5,
+          "jewel_name": "g_zootopia_5"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_zootopia_6",
+              "name": "g_zootopia_6",
+              "id": 41,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 6,
+              "project_name": "zootopia",
+              "scenario_path": "lesson/g_zootopia_6"
+            }
+          ],
+          "cleared": true,
+          "id": 27,
+          "course_label": "Web Design",
+          "jewel_description": "Learn more about styling by thinking about classes and using CSS to change color schemes, fonts, and background images.",
+          "jewel_label": "Styling Magic 3",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "15-25min",
+          "course_name": "web_design",
+          "display_order": 6,
+          "jewel_name": "g_zootopia_6"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_zootopia_1",
+          "id": 42,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "zootopia",
+          "scenario_path": "lesson/b_zootopia_1"
+        },
+        {
+          "label": "",
+          "name": "b_zootopia_2",
+          "id": 43,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 2,
+          "project_name": "zootopia",
+          "scenario_path": "lesson/b_zootopia_2"
+        },
+        {
+          "label": "",
+          "name": "b_zootopia_3",
+          "id": 44,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 3,
+          "project_name": "zootopia",
+          "scenario_path": "lesson/b_zootopia_3"
+        }
+      ],
+      "magic_circle_name": "b_zootopia",
+      "book_id": 6,
+      "book_name": "b_zootopia",
+      "book_label": "Person Finder Site",
+      "book_advanced_label": "Person Finder Site",
+      "book_second_label": "Zootopia",
+      "course_name": "web_design",
+      "course_label": "Web Design",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 5,
+        "hint_url": "https://hint.codeillusion.io/hint/p06glahlocveye8",
+        "card_name": "P06",
+        "symbol_position": 0
+      }
+    },
+    {
+      "type": "book",
+      "status": "cleared",
+      "position": {
+        "left": "60",
+        "top": "80"
+      },
+      "exec_cuf": false,
+      "jewels": [
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_aladdin_1",
+              "name": "g_aladdin_1",
+              "id": 29,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 1,
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_1"
+            }
+          ],
+          "cleared": true,
+          "id": 28,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to use sprites, a feature games can't be made without, to display characters and add animations.",
+          "jewel_label": "Sprite Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "game",
+          "display_order": 1,
+          "jewel_name": "g_aladdin_1"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_aladdin_2",
+              "name": "g_aladdin_2",
+              "id": 30,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 2,
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_2"
+            }
+          ],
+          "cleared": true,
+          "id": 29,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to use for statements to create many figures using short pieces of code, as well as how to connect it to your cursor.",
+          "jewel_label": "Repetition Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "20-40min",
+          "course_name": "game",
+          "display_order": 2,
+          "jewel_name": "g_aladdin_2"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_aladdin_3",
+              "name": "g_aladdin_3",
+              "id": 31,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 3,
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_3"
+            }
+          ],
+          "cleared": true,
+          "id": 30,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to create functions to bundle processes using a program to draw flowers.",
+          "jewel_label": "Function Magic",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "20-40min",
+          "course_name": "game",
+          "display_order": 3,
+          "jewel_name": "g_aladdin_3"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_aladdin_4",
+              "name": "g_aladdin_4",
+              "id": 32,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 4,
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_4"
+            }
+          ],
+          "cleared": true,
+          "id": 31,
+          "course_label": "Game Dev.",
+          "jewel_description": "Learn how to use sprites to display characters and blocks as well as add collision detection to them.",
+          "jewel_label": "Sprite Magic 2",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "10-20min",
+          "course_name": "game",
+          "display_order": 4,
+          "jewel_name": "g_aladdin_4"
+        },
+        {
+          "status": "cleared",
+          "lessons": [
+            {
+              "label": "g_aladdin_5",
+              "name": "g_aladdin_5",
+              "id": 33,
+              "clear_status": {
+                "cleared": true,
+                "quiz_all_answered": false,
+                "no_hint_cleared": false
+              },
+              "is_open": true,
+              "is_debug": false,
+              "display_order": 5,
+              "project_name": "aladdin",
+              "scenario_path": "lesson/g_aladdin_5"
+            }
+          ],
+          "cleared": true,
+          "id": 32,
+          "course_label": "Game Dev.",
+          "jewel_description": "Use collision detection on sprites to create a game where the player can collect gems.",
+          "jewel_label": "Sprite Magic 3",
+          "is_new": false,
+          "jewel_label_sub": "",
+          "estimated_time": "25-45min",
+          "course_name": "game",
+          "display_order": 5,
+          "jewel_name": "g_aladdin_5"
+        }
+      ],
+      "lessons": [
+        {
+          "label": "",
+          "name": "b_aladdin_1",
+          "id": 34,
+          "clear_status": {
+            "cleared": true,
+            "quiz_all_answered": false,
+            "no_hint_cleared": false
+          },
+          "is_open": true,
+          "is_debug": false,
+          "display_order": 1,
+          "project_name": "aladdin",
+          "scenario_path": "lesson/b_aladdin_1"
+        }
+      ],
+      "magic_circle_name": "b_aladdin",
+      "book_id": 7,
+      "book_name": "b_aladdin",
+      "book_label": "Flying Carpet",
+      "book_advanced_label": "Flying Carpet",
+      "book_second_label": "Aladdin",
+      "course_name": "game",
+      "course_label": "Game Dev.",
+      "clear_status": {
+        "cleared": true,
+        "quiz_all_answered": false,
+        "no_hint_cleared": false
+      },
+      "magic_word": {
+        "is_open": false,
+        "num_of_charactor": 1,
+        "hint_url": "https://hint.codeillusion.io/hint/p07pofgajabivh5",
+        "card_name": "P07",
+        "symbol_position": 0
+      }
+    }
+  ],
+  "is_accessible": true,
+  "current_area_name": "waterfall",
+  "chapter_label": "When You Wish Upon a Magic Festival",
+  "circle_connections": [],
+  "all_chapters_cleared": false,
+  "card_list_unlock": true,
+  "card_new": false,
+  "shop_unlock": true,
+  "shop_new": true,
+  "jewel_new": false,
+  "book_new": false,
+  "show_modal_on_distribution": false
+}

@@ -1,0 +1,38 @@
+title: MaintenanceUserPerRoleWithIdAndAuthenticationInfo
+oneOf:
+  - allOf:
+      - $ref: './UserStudentRole.yaml'
+      - $ref: './AuthenticationInfo.yaml'
+      - type: object
+        properties:
+          id:
+            type: string
+        required:
+          - id
+  - allOf:
+      - $ref: './UserTeacherRole.yaml'
+      - $ref: './AuthenticationInfo.yaml'
+      - type: object
+        properties:
+          id:
+            type: string
+        required:
+          - id
+  - allOf:
+      - $ref: './UserAdministratorRole.yaml'
+      - $ref: './AuthenticationInfo.yaml'
+      - type: object
+        properties:
+          id:
+            type: string
+        required:
+          - id
+  - allOf:
+      - $ref: './UserInternalOperatorRole.yaml'
+      - $ref: './AuthenticationInfo.yaml'
+      - type: object
+        properties:
+          id:
+            type: string
+        required:
+          - id

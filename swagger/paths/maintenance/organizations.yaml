@@ -1,0 +1,76 @@
+get:
+  summary: Get All Organizations for accounts management purpose
+  operationId: maintenanceGetOrganizations
+  tags:
+    - maintenance
+  responses:
+    '200':
+      description: Returns all Organizations
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              organizations:
+                type: array
+                items:
+                  $ref: '../../models/maintenance/OrganizationWithId.yaml'
+            required:
+              - organizations
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+put:
+  summary: Create or Update Organizations bulky for accounts management purpose
+  operationId: maintenancePutOrganizations
+  tags:
+    - maintenance
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          properties:
+            organizations:
+              type: array
+              items:
+                allOf:
+                  - type: object
+                    properties:
+                      id:
+                        type: string
+                  - $ref: '../../models/maintenance/Organization.yaml'
+          required:
+            - organizations
+  responses:
+    '200':
+      description: Returns created Organizations
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              ok:
+                type: string
+            required:
+              - ok
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred

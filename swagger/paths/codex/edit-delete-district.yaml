@@ -1,0 +1,197 @@
+parameters:
+  - schema:
+      type: string
+    name: districtId
+    in: path
+    required: true
+put:
+  summary: District API PUT
+  operationId: putDistrict
+  tags:
+    - codex
+  requestBody:
+    content:
+      application/json:
+        schema:
+          description: ''
+          type: object
+          x-examples:
+            example-1:
+              name: Florida District
+              lmsId: 1
+              districtLmsId: 10
+          properties:
+            name:
+              type: string
+              minLength: 1
+              description: This is a district name.
+            lmsId:
+              type: string
+              minLength: 1
+              description: This is a lmsId like(None, Clever, Claslink, Google classroom).
+            districtLmsId:
+              type: string
+              description: This is a districtLmsId.
+              minLength: 1
+            enableRosterSync:
+              type: boolean
+              minLength: 1
+              description: This is a enableRosterSync.
+            apiToken:
+              type: string
+              minLength: 1
+              description: This is apiToken.
+          required:
+            - name
+            - lmsId
+        examples:
+          success:
+            value:
+              name: Florida District
+              lmsId: 1
+              districtLmsId: 10
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '409':
+      description: District already exist
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: District already exist
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to add the specified district's information
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            district not found:
+              value:
+                error: The specified district not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            x-examples:
+              internal server error:
+                error: something wrong happened
+            properties:
+              error:
+                type: string
+            required:
+              - error
+          examples:
+            internal error:
+              value:
+                error: Something wrong has occurred
+  description: District PUT API call when user want to edit district in system.
+delete:
+  summary: Delete district
+  tags:
+    - codex
+  security:
+    - BearerAuth: []
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            description: ''
+            type: object
+            properties:
+              message:
+                type: string
+                enum:
+                  - ok
+    '400':
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: Invalid district id..
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            unauthorized:
+              value:
+                error: The token is not authorized.
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            forbidden:
+              value:
+                error: The token does not have permission to delete the specified district's information
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            user not found:
+              value:
+                error: The specified district not found
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../../models/Error.yaml
+          examples:
+            internal server error:
+              value:
+                error: Something wrong has occurred
+  operationId: deleteDistrict
+  description: |-
+    Delete district

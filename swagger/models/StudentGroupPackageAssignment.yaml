@@ -1,0 +1,14 @@
+title: StudentGroupPackageAssignment
+type: object
+properties:
+  packageCategoryId:
+    type: string
+  studentGroupId:
+    type: string
+  packageId:
+    type: string
+required:
+  - packageCategoryId
+  - studentGroupId
+  - packageId
+description: The Definition of Get StudentGroupPackageAssignment
